@@ -1,0 +1,89 @@
+For vector styles for the NGI data.
+
+svg symbols were created using ink scape vector graphics and they are stored in a folder which is referenced in qgis.
+
+
+since there were duplicates for the datasets i had to merge them into the same table and then drop the smaller table which did not have lots of fields.
+
+the following is a list of all the tables that were to be merged and the table into which they were merged into. the layers that were merged into another layer were then dropped from the database
+
+
+layers to be merged(dropped after merging)			layer to merge into
+
+airtransport							airtransportarea
+
+boundaryline							boundarylineline
+
+boundaryarea							boundaryareaarea
+
+controlpoint							controlpointpoint
+
+drainageline							drainagelineline
+
+road								roadline
+
+topoline							topolineline
+
+topopoint							topopointpoint
+
+topoarea							topoareaarea
+
+topoarealine							topoline
+
+inlandwater							inlandwaterarea
+
+
+After the layers where merged they were then dropped from the database and then there were field which were there in the tables which were not being used which needed also to be dropped and they were dropped using the following sql in pgadmin for all the layers.
+
+For labelling there is the conditional labeling tool which allows for easy labeling.
+
+examples of conditional labelling using case and regular expressions.
+
+(1)CASE WHEN "tag" ~ '^[0-9]+$'  THEN NULL 
+ELSE "tag"  END
+
+also conditional labelling utilises the substring labels which could be like
+
+(2)substr( "feat_type",0,4) 
+
+(3) labeling based on the conversion of attributes
+case when  "feat_type" = 'BOUNDARY BEACON' then null
+else toint( "height" )
+end
+
+
+SQL used to process the database.
+
+The sql that was used to insert values into the new layers using pgadmin 
+
+insert into tablename (tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from oldtablename
+
+examples of this is 
+
+insert into topoline(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from topoarealine
+
+
+Accordingly all the the tablenames where then substituted into the sql to drop the same columns which were used did not have any values that were being used.
+
+﻿ALTER TABLE (tablename) DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+
+Example
+
+﻿ALTER TABLE topoline DROP COLUMN mapsheet, drop column row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+
+
+NGI has got data in tables that has got mixed geometries
+in order to get rid of the data that has mixed geometries in a table we run the following querries
+
+delete from tablename where condition.
+
+delete from structurearea where geom is null
+
+list of tables deleted
+
+structurearea, artificialsurfaceline,barrierline,boundarylineline,buildingarea,buildingpoint,drainagelineline,inlandwaterarea,landusearea
+,landuseline,railway area,railwayline,railwaypoint,reliefline,reliefpoint,riverarea,riverline,roadline,structureline,structurepoint,
+topoareaarea,topolineline,topopointpoint,vegetationarea,vegetationline,vegetationpoint,watersourcepoint
+
+
+							

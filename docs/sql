@@ -1,0 +1,36 @@
+SQL for ngi
+
+ALTER TABLE hypselevationpointsm DROP COLUMN job_nr, drop column cuid,
+drop column feature_re,drop column attr_relia,drop column capture_so,
+drop column capture_me,drop column entity_nam,drop column geometry_t,
+drop column old_gdo_gi,drop column locked_fla,drop column sdo_gtype,
+drop column reference_;
+
+ALTER TABLE hypselevationlinesm drop column cuid,
+drop column feature_re,drop column geometry_t,drop column locked_fla,drop column sdo_gtype,
+drop column reference_;
+
+To check how many points exist in a geometry(multipoint)
+
+SELECT COUNT(CASE WHEN ST_NumGeometries(geom) > 1 THEN 1 END) AS multi_geom,
+       COUNT(geom) AS total_geom
+FROM hypselevationpointsm;
+
+to convert the multi geometry to single geometry use the following:
+
+ALTER TABLE hypselevationpointsm
+    ALTER COLUMN geom TYPE geometry(Point,4326) USING ST_GeometryN(geom, 1);
+
+to insert values from hypselevationpointsm and hypselevationlinesm
+
+insert into reliefpoint(feat_type,height,geom) select feat_type_,height,geom from hypselevationpointsm
+
+insert into reliefline(feat_type,height,geom) select feat_type_,height,geom from hypselevationlinesm
+
+After the operations the tables are droped by the following commands
+
+drop table hypselevationlinesm,hypselevationpointsm;
+
+insert into inlandwaterarea(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from flightplanarea
+
+drop table flightplanarea;

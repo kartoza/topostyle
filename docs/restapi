@@ -1,0 +1,31 @@
+publishing a layer
+curl -v -u admire:samuel1982 -X POST -H "Content-type: text/xml" -d "<featureType><name>airtransportarea</name></featureType>" http://1map.co.za/geoserver/rest/workspaces/quidity/datastores/ngi/featuretypes
+
+
+in order to create a style using rest API
+
+curl -v -u admire:samuel1982 -XPOST -H "Content-type: text/xml"  -d "<style><name>islandarea</name><filename>islandarea.sld</filename></style>"  http://1map.co.za/geoserver/rest/styles
+
+--in order to populate an empty style with a style
+
+curl -v -u admire:samuel1982 -XPUT -H "Content-type: application/vnd.ogc.sld+xml" -d @/home/admire/Documents/workingfiles/ngi/ngistyles_sld/islandarea.sld http://1map.co.za:8080/geoserver/rest/styles/islandarea
+
+--in order to associate a style with a layer
+
+curl -v -u admire:samuel1982 -XPUT -H "Content-type: text/xml"  -d "<layer><defaultStyle><name>islandarea</name></defaultStyle><enabled>true</enabled></layer>" http://1map.co.za:8080/geoserver/rest/layers/quidity:islandarea
+
+
+
+--creating a layer group
+
+first create a xml document and then using rest api
+
+curl -u admire:samuel1982 -XPOST -d @/home/admire/Documents/workingfiles/ngi/ngistyles_sld/ngLayerGroup.xml -H 'Content-type: text/xml' http://1map.co.za:8080/geoserver/rest/layergroups
+
+
+
+
+
+
+
+
