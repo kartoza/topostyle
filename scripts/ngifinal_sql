@@ -125,10 +125,7 @@ insert into reliefline(feat_type,height,geom) select feat_type_,height,geom from
 
 insert into inlandwaterarea(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from flightplanarea
 
-
 --Deleting data from tables with mixed geometries
-
-
 
 delete from structurearea where geom is null
 
