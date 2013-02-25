@@ -1,183 +1,183 @@
-Dropping columns not needed from postgis database.
+--After adding NGI data with scripts provided into the database the following cleanup operations needs to be done in order to synchronise the data to be the same with everyone.The first operations is to drop all columns which are not needed in the styling of the NGI data.
 
-ALTER TABLE airtransportarea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE airtransportarea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
 
-ALTER TABLE artificialsurfacearea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE artificialsurfacearea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
 
-ALTER TABLE artificialsurfaceline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE artificialsurfaceline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
 
-ALTER TABLE artificialsurfacepoint DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE artificialsurfacepoint DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
 
-ALTER TABLE barrierline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE barrierline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE boundaryareaarea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE boundaryareaarea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
 
-ALTER TABLE boundarylineline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE boundarylineline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE buildingarea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE buildingarea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE buildingpoint DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE buildingpoint DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE coastalarea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE coastalarea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE coastalline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE coastalline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE controlpointpoint DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE controlpointpoint DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE drainagelineline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE drainagelineline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE inlandwaterarea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE inlandwaterarea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE islandarea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE islandarea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE landusearea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE landusearea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE landuseline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE landuseline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE magneticline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE magneticline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE magneticpoint DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE magneticpoint DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE navigationalaidpoint DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE navigationalaidpoint DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE railwayarea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE railwayarea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE railwayline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE railwayline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE railwaypoint DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE railwaypoint DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE reliefline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE reliefline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE reliefpoint DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE reliefpoint DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE riverarea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE riverarea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE riverline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE riverline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE roadline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE roadline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE structurearea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE structurearea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE structureline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE structureline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
 
-ALTER TABLE structurepoint DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE structurepoint DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
 
-ALTER TABLE topoareaarea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE topoareaarea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE topolineline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE topolineline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE topopointpoint DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE topopointpoint DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE vegetationarea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE vegetationarea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE vegetationline DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE vegetationline DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE vegetationpoint DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE vegetationpoint DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE watersourcepoint DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+ALTER TABLE watersourcepoint DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
 
-ALTER TABLE hypselevationpointsm DROP COLUMN job_nr, drop column cuid,drop column feature_re,drop column attr_relia,drop column capture_so,
-drop column capture_me,drop column entity_nam,drop column geometry_t,drop column old_gdo_gi,drop column locked_fla,drop column sdo_gtype,
-drop column reference_;
+ALTER TABLE hypselevationpointsm DROP COLUMN job_nr, DROP column cuid,DROP column feature_re,DROP column attr_relia,DROP column capture_so,
+DROP column capture_me,DROP column entity_nam,DROP column geometry_t,DROP column old_gdo_gi,DROP column locked_fla,DROP column sdo_gtype,
+DROP column reference_;
 
-ALTER TABLE hypselevationlinesm  DROP COLUMN job_nr, drop column cuid,drop column feature_re,drop column attr_relia,drop column capture_so,
-drop column capture_me,drop column entity_nam,drop column geometry_t,drop column old_gdo_gi,drop column locked_fla,drop column sdo_gtype,
-drop column reference_;
+ALTER TABLE hypselevationlinesm  DROP COLUMN job_nr, DROP column cuid,DROP column feature_re,DROP column attr_relia,DROP column capture_so,
+DROP column capture_me,DROP column entity_nam,DROP column geometry_t,DROP column old_gdo_gi,DROP column locked_fla,DROP column sdo_gtype,
+DROP column reference_;
 
---Merging some layers in postgis.
+--In the database exist  layers which contain the same data hence the need to merge them into one layer.
 
-insert into airtransportarea(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from airtransport
+INSERT INTO airtransportarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM airtransport
 
-insert into boundarylineline(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from boundaryline
+INSERT INTO boundarylineline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM boundaryline
 
-insert into boundaryareaarea(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from boundaryarea
+INSERT INTO boundaryareaarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM boundaryarea
 
-insert into controlpointpoint(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from controlpoint
+INSERT INTO controlpointpoint(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM controlpoint
 
-insert into drainagelineline(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from drainageline
+INSERT INTO drainagelineline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM drainageline
 
-insert into roadline(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from road
+INSERT INTO roadline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM road
 
-insert into topolineline(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from topoline
+INSERT INTO topolineline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM topoline
 
-insert into topopointpoint(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from topopoint
+INSERT INTO topopointpoint(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM topopoint
 
-insert into topoareaarea(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from topoarea
+INSERT INTO topoareaarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM topoarea
 
-insert into topoline(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from topoarealine
+INSERT INTO topoline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM topoarealine
 
-insert into inlandwaterarea(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from inlandwater
+INSERT INTO inlandwaterarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM inlandwater
 
-insert into boundarylineline(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from boundaryline
+INSERT INTO boundarylineline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM boundaryline
 
-insert into boundaryareaarea(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from boundaryarea
+INSERT INTO boundaryareaarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM boundaryarea
 
-insert into reliefpoint(feat_type,height,geom) select feat_type_,height,geom from hypselevationpointsm
+INSERT INTO reliefpoint(feat_type,height,geom) SELECT feat_type_,height,geom FROM hypselevationpointsm
 
-insert into reliefline(feat_type,height,geom) select feat_type_,height,geom from hypselevationlinesm
+INSERT INTO reliefline(feat_type,height,geom) SELECT feat_type_,height,geom FROM hypselevationlinesm
 
-insert into inlandwaterarea(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from flightplanarea
+INSERT INTO inlandwaterarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM flightplanarea
 
---Deleting data from tables with mixed geometries
+--Deleting data FROM TABLEs with geometry whic is Null.
 
-delete from structurearea where geom is null
+DELETE FROM structurearea WHERE geom IS NULL;
 
-delete from artificialsurfaceline where geom is null
+DELETE FROM artificialsurfaceline WHERE geom IS NULL;
 
-delete from barrierline where geom is null
+DELETE FROM barrierline WHERE geom IS NULL;
 
-delete from boundarylineline where geom is null
+DELETE FROM boundarylineline WHERE geom IS NULL;
 
-delete from buildingarea where geom is null
+DELETE FROM buildingarea WHERE geom IS NULL;
 
-delete from buildingpoint where geom is null
+DELETE FROM buildingpoint WHERE geom IS NULL;
 
-delete from drainagelineline where geom is null
+DELETE FROM drainagelineline WHERE geom IS NULL;
 
-delete from inlandwaterarea where geom is null
+DELETE FROM inlandwaterarea WHERE geom IS NULL;
 
-delete from landusearea where geom is null
+DELETE FROM landusearea WHERE geom IS NULL;
 
-delete from landuseline where geom is null
+DELETE FROM landuseline WHERE geom IS NULL;
 
-delete from railwayarea where geom is null
+DELETE FROM railwayarea WHERE geom IS NULL;
 
-delete from railwaypoint where geom is null
+DELETE FROM railwaypoint WHERE geom IS NULL;
 
-delete from reliefpoint where geom is null
+DELETE FROM reliefpoint WHERE geom IS NULL;
 
-delete from riverarea where geom is null
+DELETE FROM riverarea WHERE geom IS NULL;
 
-delete from riverline where geom is null
+DELETE FROM riverline WHERE geom IS NULL;
 
-delete from riverline where geom is null
+DELETE FROM riverline WHERE geom IS NULL;
 
-delete from roadline where geom is null
+DELETE FROM roadline WHERE geom IS NULL;
 
-delete from structureline where geom is null
+DELETE FROM structureline WHERE geom IS NULL;
 
-delete from structurepoint where geom is null
+DELETE FROM structurepoint WHERE geom IS NULL;
 
-delete from topoareaarea where geom is null
+DELETE FROM topoareaarea WHERE geom IS NULL;
 
-delete from topolineline where geom is null
+DELETE FROM topolineline WHERE geom IS NULL;
 
-delete from topopointpoint where geom is null
+DELETE FROM topopointpoint WHERE geom IS NULL;
 
-delete from vegetationarea where geom is null
+DELETE FROM vegetationarea WHERE geom IS NULL;
 
-delete from vegetationline where geom is null
+DELETE FROM vegetationline WHERE geom IS NULL;
 
-delete from vegetationpoint where geom is null
+DELETE FROM vegetationpoint WHERE geom IS NULL;
 
-delete from watersourcepoint where geom is null
+DELETE FROM watersourcepoint WHERE geom IS NULL;
 
 
 --checking to see how many points exist in a geometry(multipoint)
@@ -192,12 +192,45 @@ FROM hypselevationpointsm;
 ALTER TABLE hypselevationpointsm
     ALTER COLUMN geom TYPE geometry(Point,4326) USING ST_GeometryN(geom, 1);
 
---dropping tables not needed since the merger of data:
+--Dropping Tables not needed since the merger of data:
 
-drop table hypselevationlinesm,hypselevationpointsm;
+DROP TABLE hypselevationlinesm;
 
-drop table airtransport,boundaryline,boundaryarea,controlpoint,drainageline,road,topoline,topopoint,topoarea,topoarealine,inlandwater
-,boundaryline,boundaryarea,hypselevationpointsm,hypselevationlinesm,flightplanarea
+DROP TABLE hypselevationpointsm;
+
+DROP TABLE airtransport;
+
+DROP TABLE boundaryline;
+
+DROP TABLE boundaryarea;
+
+DROP TABLE controlpoint;
+
+DROP TABLE road;
+
+DROP TABLE drainageline;
+
+DROP TABLE topoline;
+
+DROP TABLE topopoint;
+
+DROP TABLE topoarealine;
+
+DROP TABLE inlandwater;
+
+DROP TABLE boundaryline;
+
+DROP TABLE boundaryarea;
+
+DROP TABLE hypselevationpointsm;
+
+DROP TABLE flightplanarea;
+
+DROP TABLE topoarea;
+
+DROP TABLE hypselevationlinesm;
+
+
 
 
 
