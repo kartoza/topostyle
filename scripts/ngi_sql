@@ -1,3 +1,0 @@
-﻿ALTER TABLE artificialsurfacearea DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,
-drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,
-drop column source_con,drop column capture_in,drop column descriptio; 
