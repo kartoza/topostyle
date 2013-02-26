@@ -11,7 +11,7 @@ Authors:
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/za/deed.en"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/2.5/za/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">topostyle</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://afrispatial.co.za" property="cc:attributionName" rel="cc:attributionURL">AfriSpatial</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/za/deed.en">Creative Commons Attribution-ShareAlike 2.5 South Africa License</a>.
 
-All files in this repository fall under this CC BY-SA 2.5 ZA licence EXCEPT the files in the scripts directory, which are GPL licenced.
+All files in this repository fall under this CC BY-SA 2.5 ZA licence EXCEPT the files in the scripts directory, which are GPL licenced. This licence also covers all cartographic products produced using these styles, including web map image tiles. 
 
 Aim
 ---
@@ -65,9 +65,9 @@ The idea is to edit the styles to improve them. Once they represent an improveme
  2. Run the SQL script. It does a few bulk data cleanups, such as dropping unnecessary fields and merging tables representing the same feature types.
  3. publish the layers via your own instance of GeoServer or any other web map server that can use SLD styles. Or open the PostGIS layers in a desktop GIS like QGIS or uDIG and apply and edit the styles there. 
 
-The layer names, field names and class values that we use map to or match those of the NGI data sets. For a list of map layers, just see the names of the SLD files. They match the database table names AND the WMS layer names. Some layers are repeated / split in the styling where we deemed necessary. Where the SLD has a number such as 'airtransportarea2.sld', it still refers to the database table "airtransportarea" but indicates that it has been published as more than one layer, each rendering different feature classes. 
+    The layer names, field names and class values that we use map to or match those of the NGI data sets. For a list of map layers, just see the names of the SLD files. They match the database table names AND the WMS layer names. Some layers are repeated / split in the styling where we deemed necessary. Where the SLD has a number such as 'airtransportarea2.sld', it still refers to the database table "airtransportarea" but indicates that it has been published as more than one layer, each rendering different feature classes. 
 
-We have refrained from any data editing and publish the data *as is*, warts and all. As long as NGI keeps the same format, you should be able to load their next releases without breaking the map.
+    We have refrained from any data editing and publish the data *as is*, warts and all. As long as NGI keeps the same format, you should be able to load their next releases without breaking the map.
 
 2. If you don't have the data or hardware, you can still work on the styles and see the effects of your edits and improvements. 
 
@@ -122,6 +122,7 @@ SVG directory for QGIS hence the need to create the svg symbols using InkScape. 
 Since the original styling was done using QGIS it now incorporates the advanced labelling feature which makes it easy for a layer to be labelled and also eliminates the process of bringing in the layer twice in a view in order to label the feautures.
 
 **SLD Editing**
+
 GUI-based but with some incomplete implementation or non-standard extensions:
 * QGIS
 * uDIG
@@ -131,9 +132,11 @@ Hand editing the XML:
 * Any text or XML editor, with the SLD specifications close by and a browser to search for examples. 
 
 **SVG Editing**
+
 InkScape
 
 **png Editing**
+
 GIMP
 
 ---
@@ -145,29 +148,29 @@ Note: you need to authenticate with admin rights to do this. We would make reque
 
 Publishing a layer
 ------------------
-curl -v -u username:password -X POST -H "Content-type: text/xml" -d "<featureType><name>airtransportarea</name></featureType>" http://1map.co.za/geoserver/rest/workspaces/quidity/datastores/ngi/featuretypes
+>curl -v -u username:password -X POST -H "Content-type: text/xml" -d "<featureType><name>airtransportarea</name></featureType>" http://1map.co.za/geoserver/rest/workspaces/quidity/datastores/ngi/featuretypes
 
 Creating a style using rest API
 -------------------------------
 
-curl -v -u username:password -X POST -H "Content-type: text/xml"  -d "<style><name>islandarea</name><filename>islandarea.sld</filename></style>"  http://1map.co.za/geoserver/rest/styles
+>curl -v -u username:password -X POST -H "Content-type: text/xml"  -d "<style><name>islandarea</name><filename>islandarea.sld</filename></style>"  http://1map.co.za/geoserver/rest/styles
 
 Populate an empty style
 -----------------------
 
-curl -v -u username:password -X PUT -H "Content-type: application/vnd.ogc.sld+xml" -d @/home/admire/Documents/workingfiles/ngi/ngistyles_sld/islandarea.sld http://1map.co.za:8080/geoserver/rest/styles/islandarea
+>curl -v -u username:password -X PUT -H "Content-type: application/vnd.ogc.sld+xml" -d @/home/admire/Documents/workingfiles/ngi/ngistyles_sld/islandarea.sld http://1map.co.za:8080/geoserver/rest/styles/islandarea
 
 Associate a style with a layer
 ------------------------------
 
-curl -v -u username:password -X PUT -H "Content-type: text/xml"  -d "<layer><defaultStyle><name>islandarea</name></defaultStyle><enabled>true</enabled></layer>" http://1map.co.za:8080/geoserver/rest/layers/quidity:islandarea
+>curl -v -u username:password -X PUT -H "Content-type: text/xml"  -d "<layer><defaultStyle><name>islandarea</name></defaultStyle><enabled>true</enabled></layer>" http://1map.co.za:8080/geoserver/rest/layers/quidity:islandarea
 
 Create a layer group
 --------------------
 
 First create a xml document and then use the REST API. The working group layer definition XML doc is in the sld directory.
 
-curl -u username:password -X POST -d @/home/admire/Documents/workingfiles/ngi/ngistyles_sld/ngLayerGroup.xml -H 'Content-type: text/xml' http://1map.co.za:8080/geoserver/rest/layergroups
+>curl -u username:password -X POST -d @/home/admire/Documents/workingfiles/ngi/ngistyles_sld/ngLayerGroup.xml -H 'Content-type: text/xml' http://1map.co.za:8080/geoserver/rest/layergroups
 
 
 
