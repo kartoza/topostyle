@@ -1,89 +1,64 @@
-For vector styles for the NGI data.
+Vector styling for NGI datasets
 
-svg symbols were created using ink scape vector graphics and they are stored in a folder which is referenced in qgis.
-
-
-since there were duplicates for the datasets i had to merge them into the same table and then drop the smaller table which did not have lots of fields.
-
-the following is a list of all the tables that were to be merged and the table into which they were merged into. the layers that were merged into another layer were then dropped from the database
+--The initial styling of the data was achieved using QGIS and other open source tools namely inkscape vector graphics and gimp.
 
 
-layers to be merged(dropped after merging)			layer to merge into
+--In styling the data in QGIS we realised that not all the svg symbols which were specified on the 1:50 000 reference sheets existed in the 
+svg directory for QGIS hence the need to recreate the svg symbols using ink scape vector graphics and they are subsequently stored in a folder which can be referenced.
 
-airtransport							airtransportarea
+--Since the original styling was done using QGIS it now incorporates the advanced labelling feature which makes it easy for a layer to be labelled and also eliminates the process of bringing in the layer twice in a view in order to label the feautures.
 
-boundaryline							boundarylineline
+- All the layers which needed labels were labelled using the advanced feature label tool provided in QGIS but the problem encountered is that when the style is saved as an sld the labelling is not incoperated hence the need to edit the sld according to the specifications in order to allow for labels to appear.
 
-boundaryarea							boundaryareaarea
+--Since the manual editing of sld to incorporate labels the following layers provided dificulties and still could not find a way to get around it. The labels either containes regualar expressions and specifying it in sld provided dificulties.
 
-controlpoint							controlpointpoint
+Examples of labels based upon the advanced labelling feauture in QGIS.
 
-drainageline							drainagelineline
+Labelling controlpointpoint
 
-road								roadline
-
-topoline							topolineline
-
-topopoint							topopointpoint
-
-topoarea							topoareaarea
-
-topoarealine							topoline
-
-inlandwater							inlandwaterarea
-
-
-After the layers where merged they were then dropped from the database and then there were field which were there in the tables which were not being used which needed also to be dropped and they were dropped using the following sql in pgadmin for all the layers.
-
-For labelling there is the conditional labeling tool which allows for easy labeling.
-
-examples of conditional labelling using case and regular expressions.
-
-(1)CASE WHEN "tag" ~ '^[0-9]+$'  THEN NULL 
-ELSE "tag"  END
-
-also conditional labelling utilises the substring labels which could be like
-
-(2)substr( "feat_type",0,4) 
-
-(3) labeling based on the conversion of attributes
 case when  "feat_type" = 'BOUNDARY BEACON' then null
 else toint( "height" )
 end
 
+The label uses case statement to specify which fields need to be labelled and which attribute is to be used for the label hence eliminating the need to bring the layer twice.
+ 
+Example for labelling structure point
 
-SQL used to process the database.
-
-The sql that was used to insert values into the new layers using pgadmin 
-
-insert into tablename (tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from oldtablename
-
-examples of this is 
-
-insert into topoline(tag,feat_type,geom_type,create_dat,geom) select tag,feat_type,geom_type,create_dat,geom from topoarealine
-
-
-Accordingly all the the tablenames where then substituted into the sql to drop the same columns which were used did not have any values that were being used.
-
-﻿ALTER TABLE (tablename) DROP COLUMN row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
-
-Example
-
-﻿ALTER TABLE topoline DROP COLUMN mapsheet, drop column row_status,drop column lock_date,drop column selection_,drop column version_nu,drop column version_da,drop column modified_b,drop column retired_da,drop column original_g,drop column data_sourc,drop column est_revisi,drop column source_pro,drop column source_con,drop column capture_in,drop column descriptio;
+case
+      when  "feat_type"  =   'MICROWAVE TOWER' then null
+      when  "feat_type"  =  'TELECOM TOWER' then null
+      when  "feat_type"  =  'TUNNEL ENTRANCE' then null
+else  "feat_type" 
+end
 
 
-NGI has got data in tables that has got mixed geometries
-in order to get rid of the data that has mixed geometries in a table we run the following querries
+List of layers that used special advanced labelling features.
 
-delete from tablename where condition.
+-- airtransport
+-- topopointpoint
+-- boundaryareaarea.
+-- landusearea
 
-delete from structurearea where geom is null
+since the column that was being used to label the features contained a mixture of string data and integer data and we only wanted to label feautures based on string hence we used the following labelling condition on the advanced labelling feature.
 
-list of tables deleted
+ CASE WHEN "tag" ~ '^[0-9]+$'  THEN NULL 
+ELSE "tag"  END
 
-structurearea, artificialsurfaceline,barrierline,boundarylineline,buildingarea,buildingpoint,drainagelineline,inlandwaterarea,landusearea
-,landuseline,railway area,railwayline,railwaypoint,reliefline,reliefpoint,riverarea,riverline,roadline,structureline,structurepoint,
-topoareaarea,topolineline,topopointpoint,vegetationarea,vegetationline,vegetationpoint,watersourcepoint
+For Landuse area Recreational area needed to be labelled using the following.
+
+substr( "feat_type",0,4)
+
+Issues with sld generated by QGIS.
+
+--Labels did not appear in the sld generated by qgis, so manual editing is needed for the sld according to specifications in order to incoperate labels. But once the sld are edited the work fine in QGIS.
+
+--QGIS does not incoperating regular experessions used in labelling when making its sld document.
+
+-- QGIS sld tended to make most of the lines appear dashed in the sld so there was a need to check the structure of the sld once it was saved in order to see if it saved correctly and tweaking it where necessary.
+
+
+
+
 
 
 							

@@ -16,19 +16,13 @@
                     <sld:Name>Bench Mark</sld:Name>
                     <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
                     <sld:PointSymbolizer>
-                        <sld:Geometry>
-                            <ogc:Function name="offset">
-                                <ogc:PropertyName>the_geom</ogc:PropertyName>
-                                <ogc:Literal>0.0</ogc:Literal>
-                                <ogc:Literal>0.0</ogc:Literal>
-                            </ogc:Function>
-                        </sld:Geometry>
+                        
                         <sld:Graphic>
                             <sld:ExternalGraphic>
-                                <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="file:/home/admire/Documents/workingfiles/ngi/svg/benchmark.svg"/>
+                                <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="svg/benchmark.svg"/>
                                 <sld:Format>image/svg+xml</sld:Format>
                             </sld:ExternalGraphic>
-                            <sld:Size>25</sld:Size>
+                            <sld:Size>30</sld:Size>
                         </sld:Graphic>
                     </sld:PointSymbolizer>
                 </sld:Rule>
@@ -42,13 +36,8 @@
                     </ogc:Filter>
                     <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
                     <sld:PointSymbolizer>
-                        <sld:Geometry>
-                            <ogc:Function name="offset">
-                                <ogc:PropertyName>the_geom</ogc:PropertyName>
-                                <ogc:Literal>0.0</ogc:Literal>
-                                <ogc:Literal>0.0</ogc:Literal>
-                            </ogc:Function>
-                        </sld:Geometry>
+                        
+                        
                         <sld:Graphic>
                             <sld:Mark>
                                 <sld:WellKnownName>triangle</sld:WellKnownName>
@@ -112,5 +101,3 @@
         </sld:UserStyle>
     </sld:UserLayer>
 </sld:StyledLayerDescriptor>
-
-

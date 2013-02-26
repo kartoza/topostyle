@@ -26,7 +26,7 @@
                             <sld:GraphicStroke>
                                 <sld:Graphic>
                                     <sld:ExternalGraphic>
-                                        <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="file:/home/admire/Documents/workingfiles/ngi/svg/Riflerange.svg"/>
+                                        <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="svg/Riflerange.svg"/>
                                         <sld:Format>image/svg+xml</sld:Format>
                                     </sld:ExternalGraphic>
                                     <sld:Size>15</sld:Size>
@@ -473,7 +473,7 @@
                             <sld:GraphicFill>
                                 <sld:Graphic>
                                     <sld:ExternalGraphic>
-                                        <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="file:/home/admire/Documents/workingfiles/ngi/svg/cemetry.svg"/>
+                                        <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="svg/cemetry.svg"/>
                                         <sld:Format>image/svg+xml</sld:Format>
                                     </sld:ExternalGraphic>
                                 </sld:Graphic>

@@ -1,61 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se">
-  <NamedLayer>
-    <se:Name>railwaypoint</se:Name>
-    <UserStyle>
-      <se:Name>railwaypoint</se:Name>
-      <se:FeatureTypeStyle>
-        <se:Rule>
-          <se:Name>Standard</se:Name>
-          <ogc:Filter>
-            <ogc:PropertyIsEqualTo>
-              <ogc:PropertyName>feat_type</ogc:PropertyName>
-              <ogc:Literal>STANDARD</ogc:Literal>
-            </ogc:PropertyIsEqualTo>
-          </ogc:Filter>
-          <se:MinScaleDenominator>1000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
-          <se:PointSymbolizer>
-            <se:Graphic>
-              <se:Mark>
-                <se:WellKnownName>circle</se:WellKnownName>
-                <se:Fill>
-                  <se:SvgParameter name="fill">#15679d</se:SvgParameter>
-                </se:Fill>
-                <se:Stroke>
-                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-                </se:Stroke>
-              </se:Mark>
-              <se:Size>2</se:Size>
-            </se:Graphic>
-          </se:PointSymbolizer>
-        </se:Rule>
-        <se:Rule>
-          <se:Name>Station</se:Name>
-          <ogc:Filter>
-            <ogc:PropertyIsEqualTo>
-              <ogc:PropertyName>feat_type</ogc:PropertyName>
-              <ogc:Literal>STATION</ogc:Literal>
-            </ogc:PropertyIsEqualTo>
-          </ogc:Filter>
-          <se:MinScaleDenominator>1000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
-          <se:PointSymbolizer>
-            <se:Graphic>
-              <se:Mark>
-                <se:WellKnownName>rectangle</se:WellKnownName>
-                <se:Fill>
-                  <se:SvgParameter name="fill">#000000</se:SvgParameter>
-                </se:Fill>
-                <se:Stroke>
-                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-                </se:Stroke>
-              </se:Mark>
-              <se:Size>1.5</se:Size>
-            </se:Graphic>
-          </se:PointSymbolizer>
-        </se:Rule>
-      </se:FeatureTypeStyle>
-    </UserStyle>
-  </NamedLayer>
-</StyledLayerDescriptor>
+<sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" version="1.0.0">
+    <sld:UserLayer>
+        <sld:LayerFeatureConstraints>
+            <sld:FeatureTypeConstraint/>
+        </sld:LayerFeatureConstraints>
+        <sld:UserStyle>
+            <sld:Name>railwaypoint</sld:Name>
+            <sld:Title/>
+            <sld:FeatureTypeStyle>
+                <sld:Name>group 0</sld:Name>
+                <sld:FeatureTypeName>Feature</sld:FeatureTypeName>
+                <sld:SemanticTypeIdentifier>generic:geometry</sld:SemanticTypeIdentifier>
+                <sld:SemanticTypeIdentifier>simple</sld:SemanticTypeIdentifier>
+                <sld:Rule>
+                    <sld:Name>Station</sld:Name>
+                    <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
+                    <sld:PointSymbolizer>
+                        <sld:Graphic>
+                            <sld:Mark>
+                                <sld:Fill>
+                                    <sld:CssParameter name="fill">#000000</sld:CssParameter>
+                                </sld:Fill>
+                                <sld:Stroke/>
+                            </sld:Mark>
+                            <sld:Size>2</sld:Size>
+                        </sld:Graphic>
+                    </sld:PointSymbolizer>
+                </sld:Rule>
+                <sld:Rule>
+                    <sld:Name>Standard</sld:Name>
+                    <ogc:Filter>
+                        <ogc:PropertyIsEqualTo>
+                            <ogc:PropertyName>feat_type</ogc:PropertyName>
+                            <ogc:Literal>STANDARD</ogc:Literal>
+                        </ogc:PropertyIsEqualTo>
+                    </ogc:Filter>
+                    <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
+                    <sld:PointSymbolizer>
+                        <sld:Graphic>
+                            <sld:Mark>
+                                <sld:WellKnownName>circle</sld:WellKnownName>
+                                <sld:Fill>
+                                    <sld:CssParameter name="fill">#0000FF</sld:CssParameter>
+                                </sld:Fill>
+                                <sld:Stroke>
+                                    <sld:CssParameter name="stroke">#0000FF</sld:CssParameter>
+                                </sld:Stroke>
+                            </sld:Mark>
+                            <sld:Size>2</sld:Size>
+                        </sld:Graphic>
+                    </sld:PointSymbolizer>
+                </sld:Rule>
+            </sld:FeatureTypeStyle>
+        </sld:UserStyle>
+    </sld:UserLayer>
+</sld:StyledLayerDescriptor>
