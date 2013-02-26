@@ -1,4 +1,5 @@
 <layerGroup>
+<!-- This file is part of the topostyle project by AfriSpatial (https://github.com/AfriSpatial/topostyle) and it is licensed under a Creative Commons Attribution-ShareAlike 2.5 South Africa Licence.-->
   <name>NGI</name>
   <layers>
      <layer>boundaryareaarea</layer>

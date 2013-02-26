@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ogc:GetMap
+xmlns:ogc="http://www.opengis.net/ows"
+xmlns:gml="http://www.opengis.net/gml"
+version="1.1.1" service="WMS">
+
+<StyledLayerDescriptor version="1.0.0">
+<NamedLayer>
+ <Name>afrispatial:NGI</Name>
+</NamedLayer>
+</StyledLayerDescriptor>
+
+<BoundingBox srsName="http://www.opengis.net/gml/srs/epsg.xml#3857">
+<gml:coord>
+<gml:X>3248267.9567958</gml:X>
+<gml:Y>-3350999.3172331</gml:Y>
+</gml:coord>
+<gml:coord>
+<gml:X>3253159.9266061</gml:X>
+<gml:Y>-3346107.3474228</gml:Y>
+</gml:coord>
+</BoundingBox>
+
+<Output>
+ <Format>image/png</Format>
+ <Size>
+ <Width>256</Width>
+ <Height>256</Height>
+ </Size>
+</Output>
+
+<Exceptions>application/vnd.ogc.se+xml</Exceptions>
+
+</ogc:GetMap>
+

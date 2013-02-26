@@ -1,3 +1,24 @@
+/*
+#   This script is part of the topostyle project
+#
+#   Copyright (C) 2013  Afrispatial
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    Gavin Fleming email: info@afrispatial.co.za
+*/
+
 --After adding NGI data with scripts provided into the database the following cleanup operations needs to be done in order to synchronise the data to be the same with everyone.The first operations is to drop all columns which are not needed in the styling of the NGI data.
 
 ALTER TABLE airtransportarea DROP COLUMN row_status,DROP column lock_date,DROP column SELECTion_,DROP column version_nu,DROP column version_da,DROP column modified_b,DROP column retired_da,DROP column original_g,DROP column data_sourc,DROP column est_revisi,DROP column source_pro,DROP column source_con,DROP column capture_in,DROP column descriptio;
@@ -125,7 +146,7 @@ INSERT INTO reliefline(feat_type,height,geom) SELECT feat_type_,height,geom FROM
 
 INSERT INTO inlandwaterarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM flightplanarea
 
---Deleting data FROM TABLEs with geometry whic is Null.
+--Deleting data FROM TABLEs with geometry which is Null.
 
 DELETE FROM structurearea WHERE geom IS NULL;
 
@@ -187,7 +208,7 @@ SELECT COUNT(CASE WHEN ST_NumGeometries(geom) > 1 THEN 1 END) AS multi_geom,
 FROM hypselevationpointsm;
 
 
---to convert the multi geometry to single geometry use the following:
+--to convert the multi geometry to single geometry use the following. This assumes that each geometry already actually have only one point
 
 ALTER TABLE hypselevationpointsm
     ALTER COLUMN geom TYPE geometry(Point,4326) USING ST_GeometryN(geom, 1);

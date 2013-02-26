@@ -1,31 +1,40 @@
 #!/bin/bash
-# A script to import all Chief Directorate : Surveys and Mapping
-# vector tiles into PostGIS.
+# A script to import all NGI vector tiles into PostGIS. It is part of the topostyle project
+#
+#   Copyright (C) 2009  Linfiniti 
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    Gavin Fleming email: info@afrispatial.co.za
 #
 # Tim Sutton 2009
 # Gavin Fleming Dec 2010, Jan 2013
 # Lines prefixed with '#' are comments.
 
-# Drop the database if it already exists!
-dropdb -p 5433 ngi50k
+# don't forget to run postload_cleanup.sql after this, before publishing and applying topostyle styles. 
 
-# Now recreate the database
+# Drop the database if it already exists!
+dropdb -p 5432 ngi50k
+
+# Now recreate the database, here from a template that already has postgis loaded
 createdb -p 5433 -T postgis_template ngi50k
 
-# Install the plpgsql procedural language into Postgres
-# This is required before we can install the PostGIS database extensions
-#createlang plpgsql ngi50k
-
-# Install the PostGIS extention. Note you may need to adjust the path
-# to lwpostgis.sql if you are using a different version of linux
-#psql ngi50k < /usr/share/postgresql/8.4/contrib/postgis-1.5/postgis.sql
-
-# Install the PostGIS spatial reference system tables.
-# Once again, you may need to adjust for your system
-#psql ngi50k < /usr/share/postgresql/8.4/contrib/postgis-1.5/spatial_ref_sys.sql
+# If you don't have a template, run this. It is the new way of PostGIS-enabling a PostgreSQL database since PostgreSQL 9.1 and PostGIS 2.0.
+# psql -d ngi50k -c "CREATE EXTENSION postgis;"
 
 # We assume you have a directory containing many subdirectories labeled
-# after a Degree Square e.g. 2218, 2219 etc directories.
+# after a Degree Square e.g. 2218, 2219 etc directories, e.g. the DVDs from NGI
 # First we will find all shapefiles within those directores and then
 # loop through the resulting list of shapefile names. The list will be
 # something like this:
