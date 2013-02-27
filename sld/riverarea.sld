@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file is part of the topostyle project by AfriSpatial (https://github.com/AfriSpatial/topostyle) and it is licensed under a Creative Commons Attribution-ShareAlike 2.5 South Africa Licence.-->
 <sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" version="1.0.0">
     <sld:UserLayer>
         <sld:LayerFeatureConstraints>
@@ -22,6 +21,7 @@
                         </sld:Fill>
                         <sld:Stroke>
                             <sld:CssParameter name="stroke">#6998C9</sld:CssParameter>
+                            <sld:CssParameter name="stroke-width">0.1</sld:CssParameter>
                             <sld:CssParameter name="stroke-dasharray">1.0</sld:CssParameter>
                         </sld:Stroke>
                     </sld:PolygonSymbolizer>
@@ -41,6 +41,7 @@
                         </sld:Fill>
                         <sld:Stroke>
                             <sld:CssParameter name="stroke">#6998C9</sld:CssParameter>
+                            <sld:CssParameter name="stroke-width">0.1</sld:CssParameter>
                         </sld:Stroke>
                     </sld:PolygonSymbolizer>
                 </sld:Rule>
@@ -57,7 +58,10 @@
                         <sld:Fill>
                             <sld:CssParameter name="fill">#D5EEFF</sld:CssParameter>
                         </sld:Fill>
-                        <sld:Stroke/>
+                         <sld:Stroke>
+                            <sld:CssParameter name="stroke">#6998C9</sld:CssParameter>
+                            <sld:CssParameter name="stroke-width">0.1</sld:CssParameter>
+                        </sld:Stroke>
                     </sld:PolygonSymbolizer>
                 </sld:Rule>
                 <sld:Rule>
@@ -75,6 +79,7 @@
                         </sld:Fill>
                         <sld:Stroke>
                             <sld:CssParameter name="stroke">#6998C9</sld:CssParameter>
+                            <sld:CssParameter name="stroke-width">0.1</sld:CssParameter>
                             <sld:CssParameter name="stroke-dasharray">1.0</sld:CssParameter>
                         </sld:Stroke>
                     </sld:PolygonSymbolizer>
@@ -94,6 +99,7 @@
                         </sld:Fill>
                         <sld:Stroke>
                             <sld:CssParameter name="stroke">#6998C9</sld:CssParameter>
+                            <sld:CssParameter name="stroke-width">0.1</sld:CssParameter>
                         </sld:Stroke>
                     </sld:PolygonSymbolizer>
                 </sld:Rule>
@@ -109,8 +115,11 @@
                     <sld:PolygonSymbolizer>
                         <sld:Fill>
                             <sld:CssParameter name="fill">#E0CCC0</sld:CssParameter>
+                            
                         </sld:Fill>
-                        <sld:Stroke/>
+                         <sld:Stroke>
+                        <sld:CssParameter name="stroke-width">0.1</sld:CssParameter>
+                      </sld:Stroke>   
                     </sld:PolygonSymbolizer>
                 </sld:Rule>
                 <sld:Rule>
@@ -125,10 +134,12 @@
                     <sld:PolygonSymbolizer>
                         <sld:Fill>
                             <sld:CssParameter name="fill">#E0CCC0</sld:CssParameter>
-                            <sld:CssParameter name="fill-opacity">0.5</sld:CssParameter>
+                            
                         </sld:Fill>
                         <sld:Stroke>
                             <sld:CssParameter name="stroke">#6998C9</sld:CssParameter>
+                            <sld:CssParameter name="stroke-width">0.1</sld:CssParameter>
+                            <sld:CssParameter name="stroke-dasharray">2</sld:CssParameter>
                         </sld:Stroke>
                     </sld:PolygonSymbolizer>
                 </sld:Rule>

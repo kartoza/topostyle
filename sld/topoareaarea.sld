@@ -24,7 +24,10 @@
                         <sld:Fill>
                             <sld:CssParameter name="fill">#6998C9</sld:CssParameter>
                         </sld:Fill>
-                        <sld:Stroke/>
+                        <sld:Stroke>
+                            <sld:CssParameter name="stroke">#6998C9</sld:CssParameter>
+                            <sld:CssParameter name="stroke-width">0.10</sld:CssParameter>
+                        </sld:Stroke>
                     </sld:PolygonSymbolizer>
                     <sld:PointSymbolizer>
                         <sld:Graphic>
@@ -55,23 +58,11 @@
                     <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
                     <sld:PolygonSymbolizer>
                         <sld:Fill>
-                            <sld:GraphicFill>
-                                <sld:Graphic>
-                                    <sld:Mark>
-                                        <sld:WellKnownName>shape://dot</sld:WellKnownName>
-                                        <sld:Fill/>
-                                        <sld:Stroke>
-                                            <sld:CssParameter name="stroke">#808080</sld:CssParameter>
-                                            <sld:CssParameter name="stroke-width">3.0</sld:CssParameter>
-                                        </sld:Stroke>
-                                    </sld:Mark>
-                                    <sld:Size>3.0</sld:Size>
-                                </sld:Graphic>
-                            </sld:GraphicFill>
-                            <sld:CssParameter name="fill">#E09B89</sld:CssParameter>
+                            <sld:CssParameter name="fill">#E0CCC0</sld:CssParameter>
                         </sld:Fill>
                         <sld:Stroke>
-                            <sld:CssParameter name="stroke">#E09B89</sld:CssParameter>
+                            <sld:CssParameter name="stroke">#C79B89</sld:CssParameter>
+                            <sld:CssParameter name="stroke-width">0.1</sld:CssParameter>
                         </sld:Stroke>
                     </sld:PolygonSymbolizer>
                 </sld:Rule>
@@ -86,23 +77,11 @@
                     <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
                     <sld:PolygonSymbolizer>
                         <sld:Fill>
-                            <sld:GraphicFill>
-                                <sld:Graphic>
-                                    <sld:Mark>
-                                        <sld:WellKnownName>shape://dot</sld:WellKnownName>
-                                        <sld:Fill/>
-                                        <sld:Stroke>
-                                            <sld:CssParameter name="stroke">#808080</sld:CssParameter>
-                                            <sld:CssParameter name="stroke-width">3.0</sld:CssParameter>
-                                        </sld:Stroke>
-                                    </sld:Mark>
-                                    <sld:Size>3.0</sld:Size>
-                                </sld:Graphic>
-                            </sld:GraphicFill>
-                            <sld:CssParameter name="fill">#C79B89</sld:CssParameter>
+                            <sld:CssParameter name="fill">#E0CCC0</sld:CssParameter>
                         </sld:Fill>
                         <sld:Stroke>
                             <sld:CssParameter name="stroke">#C79B89</sld:CssParameter>
+                            <sld:CssParameter name="stroke-width">0.1</sld:CssParameter>
                         </sld:Stroke>
                     </sld:PolygonSymbolizer>
                 </sld:Rule>
@@ -121,6 +100,7 @@
                         </sld:Fill>
                         <sld:Stroke>
                             <sld:CssParameter name="stroke">java.awt.Color[r=0,g=0,b=0]</sld:CssParameter>
+                            <sld:CssParameter name="stroke-width">0.1</sld:CssParameter>
                         </sld:Stroke>
                     </sld:PolygonSymbolizer>
                 </sld:Rule>
@@ -137,7 +117,9 @@
                         <sld:Fill>
                             <sld:CssParameter name="fill">#7F7F7F</sld:CssParameter>
                         </sld:Fill>
-                        <sld:Stroke/>
+                        <sld:Stroke>
+                            <sld:CssParameter name="stroke-width">0.1</sld:CssParameter>
+                        </sld:Stroke>
                     </sld:PolygonSymbolizer>
                 </sld:Rule>
                 <sld:Rule>
@@ -151,24 +133,12 @@
                     <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
                     <sld:PolygonSymbolizer>
                         <sld:Fill>
-                            <sld:GraphicFill>
-                                <sld:Graphic>
-                                    <sld:Mark>
-                                        <sld:WellKnownName>shape://dot</sld:WellKnownName>
-                                        <sld:Fill/>
-                                        <sld:Stroke>
-                                            <sld:CssParameter name="stroke">#808080</sld:CssParameter>
-                                            <sld:CssParameter name="stroke-width">3.0</sld:CssParameter>
-                                        </sld:Stroke>
-                                    </sld:Mark>
-                                    <sld:Size>3.0</sld:Size>
-                                </sld:Graphic>
-                            </sld:GraphicFill>
-                            <sld:CssParameter name="fill">#DD6E00</sld:CssParameter>
-                            <sld:CssParameter name="fill-opacity">0.5</sld:CssParameter>
+                            <sld:CssParameter name="fill">#E0CCC0</sld:CssParameter>
                         </sld:Fill>
                         <sld:Stroke>
                             <sld:CssParameter name="stroke">#0078FF</sld:CssParameter>
+                            <sld:CssParameter name="stroke-width">0.1</sld:CssParameter>
+                            <sld:CssParameter name="stroke-dasharray">2.0</sld:CssParameter>
                         </sld:Stroke>
                     </sld:PolygonSymbolizer>
                 </sld:Rule>
@@ -176,5 +146,3 @@
         </sld:UserStyle>
     </sld:UserLayer>
 </sld:StyledLayerDescriptor>
-
-

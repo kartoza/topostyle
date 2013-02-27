@@ -76,7 +76,8 @@
           <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
           <sld:LineSymbolizer>
             <sld:Stroke>
-              <sld:CssParameter name="stroke-dasharray">0.15</sld:CssParameter>
+              <sld:CssParameter name="stroke-width">0.15</sld:CssParameter>
+              <sld:CssParameter name="stroke-dasharray">1 0.15</sld:CssParameter>
             </sld:Stroke>
           </sld:LineSymbolizer>
         </sld:Rule>
