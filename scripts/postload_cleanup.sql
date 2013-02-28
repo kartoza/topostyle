@@ -252,6 +252,327 @@ DROP TABLE topoarea;
 DROP TABLE hypselevationlinesm;
 
 
+--Creating an index on all the columns used as filters.
+
+CREATE INDEX barrierline_feat_type_idx ON barrierline USING btree;
+
+CREATE INDEX airtransportarea_feat_type_idx ON airtransportarea (feat_type);
+
+CREATE INDEX artificialsurfacearea_feat_type_idx ON artificialsurfacearea (feat_type);
+
+CREATE INDEX artificialsurfaceline_feat_type_idx ON artificialsurfaceline (feat_type);
+
+CREATE INDEX artificialsurfacepoint_feat_type_idx ON artificialsurfacepoint (feat_type);
+
+CREATE INDEX boundaryarearea_feat_type_idx ON boundaryarearea (feat_type);
+
+CREATE INDEX boundarylineline_feat_type_idx ON boundarylineline (feat_type);
+
+CREATE INDEX buildingarea_feat_type_idx ON buildingarea (feat_type);
+
+CREATE INDEX buildingpoint_feat_type_idx ON buildingpoint (feat_type);
+
+CREATE INDEX coastalarea_feat_type_idx ON coastalarea (feat_type);
+
+CREATE INDEX coastalline_feat_type_idx ON coastalline (feat_type);
+
+CREATE INDEX controlpointpoint_feat_type_idx ON controlpointpoint (feat_type);
+
+CREATE INDEX drainagelineline_feat_type_idx ON drainagelineline (feat_type);
+
+CREATE INDEX inlandwaterarea_feat_type_idx ON inlandwaterarea (feat_type);
+
+CREATE INDEX islandarea_feat_type_idx ON islandarea (feat_type);
+
+CREATE INDEX landusearea_feat_type_idx ON landusearea (feat_type);
+
+CREATE INDEX landuseline_feat_type_idx ON landuseline (feat_type);
+
+CREATE INDEX magneticline_feat_type_idx ON magneticline (feat_type);
+
+CREATE INDEX magneticpoint_feat_type_idx ON magneticpoint (feat_type);
+
+CREATE INDEX navigationalaidpoint_feat_type_idx ON navigationalaidpoint (feat_type);
+
+CREATE INDEX railwayarea_feat_type_idx ON railwayarea (feat_type);
+
+CREATE INDEX railwayline_feat_type_idx ON railwayline (feat_type);
+
+CREATE INDEX railwaypoint_feat_type_idx ON railwaypoint (feat_type);
+
+CREATE INDEX reliefline_feat_type_idx ON reliefline (feat_type);
+
+CREATE INDEX reliefpoint_feat_type_idx ON reliefpoint (feat_type);
+
+CREATE INDEX riverarea_feat_type_idx ON riverarea (feat_type);
+
+CREATE INDEX riverline_feat_type_idx ON riverline (feat_type);
+
+CREATE INDEX roadline_feat_type_idx ON roadline (feat_type);
+
+CREATE INDEX structurearea_feat_type_idx ON structurearea (feat_type);
+
+CREATE INDEX structureline_feat_type_idx ON structureline (feat_type);
+
+CREATE INDEX structurepoint_feat_type_idx ON structurepoint (feat_type);
+
+CREATE INDEX topoareaarea_feat_type_idx ON topoareaarea (feat_type);
+
+CREATE INDEX topolineline_feat_type_idx ON topolineline (feat_type);
+
+CREATE INDEX topopointpoint_feat_type_idx ON topopointpoint (feat_type);
+
+CREATE INDEX vegetationarea_feat_type_idx ON vegetationarea (feat_type);
+
+CREATE INDEX vegetationline_feat_type_idx ON vegetationline (feat_type);
+
+CREATE INDEX vegetationpoint_feat_type_idx ON vegetationpoint (feat_type);
+
+CREATE INDEX watersourcepoint_feat_type_idx ON watersourcepoint (feat_type);
+
+
+--Creating hashed index on the geom to optimise perfomance and searching and then create a cluster for each individual table.
+
+CREATE INDEX airtransportarea_geohash_index ON airtransportarea (ST_GeoHash(geom));
+
+CLUSTER airtransportarea USING airtransportarea_geohash_index;
+
+--
+CREATE INDEX artificialsurfacearea_geohash_index ON artificialsurfacearea (ST_GeoHash(geom));
+
+CLUSTER artificialsurfacearea USING artificialsurfacearea_geohash_index;
+
+--
+CREATE INDEX artificialsurfaceline_geohash_index ON artificialsurfaceline (ST_GeoHash(geom));
+
+CLUSTER artificialsurfaceline USING artificialsurfaceline_geohash_index;
+
+--
+
+CREATE INDEX artificialsurfacepoint_geohash_index ON artificialsurfacepoint (ST_GeoHash(geom));
+
+CLUSTER artificialsurfacepoint USING artificialsurfacepoint_geohash_index;
+
+--
+CREATE INDEX barrierline_geohash_index ON barrierline (ST_GeoHash(geom));
+
+CLUSTER barrierline USING barrierline_geohash_index;
+
+--
+CREATE INDEX boundarylineline_geohash_index ON boundarylineline (ST_GeoHash(geom));
+
+CLUSTER boundarylineline USING boundarylineline_geohash_index;
+
+--
+CREATE INDEX buildingarea_geohash_index ON buildingarea (ST_GeoHash(geom));
+
+CLUSTER buildingarea USING buildingarea_geohash_index;
+
+--
+CREATE INDEX buildingpoint_geohash_index ON buildingpoint (ST_GeoHash(geom));
+
+CLUSTER buildingpoint USING buildingpoint_geohash_index;
+
+--
+CREATE INDEX coastalarea_geohash_index ON coastalarea (ST_GeoHash(geom));
+
+CLUSTER coastalarea USING coastalarea_geohash_index;
+
+--
+CREATE INDEX coastalline_geohash_index ON coastalline (ST_GeoHash(geom));
+
+CLUSTER coastalline USING coastalline_geohash_index;
+
+--
+CREATE INDEX controlpointpoint_geohash_index ON controlpointpoint (ST_GeoHash(geom));
+
+CLUSTER controlpointpoint USING controlpointpoint_geohash_index;
+
+--
+CREATE INDEX drainagelineline_geohash_index ON drainagelineline (ST_GeoHash(geom));
+
+CLUSTER drainagelineline USING drainagelineline_geohash_index;
+
+--
+CREATE INDEX inlandwaterarea_geohash_index ON inlandwaterarea (ST_GeoHash(geom));
+
+CLUSTER inlandwaterarea USING inlandwaterarea_geohash_index;
+
+--
+CREATE INDEX islandarea_geohash_index ON islandarea (ST_GeoHash(geom));
+
+CLUSTER islandarea USING islandarea_geohash_index;
+
+--
+CREATE INDEX landusearea_geohash_index ON landusearea (ST_GeoHash(geom));
+
+CLUSTER landusearea USING landusearea_geohash_index;
+
+--
+CREATE INDEX landuseline_geohash_index ON landuseline (ST_GeoHash(geom));
+
+CLUSTER landuseline USING landuseline_geohash_index;
+
+--
+CREATE INDEX magneticline_geohash_index ON magneticline (ST_GeoHash(geom));
+
+CLUSTER magneticline USING magneticline_geohash_index;
+
+--
+CREATE INDEX magneticpoint_geohash_index ON magneticpoint (ST_GeoHash(geom));
+
+CLUSTER magneticpoint USING magneticpoint_geohash_index;
+
+--
+CREATE INDEX navigationalaidpoint_geohash_index ON navigationalaidpoint (ST_GeoHash(geom));
+
+CLUSTER navigationalaidpoint USING navigationalaidpoint_geohash_index;
+
+--
+CREATE INDEX railwayarea_geohash_index ON railwayarea (ST_GeoHash(geom));
+
+CLUSTER railwayarea USING railwayarea_geohash_index;
+
+--
+CREATE INDEX railwayline_geohash_index ON railwayline (ST_GeoHash(geom));
+
+CLUSTER railwayline USING railwayline_geohash_index;
+
+--
+CREATE INDEX railwaypoint_geohash_index ON railwaypoint (ST_GeoHash(geom));
+
+CLUSTER railwaypoint USING railwaypoint_geohash_index;
+
+--
+CREATE INDEX reliefline_geohash_index ON reliefline (ST_GeoHash(geom));
+
+CLUSTER reliefline USING reliefline_geohash_index;
+
+--
+CREATE INDEX reliefpoint_geohash_index ON reliefpoint (ST_GeoHash(geom));
+
+CLUSTER reliefpoint USING reliefpoint_geohash_index;
+
+--
+CREATE INDEX riverarea_geohash_index ON riverarea (ST_GeoHash(geom));
+
+CLUSTER riverarea USING riverarea_geohash_index;
+
+--
+CREATE INDEX riverline_geohash_index ON riverline (ST_GeoHash(geom));
+
+CLUSTER riverline USING riverline_geohash_index;
+
+--
+CREATE INDEX roadline_geohash_index ON roadline (ST_GeoHash(geom));
+
+CLUSTER roadline USING roadline_geohash_index;
+
+--
+CREATE INDEX structurearea_geohash_index ON structurearea (ST_GeoHash(geom));
+
+CLUSTER structurearea USING structurearea_geohash_index;
+
+--
+CREATE INDEX structureline_geohash_index ON structureline (ST_GeoHash(geom));
+
+CLUSTER structureline USING structureline_geohash_index;
+
+--
+CREATE INDEX structurepoint_geohash_index ON structurepoint (ST_GeoHash(geom));
+
+CLUSTER structurepoint USING structurepoint_geohash_index;
+
+--
+CREATE INDEX topoareaarea_geohash_index ON topoareaarea (ST_GeoHash(geom));
+
+CLUSTER topoareaarea USING topoareaarea_geohash_index;
+
+--
+CREATE INDEX topolineline_geohash_index ON topolineline (ST_GeoHash(geom));
+
+CLUSTER topolineline USING topolineline_geohash_index;
+
+--
+CREATE INDEX topopointpoint_geohash_index ON topopointpoint (ST_GeoHash(geom));
+
+CLUSTER topopointpoint USING topopointpoint_geohash_index;
+
+--
+CREATE INDEX vegetationarea_geohash_index ON vegetationarea (ST_GeoHash(geom));
+
+CLUSTER vegetationarea USING vegetationarea_geohash_index;
+
+--
+CREATE INDEX vegetationline_geohash_index ON vegetationline (ST_GeoHash(geom));
+
+CLUSTER vegetationline USING vegetationline_geohash_index;
+
+--
+CREATE INDEX vegetationpoint_geohash_index ON vegetationpoint (ST_GeoHash(geom));
+
+CLUSTER vegetationpoint USING vegetationpoint_geohash_index;
+
+--
+CREATE INDEX watersourcepoint_geohash_index ON watersourcepoint (ST_GeoHash(geom));
+
+CLUSTER watersourcepoint USING watersourcepoint_geohash_index;
+
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
