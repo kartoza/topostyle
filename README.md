@@ -47,6 +47,12 @@ You will see the current version of the map, not necessarily with the latest sty
 
 **Bonus:** The 'Imagery' layer on 1Map is the NGI aerial photography for the whole country. It's great to switch that on below the topo layer and make the topo layer a little transparent. 
 
+Using the layer
+---------------
+You may use the layer as published by the 1Map service in your own web apps and desktop GIS but only under these conditions:
+1. You attribute the layer correctly according to the licence above.
+2. You use the cached layer and not the normal WMS layer. i.e. use the 'afrispatial:NGI' layer available at http://www.onemap.co.za/geoserver/gwc/service/wms?TILED=true
+
 The 'NGI' layer on 1Map
 =======================
 
@@ -104,6 +110,7 @@ You should get something like this...
 
 Workflow
 ========
+1. Clone the repository and create a branch for your development work, preferably.
 1. Copy the UserStyle element from the SLD(s) of interest into the appropriate 'NamedLayer' elements in an xml document as in docs/getmap_withlocalstyle.xml
 2. Make your desired changes
 3. POST with curl and test

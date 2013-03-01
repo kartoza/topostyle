@@ -114,37 +114,37 @@ DROP column reference_;
 
 --In the database exist  layers which contain the same data hence the need to merge them into one layer.
 
-INSERT INTO airtransportarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM airtransport
+INSERT INTO airtransportarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM airtransport;
 
-INSERT INTO boundarylineline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM boundaryline
+INSERT INTO boundarylineline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM boundaryline;
 
-INSERT INTO boundaryareaarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM boundaryarea
+INSERT INTO boundaryareaarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM boundaryarea;
 
-INSERT INTO controlpointpoint(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM controlpoint
+INSERT INTO controlpointpoint(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM controlpoint;
 
-INSERT INTO drainagelineline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM drainageline
+INSERT INTO drainagelineline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM drainageline;
 
-INSERT INTO roadline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM road
+INSERT INTO roadline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM road;
 
-INSERT INTO topolineline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM topoline
+INSERT INTO topolineline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM topoline;
 
-INSERT INTO topopointpoint(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM topopoint
+INSERT INTO topopointpoint(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM topopoint;
 
-INSERT INTO topoareaarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM topoarea
+INSERT INTO topoareaarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM topoarea;
 
-INSERT INTO topoline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM topoarealine
+INSERT INTO topoline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM topoarealine;
 
-INSERT INTO inlandwaterarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM inlandwater
+INSERT INTO inlandwaterarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM inlandwater;
 
-INSERT INTO boundarylineline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM boundaryline
+INSERT INTO boundarylineline(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM boundaryline;
 
-INSERT INTO boundaryareaarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM boundaryarea
+INSERT INTO boundaryareaarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM boundaryarea;
 
-INSERT INTO reliefpoint(feat_type,height,geom) SELECT feat_type_,height,geom FROM hypselevationpointsm
+INSERT INTO reliefpoint(feat_type,height,geom) SELECT feat_type_,height,geom FROM hypselevationpointsm;
 
-INSERT INTO reliefline(feat_type,height,geom) SELECT feat_type_,height,geom FROM hypselevationlinesm
+INSERT INTO reliefline(feat_type,height,geom) SELECT feat_type_,height,geom FROM hypselevationlinesm;
 
-INSERT INTO inlandwaterarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM flightplanarea
+INSERT INTO inlandwaterarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM flightplanarea;
 
 --Deleting data FROM TABLEs with geometry which is Null.
 
@@ -252,86 +252,95 @@ DROP TABLE topoarea;
 DROP TABLE hypselevationlinesm;
 
 
---Creating an index on all the columns used as filters.
+--Creating an index on all the columns used as filters in styles.
 
-CREATE INDEX barrierline_feat_type_idx ON barrierline USING btree;
+--feat_type
 
-CREATE INDEX airtransportarea_feat_type_idx ON airtransportarea (feat_type);
+CREATE INDEX barrierline_feat_type_idx ON barrierline  USING btree (feat_type);
 
-CREATE INDEX artificialsurfacearea_feat_type_idx ON artificialsurfacearea (feat_type);
+CREATE INDEX airtransportarea_feat_type_idx ON airtransportarea  USING btree (feat_type);
 
-CREATE INDEX artificialsurfaceline_feat_type_idx ON artificialsurfaceline (feat_type);
+CREATE INDEX artificialsurfacearea_feat_type_idx ON artificialsurfacearea  USING btree (feat_type);
 
-CREATE INDEX artificialsurfacepoint_feat_type_idx ON artificialsurfacepoint (feat_type);
+CREATE INDEX artificialsurfaceline_feat_type_idx ON artificialsurfaceline  USING btree (feat_type);
 
-CREATE INDEX boundaryarearea_feat_type_idx ON boundaryarearea (feat_type);
+CREATE INDEX artificialsurfacepoint_feat_type_idx ON artificialsurfacepoint  USING btree (feat_type);
 
-CREATE INDEX boundarylineline_feat_type_idx ON boundarylineline (feat_type);
+CREATE INDEX boundaryareaarea_feat_type_idx ON boundaryareaarea  USING btree (feat_type);
 
-CREATE INDEX buildingarea_feat_type_idx ON buildingarea (feat_type);
+CREATE INDEX boundarylineline_feat_type_idx ON boundarylineline  USING btree (feat_type);
 
-CREATE INDEX buildingpoint_feat_type_idx ON buildingpoint (feat_type);
+CREATE INDEX buildingarea_feat_type_idx ON buildingarea  USING btree (feat_type);
 
-CREATE INDEX coastalarea_feat_type_idx ON coastalarea (feat_type);
+CREATE INDEX buildingpoint_feat_type_idx ON buildingpoint  USING btree (feat_type);
 
-CREATE INDEX coastalline_feat_type_idx ON coastalline (feat_type);
+CREATE INDEX coastalarea_feat_type_idx ON coastalarea  USING btree (feat_type);
 
-CREATE INDEX controlpointpoint_feat_type_idx ON controlpointpoint (feat_type);
+CREATE INDEX coastalline_feat_type_idx ON coastalline  USING btree (feat_type);
 
-CREATE INDEX drainagelineline_feat_type_idx ON drainagelineline (feat_type);
+CREATE INDEX controlpointpoint_feat_type_idx ON controlpointpoint  USING btree (feat_type);
 
-CREATE INDEX inlandwaterarea_feat_type_idx ON inlandwaterarea (feat_type);
+CREATE INDEX drainagelineline_feat_type_idx ON drainagelineline  USING btree (feat_type);
 
-CREATE INDEX islandarea_feat_type_idx ON islandarea (feat_type);
+CREATE INDEX inlandwaterarea_feat_type_idx ON inlandwaterarea  USING btree (feat_type);
 
-CREATE INDEX landusearea_feat_type_idx ON landusearea (feat_type);
+CREATE INDEX islandarea_feat_type_idx ON islandarea  USING btree (feat_type);
 
-CREATE INDEX landuseline_feat_type_idx ON landuseline (feat_type);
+CREATE INDEX landusearea_feat_type_idx ON landusearea  USING btree (feat_type);
 
-CREATE INDEX magneticline_feat_type_idx ON magneticline (feat_type);
+CREATE INDEX landuseline_feat_type_idx ON landuseline  USING btree (feat_type);
 
-CREATE INDEX magneticpoint_feat_type_idx ON magneticpoint (feat_type);
+CREATE INDEX magneticline_feat_type_idx ON magneticline  USING btree (feat_type);
 
-CREATE INDEX navigationalaidpoint_feat_type_idx ON navigationalaidpoint (feat_type);
+CREATE INDEX magneticpoint_feat_type_idx ON magneticpoint  USING btree (feat_type);
 
-CREATE INDEX railwayarea_feat_type_idx ON railwayarea (feat_type);
+CREATE INDEX navigationalaidpoint_feat_type_idx ON navigationalaidpoint  USING btree (feat_type);
 
-CREATE INDEX railwayline_feat_type_idx ON railwayline (feat_type);
+CREATE INDEX railwayarea_feat_type_idx ON railwayarea  USING btree (feat_type);
 
-CREATE INDEX railwaypoint_feat_type_idx ON railwaypoint (feat_type);
+CREATE INDEX railwayline_feat_type_idx ON railwayline  USING btree (feat_type);
 
-CREATE INDEX reliefline_feat_type_idx ON reliefline (feat_type);
+CREATE INDEX railwaypoint_feat_type_idx ON railwaypoint  USING btree (feat_type);
 
-CREATE INDEX reliefpoint_feat_type_idx ON reliefpoint (feat_type);
+CREATE INDEX reliefline_feat_type_idx ON reliefline  USING btree (feat_type);
 
-CREATE INDEX riverarea_feat_type_idx ON riverarea (feat_type);
+CREATE INDEX reliefpoint_feat_type_idx ON reliefpoint  USING btree (feat_type);
 
-CREATE INDEX riverline_feat_type_idx ON riverline (feat_type);
+CREATE INDEX riverarea_feat_type_idx ON riverarea  USING btree (feat_type);
 
-CREATE INDEX roadline_feat_type_idx ON roadline (feat_type);
+CREATE INDEX riverline_feat_type_idx ON riverline  USING btree (feat_type);
 
-CREATE INDEX structurearea_feat_type_idx ON structurearea (feat_type);
+CREATE INDEX roadline_feat_type_idx ON roadline  USING btree (feat_type);
 
-CREATE INDEX structureline_feat_type_idx ON structureline (feat_type);
+CREATE INDEX structurearea_feat_type_idx ON structurearea  USING btree (feat_type);
 
-CREATE INDEX structurepoint_feat_type_idx ON structurepoint (feat_type);
+CREATE INDEX structureline_feat_type_idx ON structureline  USING btree (feat_type);
 
-CREATE INDEX topoareaarea_feat_type_idx ON topoareaarea (feat_type);
+CREATE INDEX structurepoint_feat_type_idx ON structurepoint  USING btree (feat_type);
 
-CREATE INDEX topolineline_feat_type_idx ON topolineline (feat_type);
+CREATE INDEX topoareaarea_feat_type_idx ON topoareaarea  USING btree (feat_type);
 
-CREATE INDEX topopointpoint_feat_type_idx ON topopointpoint (feat_type);
+CREATE INDEX topolineline_feat_type_idx ON topolineline  USING btree (feat_type);
 
-CREATE INDEX vegetationarea_feat_type_idx ON vegetationarea (feat_type);
+CREATE INDEX topopointpoint_feat_type_idx ON topopointpoint  USING btree (feat_type);
 
-CREATE INDEX vegetationline_feat_type_idx ON vegetationline (feat_type);
+CREATE INDEX vegetationarea_feat_type_idx ON vegetationarea  USING btree (feat_type);
 
-CREATE INDEX vegetationpoint_feat_type_idx ON vegetationpoint (feat_type);
+CREATE INDEX vegetationline_feat_type_idx ON vegetationline  USING btree (feat_type);
 
-CREATE INDEX watersourcepoint_feat_type_idx ON watersourcepoint (feat_type);
+CREATE INDEX vegetationpoint_feat_type_idx ON vegetationpoint  USING btree (feat_type);
 
+CREATE INDEX watersourcepoint_feat_type_idx ON watersourcepoint  USING btree (feat_type);
 
---Creating hashed index on the geom to optimise perfomance and searching and then create a cluster for each individual table.
+--tag
+CREATE INDEX boundaryareaarea_tag_idx ON boundaryareaarea USING btree (tag);
+
+CREATE INDEX topopointpoint_tag_idx ON topopointpoint USING btree (tag);
+
+CREATE INDEX airtransportarea_tag_idx ON airtransportarea USING btree (tag);
+
+--Creating hashed index on the geom to optimise perfomance and searching and then cluster by the hash for each individual table, 
+--which moves records that are geographically close together, closer together on disk.
 
 CREATE INDEX airtransportarea_geohash_index ON airtransportarea (ST_GeoHash(geom));
 
