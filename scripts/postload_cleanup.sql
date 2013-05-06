@@ -112,6 +112,18 @@ ALTER TABLE hypselevationlinesm  DROP COLUMN job_nr, DROP column cuid,DROP colum
 DROP column capture_me,DROP column entity_nam,DROP column geometry_t,DROP column old_gdo_gi,DROP column locked_fla,DROP column sdo_gtype,
 DROP column reference_;
 
+--checking to see how many points exist in a geometry(multipoint)
+
+SELECT COUNT(CASE WHEN ST_NumGeometries(geom) > 1 THEN 1 END) AS multi_geom,
+       COUNT(geom) AS total_geom
+FROM hypselevationpointsm;
+
+
+--to convert the multi geometry to single geometry use the following. This assumes that each geometry already actually have only one point
+
+ALTER TABLE hypselevationpointsm
+    ALTER COLUMN geom TYPE geometry(Point,4326) USING ST_GeometryN(geom, 1);
+
 --In the database exist  layers which contain the same data hence the need to merge them into one layer.
 
 INSERT INTO airtransportarea(tag,feat_type,geom_type,create_dat,geom) SELECT tag,feat_type,geom_type,create_dat,geom FROM airtransport;
@@ -200,18 +212,6 @@ DELETE FROM vegetationpoint WHERE geom IS NULL;
 
 DELETE FROM watersourcepoint WHERE geom IS NULL;
 
-
---checking to see how many points exist in a geometry(multipoint)
-
-SELECT COUNT(CASE WHEN ST_NumGeometries(geom) > 1 THEN 1 END) AS multi_geom,
-       COUNT(geom) AS total_geom
-FROM hypselevationpointsm;
-
-
---to convert the multi geometry to single geometry use the following. This assumes that each geometry already actually have only one point
-
-ALTER TABLE hypselevationpointsm
-    ALTER COLUMN geom TYPE geometry(Point,4326) USING ST_GeometryN(geom, 1);
 
 --Dropping Tables not needed since the merger of data:
 

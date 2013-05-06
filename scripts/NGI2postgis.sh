@@ -25,7 +25,7 @@
 # don't forget to run postload_cleanup.sql after this, before publishing and applying topostyle styles. 
 
 # Drop the database if it already exists!
-dropdb -p 5432 ngi50k
+dropdb -p 5433 ngi50k
 
 # Now recreate the database, here from a template that already has postgis loaded
 createdb -p 5433 -T postgis_template ngi50k
