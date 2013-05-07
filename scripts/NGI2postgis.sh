@@ -22,6 +22,10 @@
 # Gavin Fleming Dec 2010, Jan 2013
 # Lines prefixed with '#' are comments.
 
+# TODO
+# speedup: accumulate list of layers created and only index them at the end
+#    i.e. no -I option in shp2pgsql, so that index isn't updated on each load.
+
 # don't forget to run postload_cleanup.sql after this, before publishing and applying topostyle styles. 
 
 DB='ngi10k'
@@ -56,7 +60,7 @@ MYSTART=`date`
 # reproducable list of every command that was run to import data
 echo "" > commandlog.txt
 
-for MYPATH in `find $DATAPATH -name *.shp`
+for MYPATH in `find $DATAPATH -name "*.shp"`
 
 do
   # Print the name of the file we are currently working on to screen
@@ -70,10 +74,10 @@ do
   # Now we want to get rid of the Degree cell number prefix from the front
   # of the file name so that 3229_VEGETATION_POINT_2006_04 will be
   # changed to VEGETATION_POINT_2006_04. The line below also accounts for
-  # when we have a 'two cell' layer like: 3317BB_3318AA_ARTIFICIAL_SURFACE_AREA_2006_06
+  # when we have a 'two (or three) cell' layer like: 3317BB_3318AA_ARTIFICIAL_SURFACE_AREA_2006_06
   # which afterwards will become ARTIFICIAL_SURFACE_AREA_2006_06.
   # The result of this step is stored in the variable 'LAYER'
-  LAYER=`echo $FILE | sed 's/^[0-9]*..\_//g' | sed 's/^[0-9]*..\_//g' | sed 's/^[0-9]*\_//g'`
+  LAYER=`echo $FILE | sed 's/^[0-9]*..\_//g' | sed 's/^[0-9]*..\_//g' | sed 's/^[0-9]*..\_//g'`
 
   # Now lets get rid of that date at the end. So ARTIFICIAL_SURFACE_AREA_2006_06
   # will become ARTIFICIAL_SURFACE_AREA. This again be stored as 'LAYER'
@@ -95,6 +99,7 @@ do
   # Now find out the directory name from the original file name. So
   # if we had ./3229/3229_VEGETATION_POINT_2006_04.shp to start with,
   # DIR will store ./3229/ afterwards.
+  # this is just information, it's not used elsewhere
   DIR=`echo $MYPATH | sed 's/....\_.*$//g'`
 
   # The next three lines just print the result of the above steps to
@@ -105,13 +110,16 @@ do
 
   # Now we want to see if our database already has a table for our layer
   # (e.g. artificialsurfacearea)
-  if test `echo "\d" | psql -p $PORT $DB | grep -o "${LAYER} "`
+  TESTSTRING=`echo "\d" | psql -p $PORT "$DB" | grep -o "${LAYER} "`
+  echo "Teststring : $TESTSTRING"
+  if test $TESTSTRING
   then
     # Ok we found the table already exists so the '-a' option in
     # shp2pgsql tells shp2pgsql to append the data to the existing table
     # -s 4326 tells it the CRS should be lat long / wgs84
     # -W UTF-8 tells it to load text data as UTF-8 rather than unicode
     echo "Database table exists, appending..."
+
     shp2pgsql -a -s 4326 -D -W LATIN1 $MYPATH $LAYER 2>>/tmp/ngiloaders2plog | psql -p $PORT -q -d $DB  >>/tmp/ngiloaderpglog 2>&1
     echo "shp2pgsql -a -s 4326 -D -W LATIN1 $MYPATH $LAYER 2>/tmp/ngiloaderlog | psql -p $PORT -q -d $DB  >/dev/null 2>&1" >> commandlog.txt
   else
