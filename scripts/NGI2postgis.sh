@@ -24,14 +24,18 @@
 
 # don't forget to run postload_cleanup.sql after this, before publishing and applying topostyle styles. 
 
+DB='ngi10k'
+PORT=5433
+DATAPATH='.'
+
 # Drop the database if it already exists!
-dropdb -p 5433 ngi50k
+dropdb -p $PORT $DB
 
 # Now recreate the database, here from a template that already has postgis loaded
-createdb -p 5433 -T postgis_template ngi50k
+createdb -p $PORT -T postgis_template $DB
 
 # If you don't have a template, run this. It is the new way of PostGIS-enabling a PostgreSQL database since PostgreSQL 9.1 and PostGIS 2.0.
-# psql -d ngi50k -c "CREATE EXTENSION postgis;"
+# psql -d $DB -c "CREATE EXTENSION postgis;"
 
 # We assume you have a directory containing many subdirectories labeled
 # after a Degree Square e.g. 2218, 2219 etc directories, e.g. the DVDs from NGI
@@ -52,7 +56,7 @@ MYSTART=`date`
 # reproducable list of every command that was run to import data
 echo "" > commandlog.txt
 
-for MYPATH in `find . -name *.shp`
+for MYPATH in `find $DATAPATH -name *.shp`
 
 do
   # Print the name of the file we are currently working on to screen
@@ -101,21 +105,21 @@ do
 
   # Now we want to see if our database already has a table for our layer
   # (e.g. artificialsurfacearea)
-  if test `echo "\d" | psql -p 5433 ngi50k | grep -o "${LAYER} "`
+  if test `echo "\d" | psql -p $PORT $DB | grep -o "${LAYER} "`
   then
     # Ok we found the table already exists so the '-a' option in
     # shp2pgsql tells shp2pgsql to append the data to the existing table
     # -s 4326 tells it the CRS should be lat long / wgs84
     # -W UTF-8 tells it to load text data as UTF-8 rather than unicode
     echo "Database table exists, appending..."
-    shp2pgsql -a -s 4326 -D -W LATIN1 $MYPATH $LAYER 2>>/tmp/ngiloaders2plog | psql -p 5433 -q -d ngi50k  >>/tmp/ngiloaderpglog 2>&1
-    echo "shp2pgsql -a -s 4326 -D -W LATIN1 $MYPATH $LAYER 2>/tmp/ngiloaderlog | psql -p 5433 -q -d ngi50k  >/dev/null 2>&1" >> commandlog.txt
+    shp2pgsql -a -s 4326 -D -W LATIN1 $MYPATH $LAYER 2>>/tmp/ngiloaders2plog | psql -p $PORT -q -d $DB  >>/tmp/ngiloaderpglog 2>&1
+    echo "shp2pgsql -a -s 4326 -D -W LATIN1 $MYPATH $LAYER 2>/tmp/ngiloaderlog | psql -p $PORT -q -d $DB  >/dev/null 2>&1" >> commandlog.txt
   else
     # In the alternate case, the table doesnt already exist so we rather create
     # a new table named after the layer using '-c' with a spatial index '-I'
     echo "Database table does not exist, creating..."
-    shp2pgsql -I -c -s 4326 -D -W LATIN1 $MYPATH $LAYER 2>>/tmp/ngiloaders2plog | psql -p 5433 -q -d ngi50k  >>/tmp/ngiloaderpglog 2>&1
-    echo "shp2pgsql -I -c -s 4326 -D -W LATIN1 $MYPATH $LAYER 2>/tmp/ngiloaders2plog | psql -p 5433 -q -d ngi50k  >/dev/null 2>&1" >> commandlog.txt
+    shp2pgsql -I -c -s 4326 -D -W LATIN1 $MYPATH $LAYER 2>>/tmp/ngiloaders2plog | psql -p $PORT -q -d $DB  >>/tmp/ngiloaderpglog 2>&1
+    echo "shp2pgsql -I -c -s 4326 -D -W LATIN1 $MYPATH $LAYER 2>/tmp/ngiloaders2plog | psql -p $PORT -q -d $DB  >/dev/null 2>&1" >> commandlog.txt
   fi
   # Ok now we loop on through to the next layer until we are all done...
 done
