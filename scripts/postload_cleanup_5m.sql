@@ -55,5 +55,23 @@ INSERT INTO reliefline(feat_type,height,geom) SELECT feat_type_,height,geom FROM
 
 INSERT INTO reliefline(feat_type,height,geom) SELECT feat_type_,height,geom FROM hypselevationlines;
 
+-- spatial index
+-- assume loading process created gist index on geometry, otherwise add manually.
+
+-- create indexes on fields used in style filters
+CREATE INDEX reliefpoint_feat_type_idx ON reliefpoint USING btree (feat_type);
+
+CREATE INDEX reliefline_feat_type_idx ON reliefline USING btree (feat_type);
+
+--Creating hashed index on the geom to optimise perfomance and searching and then cluster by the hash for each individual table, 
+--which moves records that are geographically close together, closer together on disk.
+
+CREATE INDEX reliefpoint_geohash_index ON reliefpoint (ST_GeoHash(geom));
+
+CLUSTER reliefpoint USING reliefpoint_geohash_index;
+
+CREATE INDEX reliefline_geohash_index ON reliefline (ST_GeoHash(geom));
+
+CLUSTER reliefline USING reliefline_geohash_index;
 
 
