@@ -9,8 +9,8 @@
       <rule filter="feat_type = 'LOOK OUT TOWER'" symbol="3" label="Look out tower"/>
       <rule filter=" &quot;feat_type&quot;  =  'TUNNEL ENTRANCE' " symbol="4" label="Tunnel entrance"/>
       <rule filter=" &quot;feat_type&quot;  =  'TELECOM TOWER' " symbol="5" label="Telecom Tower"/>
-      <rule filter=" &quot;feat_type&quot;  =  'MICROWAVE TOWER' " symbol="6" label="Microwave Tower"/>
-      <rule filter=" &quot;feat_type&quot;  =  'COOLING TOWER' " symbol="7" label="Cooling tower"/>
+      <rule filter=" &quot;feat_type&quot;  =  'MICROWAVE TOWER' " symbol="6" label="Microwave tower"/>
+      <rule filter=" &quot;feat_type&quot;  =  'COOLING TOWER' " symbol="7" label="Cooling Tower"/>
     </rules>
     <symbols>
       <symbol outputUnit="MM" alpha="1" type="marker" name="0">
@@ -161,7 +161,7 @@
     <property key="labeling/dist" value="0.4"/>
     <property key="labeling/distInMapUnits" value="false"/>
     <property key="labeling/enabled" value="true"/>
-    <property key="labeling/fieldName" value="feat_type"/>
+    <property key="labeling/fieldName" value="case when &quot;feat_type&quot; in ('LOOK OUT TOWER', 'MINE SHAFT', 'SILO', 'STATION') then  &quot;feat_type&quot;   &#xa;else null&#xa;end  "/>
     <property key="labeling/fontFamily" value="Ubuntu"/>
     <property key="labeling/fontItalic" value="false"/>
     <property key="labeling/fontSize" value="6"/>
@@ -170,7 +170,7 @@
     <property key="labeling/fontUnderline" value="false"/>
     <property key="labeling/fontWeight" value="50"/>
     <property key="labeling/formatNumbers" value="false"/>
-    <property key="labeling/isExpression" value="false"/>
+    <property key="labeling/isExpression" value="true"/>
     <property key="labeling/labelPerPart" value="false"/>
     <property key="labeling/mergeLines" value="false"/>
     <property key="labeling/minFeatureSize" value="0"/>
