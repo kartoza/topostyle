@@ -57,7 +57,7 @@ createdb -p $PORT -T postgis_template $DB
 MYSTART=`date`
 
 # We will use this file (commandlog.txt) to keep a
-# reproducable list of every command that was run to import data
+# reproducible list of every command that was run to import data
 echo "" > commandlog.txt
 
 for MYPATH in `find $DATAPATH -name "*.shp"`
@@ -90,6 +90,8 @@ do
 
   # If there are still any numbers left in our name (there shouldnt be)
   # lets get rid of them.
+  # BEWARE: RELIEF10 is 5m contours / 1in10k spot heights so the 10 should NOT be removed. This is OK if you move any RELIEF10 files out. 
+  # I have a separate dir for the 1:10000 data (5m contours and spot heights)
   LAYER=`echo $LAYER | sed 's/[0-9]//g'`
 
   # Now lets convert the name to lower case so that ARTIFICIALSURFACEAREA

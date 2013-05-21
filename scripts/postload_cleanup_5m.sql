@@ -55,19 +55,23 @@ INSERT INTO reliefline(feat_type,height,geom) SELECT feat_type_,height,geom FROM
 
 INSERT INTO reliefline(feat_type,height,geom) SELECT feat_type_,height,geom FROM hypselevationlines;
 
---14 may 2013 cleaning out the 5m contours and reliefpoint
+-- spatial index
+-- assume loading process created gist index on geometry, otherwise add manually.
 
-UPDATE reliefpoint SET feat_type ='spot height';
+-- create indexes on fields used in style filters
+CREATE INDEX reliefpoint_feat_type_idx ON reliefpoint USING btree (feat_type);
 
-UPDATE reliefline SET feat_type='Contour' WHERE feat_type='CONTOUR';
+CREATE INDEX reliefline_feat_type_idx ON reliefline USING btree (feat_type);
 
-UPDATE reliefline SET feat_type='Contour' WHERE feat_type='251';
+--Creating hashed index on the geom to optimise perfomance and searching and then cluster by the hash for each individual table, 
+--which moves records that are geographically close together, closer together on disk.
 
-UPDATE reliefline SET feat_type='Contour' WHERE feat_type='250';
+CREATE INDEX reliefpoint_geohash_index ON reliefpoint (ST_GeoHash(geom));
 
-UPDATE reliefline SET feat_type='Depression Contour' WHERE feat_type='DEPRESSION CONTOUR';
+CLUSTER reliefpoint USING reliefpoint_geohash_index;
 
+CREATE INDEX reliefline_geohash_index ON reliefline (ST_GeoHash(geom));
 
-
+CLUSTER reliefline USING reliefline_geohash_index;
 
 
