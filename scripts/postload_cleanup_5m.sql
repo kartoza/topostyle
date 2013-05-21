@@ -55,5 +55,19 @@ INSERT INTO reliefline(feat_type,height,geom) SELECT feat_type_,height,geom FROM
 
 INSERT INTO reliefline(feat_type,height,geom) SELECT feat_type_,height,geom FROM hypselevationlines;
 
+--14 may 2013 cleaning out the 5m contours and reliefpoint
+
+UPDATE reliefpoint SET feat_type ='spot height';
+
+UPDATE reliefline SET feat_type='Contour' WHERE feat_type='CONTOUR';
+
+UPDATE reliefline SET feat_type='Contour' WHERE feat_type='251';
+
+UPDATE reliefline SET feat_type='Contour' WHERE feat_type='250';
+
+UPDATE reliefline SET feat_type='Depression Contour' WHERE feat_type='DEPRESSION CONTOUR';
+
+
+
 
 

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file is part of the topostyle project by AfriSpatial (https://github.com/AfriSpatial/topostyle) and it is licensed under a Creative Commons Attribution-ShareAlike 2.5 South Africa Licence.-->
 <StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se">
   <NamedLayer>
     <se:Name>reliefline</se:Name>
@@ -14,7 +13,7 @@
               <ogc:Literal>CONTOUR</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <se:MinScaleDenominator>1000</se:MinScaleDenominator>
+          <se:MinScaleDenominator>20000</se:MinScaleDenominator>
           <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
           <se:LineSymbolizer>
             <se:Stroke>
@@ -30,7 +29,7 @@
                         </se:Label>
                         <se:Font>
                             <se:SvgParameter name="font-family">Arial</se:SvgParameter>
-                            <se:SvgParameter name="font-size">6.0</se:SvgParameter>
+                            <se:SvgParameter name="font-size">9.0</se:SvgParameter>
                             <se:SvgParameter name="font-style">normal</se:SvgParameter>
                             <se:SvgParameter name="font-weight">normal</se:SvgParameter>
                         </se:Font>
@@ -46,6 +45,12 @@
                                 </se:Displacement>
                             </se:PointPlacement>
                         </se:LabelPlacement>
+                          <se:Halo>
+                            <se:Radius>2</se:Radius>
+                            <se:Fill>
+                                <se:SvgParameter name="fill">#FFFFFF</se:SvgParameter>
+                            </se:Fill>
+                        </se:Halo>
                         <se:Fill>
                             <se:SvgParameter name="fill">#C79B89</se:SvgParameter>
                         </se:Fill>
@@ -60,7 +65,7 @@
               <ogc:Literal>Index contours at 100m</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <se:MinScaleDenominator>1000</se:MinScaleDenominator>
+          <se:MinScaleDenominator>20000</se:MinScaleDenominator>
           <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
           <se:LineSymbolizer>
             <se:Stroke>
@@ -77,7 +82,7 @@
                         </se:Label>
                         <se:Font>
                             <se:SvgParameter name="font-family">Arial</se:SvgParameter>
-                            <se:SvgParameter name="font-size">6.0</se:SvgParameter>
+                            <se:SvgParameter name="font-size">9.0</se:SvgParameter>
                             <se:SvgParameter name="font-style">normal</se:SvgParameter>
                             <se:SvgParameter name="font-weight">normal</se:SvgParameter>
                         </se:Font>
@@ -93,6 +98,12 @@
                                 </se:Displacement>
                             </se:PointPlacement>
                         </se:LabelPlacement>
+                         <se:Halo>
+                            <se:Radius>2</se:Radius>
+                            <se:Fill>
+                                <se:SvgParameter name="fill">#FFFFFF</se:SvgParameter>
+                            </se:Fill>
+                        </se:Halo>
                         <se:Fill>
                             <se:SvgParameter name="fill">#C79B89</se:SvgParameter>
                         </se:Fill>
@@ -107,7 +118,7 @@
               <ogc:Literal>Depression contour at 20m</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <se:MinScaleDenominator>1000</se:MinScaleDenominator>
+          <se:MinScaleDenominator>20000</se:MinScaleDenominator>
           <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
           <se:LineSymbolizer>
             <se:Stroke>
@@ -134,7 +145,7 @@
                         </se:Label>
                         <se:Font>
                             <se:SvgParameter name="font-family">Arial</se:SvgParameter>
-                            <se:SvgParameter name="font-size">6.0</se:SvgParameter>
+                            <se:SvgParameter name="font-size">9.0</se:SvgParameter>
                             <se:SvgParameter name="font-style">normal</se:SvgParameter>
                             <se:SvgParameter name="font-weight">normal</se:SvgParameter>
                         </se:Font>
@@ -150,6 +161,12 @@
                                 </se:Displacement>
                             </se:PointPlacement>
                         </se:LabelPlacement>
+                         <se:Halo>
+                            <se:Radius>2</se:Radius>
+                            <se:Fill>
+                                <se:SvgParameter name="fill">#FFFFFF</se:SvgParameter>
+                            </se:Fill>
+                        </se:Halo>
                         <se:Fill>
                             <se:SvgParameter name="fill">#C79B89</se:SvgParameter>
                         </se:Fill>
@@ -164,7 +181,7 @@
               <ogc:Literal>Depression contour at 100m</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <se:MinScaleDenominator>1000</se:MinScaleDenominator>
+          <se:MinScaleDenominator>20000</se:MinScaleDenominator>
           <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
           <se:LineSymbolizer>
             <se:Stroke>
@@ -191,7 +208,7 @@
                         </se:Label>
                         <se:Font>
                             <se:SvgParameter name="font-family">Arial</se:SvgParameter>
-                            <se:SvgParameter name="font-size">6.0</se:SvgParameter>
+                            <se:SvgParameter name="font-size">9.0</se:SvgParameter>
                             <se:SvgParameter name="font-style">normal</se:SvgParameter>
                             <se:SvgParameter name="font-weight">normal</se:SvgParameter>
                         </se:Font>
@@ -207,6 +224,12 @@
                                 </se:Displacement>
                             </se:PointPlacement>
                         </se:LabelPlacement>
+                         <se:Halo>
+                            <se:Radius>2</se:Radius>
+                            <se:Fill>
+                                <se:SvgParameter name="fill">#FFFFFF</se:SvgParameter>
+                            </se:Fill>
+                        </se:Halo>
                         <se:Fill>
                             <se:SvgParameter name="fill">#C79B89</se:SvgParameter>
                         </se:Fill>

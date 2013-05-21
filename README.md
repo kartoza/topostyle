@@ -173,8 +173,8 @@ Populate an empty style
 
 >curl -v -u username:password -X PUT -H "Content-type: application/vnd.ogc.sld+xml" -d @/home/admire/Documents/workingfiles/ngi/ngistyles_sld/islandarea.sld http://1map.co.za:8080/geoserver/rest/styles/islandarea
 
-Associate a style with a layer
-------------------------------
+Associate a style with a layer, remove the enabled and associate the layer with a style so that it goes to default enabled and advertised.
+------------------------------------------------------------------------------------------------------------------------------------------
 
 >curl -v -u username:password -X PUT -H "Content-type: text/xml"  -d "<layer><defaultStyle><name>islandarea</name></defaultStyle><enabled>true</enabled></layer>" http://1map.co.za:8080/geoserver/rest/layers/quidity:islandarea
 

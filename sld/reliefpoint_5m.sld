@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- This file is part of the topostyle project by AfriSpatial (https://github.com/AfriSpatial/topostyle) and it is licensed under a Creative Commons Attribution-ShareAlike 2.5 South Africa Licence.-->
 <sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" version="1.0.0">
     <sld:UserLayer>
         <sld:LayerFeatureConstraints>
@@ -14,8 +15,7 @@
                 <sld:SemanticTypeIdentifier>simple</sld:SemanticTypeIdentifier>
                 <sld:Rule>
                     <sld:Name>Spot Height</sld:Name>
-                    <sld:MinScaleDenominator>20000.0</sld:MinScaleDenominator>
-                    <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
+                    <sld:MaxScaleDenominator>20000.0</sld:MaxScaleDenominator>
                     <sld:PointSymbolizer>
                         <sld:Graphic>
                             <sld:Mark>
@@ -24,7 +24,7 @@
                                 </sld:Fill>
                                 <sld:Stroke/>
                             </sld:Mark>
-                            <sld:Size>1</sld:Size>
+                            <sld:Size>3</sld:Size>
                         </sld:Graphic>
                     </sld:PointSymbolizer>
                     <sld:TextSymbolizer>
@@ -33,7 +33,7 @@
                         </sld:Label>
                         <sld:Font>
                             <sld:CssParameter name="font-family">Arial</sld:CssParameter>
-                            <sld:CssParameter name="font-size">7.0</sld:CssParameter>
+                            <sld:CssParameter name="font-size">8.0</sld:CssParameter>
                             <sld:CssParameter name="font-style">normal</sld:CssParameter>
                             <sld:CssParameter name="font-weight">normal</sld:CssParameter>
                         </sld:Font>
