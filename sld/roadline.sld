@@ -138,7 +138,7 @@
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-              <se:SvgParameter name="stroke-width">0.51</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1.51</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
               <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
             </se:Stroke>
@@ -146,7 +146,7 @@
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#ffffff</se:SvgParameter>
-              <se:SvgParameter name="stroke-width">0.41</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1.41</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
               <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
             </se:Stroke>
@@ -165,7 +165,7 @@
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-              <se:SvgParameter name="stroke-width">0.4</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1.4</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">round</se:SvgParameter>
               <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
             </se:Stroke>
@@ -173,7 +173,7 @@
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#ffffff</se:SvgParameter>
-              <se:SvgParameter name="stroke-width">0.3</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">1.3</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
               <se:SvgParameter name="stroke-linecap">round</se:SvgParameter>
             </se:Stroke>

@@ -28,7 +28,7 @@ Style the maps to look as close as possible to the familiar topo map sheets in t
  2. in some cases SLD v 1.0, where GeoServer has not implemented a 1.1 element. http://portal.opengeospatial.org/files/?artifact_id=1188
  3. Use GeoServer extensions (CQL filters, geometry transformations, etc) and VendorOptions where SLD is lacking.
 2. custom graphics in SVG or png formats
-3. conform to NGI published specifications where available (http://www.ngi.gov.za/index.php/Standards/standards.html). Docs in the 'specs' directory specify almost everything except layer order.
+3. conform to NGI published specifications where available (http://www.ngi.gov.za/index.php/Standards/standards.html). Docs in the 'specs' directory specify almost everything except layer order. 
 4. Look 'perfect' at and around 1:50000. Then extend to scale and generalise at smaller scales.
 5. Extend the project to other data sets, such as 5m contours, 1:250000 maps, etc. This will involve lots more advanced styling and data management including possibly generalisation. 
 
@@ -74,6 +74,8 @@ The idea is to edit the styles to improve them. Once they represent an improveme
     The layer names, field names and class values that we use map to or match those of the NGI data sets. For a list of map layers, just see the names of the SLD files. They match the database table names AND the WMS layer names. Some layers are repeated / split in the styling where we deemed necessary. Where the SLD has a number such as 'airtransportarea2.sld', it still refers to the database table "airtransportarea" but indicates that it has been published as more than one layer, each rendering different feature classes. 
 
     We have refrained from any data editing and publish the data *as is*, warts and all. As long as NGI keeps the same format, you should be able to load their next releases without breaking the map.
+
+The road style has been modified from the normal style that is in the specification of the NGI to one that does have a nice rendering effect in geoserver. The style has been tweaked a little bit to allow nice visualisation when all the layers are grouped together. The SLD has been incoperated into github.
 
 2. If you don't have the data or hardware, you can still work on the styles and see the effects of your edits and improvements. 
 
