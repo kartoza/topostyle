@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file is part of the topostyle project by AfriSpatial (https://github.com/AfriSpatial/topostyle) and it is licensed under a Creative Commons Attribution-ShareAlike 2.5 South Africa Licence.-->
 <StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se">
   <NamedLayer>
-    <se:Name>inlandwater</se:Name>
+    <se:Name>inlandwaterarea</se:Name>
     <UserStyle>
-      <se:Name>inlandwater</se:Name>
+      <se:Name>inlandwaterarea</se:Name>
       <se:FeatureTypeStyle>
         <se:Rule>
           <se:Name>DAM</se:Name>
+          <se:Description>
+            <se:Title>DAM</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
@@ -26,6 +28,9 @@
         </se:Rule>
         <se:Rule>
           <se:Name>DRY PAN</se:Name>
+          <se:Description>
+            <se:Title>DRY PAN</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
@@ -39,29 +44,33 @@
             <se:Stroke>
               <se:SvgParameter name="stroke">#6998c9</se:SvgParameter>
               <se:SvgParameter name="stroke-width">0.1</se:SvgParameter>
+              <se:SvgParameter name="stroke-dasharray">4 2</se:SvgParameter>
             </se:Stroke>
           </se:PolygonSymbolizer>
         </se:Rule>
         <se:Rule>
           <se:Name>FISH FARM</se:Name>
+          <se:Description>
+            <se:Title>FISH FARM</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
               <ogc:Literal>FISH FARM</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <se:LineSymbolizer>
+          <se:PolygonSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
               <se:SvgParameter name="stroke-width">0.26</se:SvgParameter>
-              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
-              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
-              <se:SvgParameter name="stroke-dasharray">0</se:SvgParameter>
             </se:Stroke>
-          </se:LineSymbolizer>
+          </se:PolygonSymbolizer>
         </se:Rule>
         <se:Rule>
           <se:Name>LAKE</se:Name>
+          <se:Description>
+            <se:Title>LAKE</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
@@ -80,6 +89,9 @@
         </se:Rule>
         <se:Rule>
           <se:Name>LARGE RESERVOIR</se:Name>
+          <se:Description>
+            <se:Title>LARGE RESERVOIR</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
@@ -103,8 +115,8 @@
           <se:PointSymbolizer>
             <se:Graphic>
               <se:Mark>
-                <OnlineResource xlink:type="simple" xlink:href="ttf://Times New Roman"/>
-                <Format>ttf</Format>
+                <se:OnlineResource xlink:type="simple" xlink:href="file:ttf://Times New Roman"/>
+                <se:Format>ttf</se:Format>
                 <se:MarkIndex>82</se:MarkIndex>
                 <se:Fill>
                   <se:SvgParameter name="fill">#6998c9</se:SvgParameter>
@@ -112,7 +124,7 @@
               </se:Mark>
               <se:Size>3.03333</se:Size>
               <se:Displacement>
-                <se:DisplacementX>3</se:DisplacementX>
+                <se:DisplacementX>2.5</se:DisplacementX>
                 <se:DisplacementY>0</se:DisplacementY>
               </se:Displacement>
             </se:Graphic>
@@ -120,6 +132,9 @@
         </se:Rule>
         <se:Rule>
           <se:Name>MARSH VLEI</se:Name>
+          <se:Description>
+            <se:Title>MARSH VLEI</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
@@ -131,8 +146,8 @@
               <se:GraphicFill>
                 <se:Graphic>
                   <se:ExternalGraphic>
-                    <OnlineResource xlink:type="simple" xlink:href="/home/admire/Documents/workingfiles/ngi/svg/marsh.svg"/>
-                    <Format>image/svg+xml</Format>
+                    <se:OnlineResource xlink:type="simple" xlink:href="file:///home/admire/Documents/workingfiles/ngi/svg/marsh.svg"/>
+                    <se:Format>image/svg+xml</se:Format>
                   </se:ExternalGraphic>
                   <se:Size>24</se:Size>
                   <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -141,18 +156,12 @@
               </se:GraphicFill>
             </se:Fill>
           </se:PolygonSymbolizer>
-          <se:LineSymbolizer>
-            <se:Stroke>
-              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-              <se:SvgParameter name="stroke-width">0.26</se:SvgParameter>
-              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
-              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
-              <se:SvgParameter name="stroke-dasharray">5 2</se:SvgParameter>
-            </se:Stroke>
-          </se:LineSymbolizer>
         </se:Rule>
         <se:Rule>
           <se:Name>MUD FLATS</se:Name>
+          <se:Description>
+            <se:Title>MUD FLATS</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
@@ -171,6 +180,9 @@
         </se:Rule>
         <se:Rule>
           <se:Name>NON-PERENNIAL PAN</se:Name>
+          <se:Description>
+            <se:Title>NON-PERENNIAL PAN</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
@@ -180,23 +192,28 @@
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:GraphicFill>
-                <se:Graphic/>
-                <se:Mark>
-                  <se:WellKnownName>brush://dense6</se:WellKnownName>
-                  <se:Fill>
-                    <se:SvgParameter name="fill">#d3e5f3</se:SvgParameter>
-                  </se:Fill>
-                </se:Mark>
+                <se:Graphic>
+                  <se:Mark>
+                    <se:WellKnownName>brush://dense6</se:WellKnownName>
+                    <se:Fill>
+                      <se:SvgParameter name="fill">#d3e5f3</se:SvgParameter>
+                    </se:Fill>
+                  </se:Mark>
+                </se:Graphic>
               </se:GraphicFill>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#6998c9</se:SvgParameter>
               <se:SvgParameter name="stroke-width">0.26</se:SvgParameter>
+              <se:SvgParameter name="stroke-dasharray">4 2</se:SvgParameter>
             </se:Stroke>
           </se:PolygonSymbolizer>
         </se:Rule>
         <se:Rule>
           <se:Name>PERENNIAL PAN</se:Name>
+          <se:Description>
+            <se:Title>PERENNIAL PAN</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
@@ -215,6 +232,9 @@
         </se:Rule>
         <se:Rule>
           <se:Name>POOL</se:Name>
+          <se:Description>
+            <se:Title>POOL</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
@@ -233,6 +253,9 @@
         </se:Rule>
         <se:Rule>
           <se:Name>SCHOOL AREA</se:Name>
+          <se:Description>
+            <se:Title>SCHOOL AREA</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
@@ -241,7 +264,7 @@
           </ogc:Filter>
           <se:PolygonSymbolizer>
             <se:Fill>
-              <se:SvgParameter name="fill">#2c7cbb</se:SvgParameter>
+              <se:SvgParameter name="fill">#000000</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -251,6 +274,9 @@
         </se:Rule>
         <se:Rule>
           <se:Name>SWAMP</se:Name>
+          <se:Description>
+            <se:Title>SWAMP</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
@@ -262,8 +288,8 @@
               <se:GraphicFill>
                 <se:Graphic>
                   <se:ExternalGraphic>
-                    <OnlineResource xlink:type="simple" xlink:href="/home/admire/Documents/workingfiles/ngi/svg/marsh.svg"/>
-                    <Format>image/svg+xml</Format>
+                    <se:OnlineResource xlink:type="simple" xlink:href="file:///home/admire/Documents/workingfiles/ngi/svg/marsh.svg"/>
+                    <se:Format>image/svg+xml</se:Format>
                   </se:ExternalGraphic>
                   <se:Size>24</se:Size>
                   <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -272,18 +298,12 @@
               </se:GraphicFill>
             </se:Fill>
           </se:PolygonSymbolizer>
-          <se:LineSymbolizer>
-            <se:Stroke>
-              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-              <se:SvgParameter name="stroke-width">0.26</se:SvgParameter>
-              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
-              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
-              <se:SvgParameter name="stroke-dasharray">5 2</se:SvgParameter>
-            </se:Stroke>
-          </se:LineSymbolizer>
         </se:Rule>
         <se:Rule>
           <se:Name>WATER TANK</se:Name>
+          <se:Description>
+            <se:Title>WATER TANK</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
@@ -294,6 +314,42 @@
             <se:Fill>
               <se:SvgParameter name="fill">#d3e5f3</se:SvgParameter>
             </se:Fill>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.26</se:SvgParameter>
+            </se:Stroke>
+          </se:PolygonSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>PURIFICATION PLANT</se:Name>
+          <se:Description>
+            <se:Title>PURIFICATION PLANT</se:Title>
+          </se:Description>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>feat_type</ogc:PropertyName>
+              <ogc:Literal>PURIFICATION PLANT</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:PolygonSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.26</se:SvgParameter>
+            </se:Stroke>
+          </se:PolygonSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>SEWERAGE WORKS</se:Name>
+          <se:Description>
+            <se:Title>SEWERAGE WORKS</se:Title>
+          </se:Description>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>feat_type</ogc:PropertyName>
+              <ogc:Literal>SEWERAGE WORKS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:PolygonSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
               <se:SvgParameter name="stroke-width">0.26</se:SvgParameter>

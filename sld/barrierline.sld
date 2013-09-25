@@ -1,131 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file is part of the topostyle project by AfriSpatial (https://github.com/AfriSpatial/topostyle) and it is licensed under a Creative Commons Attribution-ShareAlike 2.5 South Africa Licence.-->
-<sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" version="1.0.0">
-  <sld:NamedLayer>
-    <sld:Name>barrierline</sld:Name>
-    <sld:UserStyle>
-      <sld:Name>barrierline</sld:Name>
-      <sld:Title/>
-      <sld:FeatureTypeStyle>
-        <sld:Name>group 0</sld:Name>
-        <sld:FeatureTypeName>Feature</sld:FeatureTypeName>
-        <sld:SemanticTypeIdentifier>generic:geometry</sld:SemanticTypeIdentifier>
-        <sld:SemanticTypeIdentifier>simple</sld:SemanticTypeIdentifier>
-        <sld:Rule>
-          <sld:Name>Anti erosion wall</sld:Name>
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se">
+  <NamedLayer>
+    <se:Name>barrierline</se:Name>
+    <UserStyle>
+      <se:Name>barrierline</se:Name>
+      <se:FeatureTypeStyle>
+        <se:Rule>
+          <se:Name>ANTI EROSION WALL</se:Name>
+          <se:Description>
+            <se:Title>ANTI EROSION WALL</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
               <ogc:Literal>ANTI EROSION WALL</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
-          <sld:LineSymbolizer>
-            <sld:Stroke>
-              <sld:GraphicStroke>
-                <sld:Graphic>
-                  <sld:ExternalGraphic>
-                    <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="svg/antierosion.svg"/>
-                    <sld:Format>image/svg+xml</sld:Format>
-                  </sld:ExternalGraphic>
-                  <sld:Size>45</sld:Size>
-                </sld:Graphic>
-              </sld:GraphicStroke>
-              <sld:CssParameter name="stroke-width">3.0</sld:CssParameter>
-            </sld:Stroke>
-          </sld:LineSymbolizer>
-        </sld:Rule>
-        <sld:Rule>
-          <sld:Name>Dam Wall</sld:Name>
+          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:GraphicStroke>
+                <se:Graphic>
+                  <se:Mark>
+                    <se:OnlineResource xlink:type="simple" xlink:href="ttf://dingbats"/>
+                    <se:Format>ttf</se:Format>
+                    <se:MarkIndex>1352</se:MarkIndex>
+                    <se:Fill>
+                      <se:SvgParameter name="fill">#000000</se:SvgParameter>
+                    </se:Fill>
+                  </se:Mark>
+                  <se:Size>4.23333</se:Size>
+                </se:Graphic>
+                <se:Gap>
+                  <ogc:Filter>
+                    <ogc:Literal>3</ogc:Literal>
+                  </ogc:Filter>
+                </se:Gap>
+              </se:GraphicStroke>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>DAM WALL</se:Name>
+          <se:Description>
+            <se:Title>DAM WALL</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
               <ogc:Literal>DAM WALL</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
-          <sld:LineSymbolizer>
-            <sld:Stroke>
-              <sld:CssParameter name="stroke-width">0.23</sld:CssParameter>
-            </sld:Stroke>
-          </sld:LineSymbolizer>
-        </sld:Rule>
-        <sld:Rule>
-          <sld:Name>Fence</sld:Name>
+          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.23</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>FENCE</se:Name>
+          <se:Description>
+            <se:Title>FENCE</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
               <ogc:Literal>FENCE</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
-          <sld:LineSymbolizer>
-            <sld:Stroke>
-              <sld:CssParameter name="stroke-width">0.076</sld:CssParameter>
-            </sld:Stroke>
-          </sld:LineSymbolizer>
-        </sld:Rule>
-        <sld:Rule>
-          <sld:Name>Track footpath</sld:Name>
+          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.076</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>TRACK FOOTPATH</se:Name>
+          <se:Description>
+            <se:Title>TRACK FOOTPATH</se:Title>
+          </se:Description>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>feat_type</ogc:PropertyName>
+              <ogc:Literal>TRACK FOOTPATH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#72b2d7</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.15</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+              <se:SvgParameter name="stroke-dasharray">1 0.5</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>WALL</se:Name>
+          <se:Description>
+            <se:Title>WALL</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
               <ogc:Literal>WALL</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
-          <sld:LineSymbolizer>
-            <sld:Stroke>
-              <sld:CssParameter name="stroke-width">0.15</sld:CssParameter>
-              <sld:CssParameter name="stroke-dasharray">1 0.15</sld:CssParameter>
-            </sld:Stroke>
-          </sld:LineSymbolizer>
-        </sld:Rule>
-        <sld:Rule>
-          <sld:Name>Wall</sld:Name>
-          <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
-          <sld:LineSymbolizer>
-            <sld:Stroke>
-              <sld:CssParameter name="stroke-width">0.23</sld:CssParameter>
-            </sld:Stroke>
-          </sld:LineSymbolizer>
-        </sld:Rule>
-        <sld:Rule>
-          <sld:Name>Weir</sld:Name>
+          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.23</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>WEIR</se:Name>
+          <se:Description>
+            <se:Title>WEIR</se:Title>
+          </se:Description>
           <ogc:Filter>
             <ogc:PropertyIsEqualTo>
               <ogc:PropertyName>feat_type</ogc:PropertyName>
               <ogc:Literal>WEIR</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <sld:MaxScaleDenominator>80000.0</sld:MaxScaleDenominator>
-          <sld:LineSymbolizer>
-            <sld:Stroke>
-              <sld:CssParameter name="stroke">#00AAFF</sld:CssParameter>
-              <sld:CssParameter name="stroke-width">0.15</sld:CssParameter>
-            </sld:Stroke>
-          </sld:LineSymbolizer>
-          <sld:TextSymbolizer>
-            <sld:Label>
-              <ogc:PropertyName>feat_type</ogc:PropertyName>
-            </sld:Label>
-            <sld:Font>
-              <sld:CssParameter name="font-family">Arial</sld:CssParameter>
-              <sld:CssParameter name="font-size">6.0</sld:CssParameter>
-              <sld:CssParameter name="font-style">normal</sld:CssParameter>
-              <sld:CssParameter name="font-weight">bold</sld:CssParameter>
-            </sld:Font>
-            <sld:LabelPlacement>
-              <sld:LinePlacement>
-                <sld:PerpendicularOffset>10.0</sld:PerpendicularOffset>
-              </sld:LinePlacement>
-            </sld:LabelPlacement>
-            <sld:Fill>
-              <sld:CssParameter name="fill">#000000</sld:CssParameter>
-            </sld:Fill>
-          </sld:TextSymbolizer>
-        </sld:Rule>
-      </sld:FeatureTypeStyle>
-    </sld:UserStyle>
-  </sld:NamedLayer>
-</sld:StyledLayerDescriptor>
+          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+          <se:LineSymbolizer>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#00aaff</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.15</se:SvgParameter>
+              <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
+              <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+      </se:FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>

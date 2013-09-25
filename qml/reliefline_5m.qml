@@ -2,38 +2,121 @@
 <qgis version="2.1.0-Master" minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
   <renderer-v2 symbollevels="0" type="RuleRenderer">
     <rules>
-      <rule scalemaxdenom="80000" filter=" &quot;feat_type&quot;  =  'STANDARD' " symbol="0" label="Standard"/>
-      <rule scalemaxdenom="80000" filter=" &quot;feat_type&quot;  =  'STATION' " symbol="1" label="Station"/>
+      <rule scalemaxdenom="20000" filter="FEAT_TYPE='CONTOUR'" symbol="0"/>
+      <rule scalemaxdenom="20000" filter="FEAT_TYPE='Index contours at 100m'" symbol="1"/>
+      <rule scalemaxdenom="20000" filter="FEAT_TYPE='Depression contour at 20m'" symbol="2"/>
+      <rule scalemaxdenom="20000" filter="FEAT_TYPE='Depression contour at 100m'" symbol="3"/>
+      <rule scalemaxdenom="20000" filter="FEAT_TYPE='Prominant rock outcrops'" symbol="4"/>
     </rules>
     <symbols>
-      <symbol alpha="1" type="marker" name="0">
-        <layer pass="0" class="SimpleMarker" locked="0">
-          <prop k="angle" v="0"/>
-          <prop k="color" v="21,103,157,255"/>
-          <prop k="color_border" v="0,0,0,255"/>
-          <prop k="name" v="circle"/>
-          <prop k="offset" v="0,0"/>
+      <symbol alpha="1" type="line" name="0">
+        <layer pass="0" class="SimpleLine" locked="0">
+          <prop k="capstyle" v="square"/>
+          <prop k="color" v="199,155,137,255"/>
+          <prop k="customdash" v="5;2"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0"/>
           <prop k="offset_unit" v="MM"/>
-          <prop k="outline_width" v="0"/>
-          <prop k="outline_width_unit" v="MM"/>
-          <prop k="scale_method" v="area"/>
-          <prop k="size" v="2"/>
-          <prop k="size_unit" v="MM"/>
+          <prop k="penstyle" v="solid"/>
+          <prop k="use_custom_dash" v="0"/>
+          <prop k="width" v="0.08"/>
+          <prop k="width_unit" v="MM"/>
         </layer>
       </symbol>
-      <symbol alpha="1" type="marker" name="1">
-        <layer pass="0" class="SimpleMarker" locked="0">
-          <prop k="angle" v="0"/>
-          <prop k="color" v="0,0,0,255"/>
-          <prop k="color_border" v="0,0,0,255"/>
-          <prop k="name" v="rectangle"/>
-          <prop k="offset" v="0,0"/>
+      <symbol alpha="1" type="line" name="1">
+        <layer pass="0" class="SimpleLine" locked="0">
+          <prop k="capstyle" v="square"/>
+          <prop k="color" v="199,155,137,255"/>
+          <prop k="customdash" v="5;2"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0"/>
           <prop k="offset_unit" v="MM"/>
-          <prop k="outline_width" v="0"/>
-          <prop k="outline_width_unit" v="MM"/>
-          <prop k="scale_method" v="area"/>
-          <prop k="size" v="1.5"/>
-          <prop k="size_unit" v="MM"/>
+          <prop k="penstyle" v="solid"/>
+          <prop k="use_custom_dash" v="0"/>
+          <prop k="width" v="0.35"/>
+          <prop k="width_unit" v="MM"/>
+        </layer>
+      </symbol>
+      <symbol alpha="1" type="line" name="2">
+        <layer pass="0" class="SimpleLine" locked="0">
+          <prop k="capstyle" v="square"/>
+          <prop k="color" v="199,155,137,255"/>
+          <prop k="customdash" v="0.08;2.5"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="penstyle" v="dash"/>
+          <prop k="use_custom_dash" v="1"/>
+          <prop k="width" v="0.5"/>
+          <prop k="width_unit" v="MM"/>
+        </layer>
+        <layer pass="0" class="SimpleLine" locked="0">
+          <prop k="capstyle" v="square"/>
+          <prop k="color" v="199,155,137,255"/>
+          <prop k="customdash" v="5;2"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="1"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="penstyle" v="solid"/>
+          <prop k="use_custom_dash" v="0"/>
+          <prop k="width" v="0.08"/>
+          <prop k="width_unit" v="MM"/>
+        </layer>
+      </symbol>
+      <symbol alpha="1" type="line" name="3">
+        <layer pass="0" class="SimpleLine" locked="0">
+          <prop k="capstyle" v="square"/>
+          <prop k="color" v="199,155,137,255"/>
+          <prop k="customdash" v="0.15;2.5"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="-1"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="penstyle" v="solid"/>
+          <prop k="use_custom_dash" v="1"/>
+          <prop k="width" v="0.5"/>
+          <prop k="width_unit" v="MM"/>
+        </layer>
+        <layer pass="0" class="SimpleLine" locked="0">
+          <prop k="capstyle" v="square"/>
+          <prop k="color" v="199,155,137,255"/>
+          <prop k="customdash" v="5;2"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="penstyle" v="solid"/>
+          <prop k="use_custom_dash" v="0"/>
+          <prop k="width" v="0.35"/>
+          <prop k="width_unit" v="MM"/>
+        </layer>
+      </symbol>
+      <symbol alpha="1" type="line" name="4">
+        <layer pass="0" class="MarkerLine" locked="0">
+          <prop k="interval" v="0.76"/>
+          <prop k="interval_unit" v="MM"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="placement" v="interval"/>
+          <prop k="rotate" v="1"/>
+          <symbol alpha="1" type="marker" name="@4@0">
+            <layer pass="0" class="SvgMarker" locked="0">
+              <prop k="angle" v="0"/>
+              <prop k="fill" v="#000000"/>
+              <prop k="name" v=""/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline" v="#000000"/>
+              <prop k="outline-width" v="1"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="size" v="0.76"/>
+              <prop k="size_unit" v="MM"/>
+            </layer>
+          </symbol>
         </layer>
       </symbol>
     </symbols>
@@ -91,8 +174,8 @@
     <property key="labeling/namedStyle" value="Bold Italic"/>
     <property key="labeling/obstacle" value="true"/>
     <property key="labeling/placeDirectionSymbol" value="0"/>
-    <property key="labeling/placement" value="0"/>
-    <property key="labeling/placementFlags" value="0"/>
+    <property key="labeling/placement" value="2"/>
+    <property key="labeling/placementFlags" value="10"/>
     <property key="labeling/plussign" value="false"/>
     <property key="labeling/preserveRotation" value="true"/>
     <property key="labeling/previewBkgrdColor" value="#ffffff"/>
@@ -163,7 +246,7 @@
   <label>0</label>
   <labelattributes>
     <label fieldname="" text="Label"/>
-    <family fieldname="" name="Ubuntu"/>
+    <family fieldname="" name="Sans"/>
     <size fieldname="" units="pt" value="12"/>
     <bold fieldname="" on="0"/>
     <italic fieldname="" on="0"/>
@@ -182,14 +265,30 @@
     <selectedonly on=""/>
   </labelattributes>
   <edittypes>
+    <edittype labelontop="0" editable="1" type="0" name="CAPTURE_IN"/>
     <edittype labelontop="0" editable="1" type="0" name="CREATE_DAT"/>
+    <edittype labelontop="0" editable="1" type="0" name="DATA_SOURC"/>
+    <edittype labelontop="0" editable="1" type="0" name="DESCRIPTIO"/>
+    <edittype labelontop="0" editable="1" type="0" name="EST_REVISI"/>
     <edittype labelontop="0" editable="1" type="0" name="FEAT_TYPE"/>
-    <edittype labelontop="0" editable="1" type="0" name="GEOM"/>
+    <edittype labelontop="0" editable="1" type="0" name="GDO_GID"/>
     <edittype labelontop="0" editable="1" type="0" name="GEOM_TYPE"/>
-    <edittype labelontop="0" editable="1" type="0" name="GMROTATION"/>
-    <edittype labelontop="0" editable="1" type="0" name="NAME"/>
+    <edittype labelontop="0" editable="1" type="0" name="HEIGHT"/>
+    <edittype labelontop="0" editable="1" type="0" name="LOCK_DATE"/>
+    <edittype labelontop="0" editable="1" type="0" name="MAPSHEET"/>
+    <edittype labelontop="0" editable="1" type="0" name="MODIFIED_B"/>
+    <edittype labelontop="0" editable="1" type="0" name="ORIGINAL_G"/>
     <edittype labelontop="0" editable="1" type="0" name="PK_UID"/>
+    <edittype labelontop="0" editable="1" type="0" name="RETIRED_DA"/>
+    <edittype labelontop="0" editable="1" type="0" name="ROW_STATUS"/>
+    <edittype labelontop="0" editable="1" type="0" name="SELECTION_"/>
+    <edittype labelontop="0" editable="1" type="0" name="SOURCE_CON"/>
+    <edittype labelontop="0" editable="1" type="0" name="SOURCE_PRO"/>
+    <edittype labelontop="0" editable="1" type="0" name="SOURCE_VER"/>
     <edittype labelontop="0" editable="1" type="0" name="TAG"/>
+    <edittype labelontop="0" editable="1" type="0" name="VERSION_DA"/>
+    <edittype labelontop="0" editable="1" type="0" name="VERSION_NU"/>
+    <edittype labelontop="0" editable="1" type="0" name="VERSION_ST"/>
     <edittype labelontop="0" editable="1" type="0" name="capture_in"/>
     <edittype labelontop="0" editable="1" type="0" name="create_dat"/>
     <edittype labelontop="0" editable="1" type="0" name="data_sourc"/>
@@ -199,17 +298,18 @@
     <edittype labelontop="0" editable="1" type="0" name="gdo_gid"/>
     <edittype labelontop="0" editable="1" type="0" name="geom_type"/>
     <edittype labelontop="0" editable="1" type="0" name="gid"/>
-    <edittype labelontop="0" editable="1" type="0" name="gmrotation"/>
+    <edittype labelontop="0" editable="1" type="0" name="height"/>
     <edittype labelontop="0" editable="1" type="0" name="lock_date"/>
     <edittype labelontop="0" editable="1" type="0" name="mapsheet"/>
     <edittype labelontop="0" editable="1" type="0" name="modified_b"/>
     <edittype labelontop="0" editable="1" type="0" name="original_g"/>
+    <edittype labelontop="0" editable="1" type="0" name="orthoindex"/>
     <edittype labelontop="0" editable="1" type="0" name="retired_da"/>
     <edittype labelontop="0" editable="1" type="0" name="row_status"/>
     <edittype labelontop="0" editable="1" type="0" name="selection_"/>
     <edittype labelontop="0" editable="1" type="0" name="source_con"/>
     <edittype labelontop="0" editable="1" type="0" name="source_pro"/>
-    <edittype labelontop="0" editable="1" type="0" name="source_pro__19"/>
+    <edittype labelontop="0" editable="1" type="0" name="source_pro__20"/>
     <edittype labelontop="0" editable="1" type="0" name="source_ver"/>
     <edittype labelontop="0" editable="1" type="0" name="tag"/>
     <edittype labelontop="0" editable="1" type="0" name="version_da"/>

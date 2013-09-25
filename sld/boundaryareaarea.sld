@@ -1,174 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file is part of the topostyle project by AfriSpatial (https://github.com/AfriSpatial/topostyle) and it is licensed under a Creative Commons Attribution-ShareAlike 2.5 South Africa Licence.-->
-<sld:StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" version="1.0.0">
-  <sld:NamedLayer>
-    <sld:Name>boundaryareaarea</sld:Name>
-    <sld:UserStyle>
-      <sld:Name>AtlasStyler 1.9</sld:Name>
-      <sld:Title/>
-      <sld:FeatureTypeStyle>
-        <sld:Name>UNIQUE_VALUE_POLYGON</sld:Name>
-        <sld:Title>UniqueValuesPolygonRuleList</sld:Title>
-        <sld:FeatureTypeName>Feature</sld:FeatureTypeName>
-        <sld:Rule>
-          <sld:Title>CONSERVATION</sld:Title>
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:se="http://www.opengis.net/se">
+  <NamedLayer>
+    <se:Name>boundaryareaarea</se:Name>
+    <UserStyle>
+      <se:Name>boundaryareaarea</se:Name>
+      <se:FeatureTypeStyle>
+        <se:Rule>
+          <se:Name>CADASTRAL</se:Name>
+          <se:Description>
+            <se:Title>CADASTRAL</se:Title>
+          </se:Description>
           <ogc:Filter>
-            <ogc:And>
-              <ogc:PropertyIsEqualTo>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-              </ogc:PropertyIsEqualTo>
-              <ogc:And>
-                <ogc:Not>
-                  <ogc:Or>
-                    <ogc:PropertyIsNull>
-                      <ogc:PropertyName>feat_type</ogc:PropertyName>
-                    </ogc:PropertyIsNull>
-                    <ogc:PropertyIsEqualTo>
-                      <ogc:PropertyName>feat_type</ogc:PropertyName>
-                      <ogc:Literal></ogc:Literal>
-                    </ogc:PropertyIsEqualTo>
-                  </ogc:Or>
-                </ogc:Not>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:PropertyName>feat_type</ogc:PropertyName>
-                  <ogc:Literal>CONSERVATION</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-              </ogc:And>
-            </ogc:And>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>feat_type</ogc:PropertyName>
+              <ogc:Literal>CADASTRAL</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <sld:MinScaleDenominator>1000</sld:MinScaleDenominator>
-          <sld:MaxScaleDenominator>80000</sld:MaxScaleDenominator>
-          <sld:PolygonSymbolizer>
-            <sld:Fill>
-              <sld:CssParameter name="fill">#76a675</sld:CssParameter>
-            </sld:Fill>
-            <sld:Stroke/>
-          </sld:PolygonSymbolizer>
-        </sld:Rule>
-        <sld:Rule>
-          <sld:Title>STATE FOREST</sld:Title>
+          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+          <se:PolygonSymbolizer>
+            <se:Fill>
+              <se:SvgParameter name="fill">#a5a5a5</se:SvgParameter>
+            </se:Fill>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.1</se:SvgParameter>
+            </se:Stroke>
+          </se:PolygonSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>CONSERVATION</se:Name>
+          <se:Description>
+            <se:Title>CONSERVATION</se:Title>
+          </se:Description>
           <ogc:Filter>
-            <ogc:And>
-              <ogc:PropertyIsEqualTo>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-              </ogc:PropertyIsEqualTo>
-              <ogc:And>
-                <ogc:Not>
-                  <ogc:Or>
-                    <ogc:PropertyIsNull>
-                      <ogc:PropertyName>feat_type</ogc:PropertyName>
-                    </ogc:PropertyIsNull>
-                    <ogc:PropertyIsEqualTo>
-                      <ogc:PropertyName>feat_type</ogc:PropertyName>
-                      <ogc:Literal></ogc:Literal>
-                    </ogc:PropertyIsEqualTo>
-                  </ogc:Or>
-                </ogc:Not>
-                <ogc:PropertyIsEqualTo>
-                  <ogc:PropertyName>feat_type</ogc:PropertyName>
-                  <ogc:Literal>STATE FOREST</ogc:Literal>
-                </ogc:PropertyIsEqualTo>
-              </ogc:And>
-            </ogc:And>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>feat_type</ogc:PropertyName>
+              <ogc:Literal>CONSERVATION</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <sld:MinScaleDenominator>1000</sld:MinScaleDenominator>
-          <sld:MaxScaleDenominator>80000</sld:MaxScaleDenominator>
-          <sld:PolygonSymbolizer>
-            <sld:Fill>
-              <sld:CssParameter name="fill">#76a675</sld:CssParameter>
-            </sld:Fill>
-            <sld:Stroke/>
-          </sld:PolygonSymbolizer>
-        </sld:Rule>
-      </sld:FeatureTypeStyle>
-      <sld:FeatureTypeStyle>
-        <sld:Name>TEXT_LABEL</sld:Name>
-        <sld:Title>TextRuleList</sld:Title>
-        <sld:FeatureTypeName>Feature</sld:FeatureTypeName>
-        <sld:Rule>
-          <sld:Name>DEFAULT</sld:Name>
+          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+          <se:PolygonSymbolizer>
+            <se:Fill>
+              <se:SvgParameter name="fill">#76a675</se:SvgParameter>
+            </se:Fill>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.1</se:SvgParameter>
+            </se:Stroke>
+          </se:PolygonSymbolizer>
+        </se:Rule>
+        <se:Rule>
+          <se:Name>STATE FOREST</se:Name>
+          <se:Description>
+            <se:Title>STATE FOREST</se:Title>
+          </se:Description>
           <ogc:Filter>
-            <ogc:And>
-              <ogc:PropertyIsEqualTo>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-                <ogc:Literal>ALL_LABEL_CLASSES_ENABLED</ogc:Literal>
-              </ogc:PropertyIsEqualTo>
-              <ogc:And>
-                <ogc:And>
-                  <ogc:PropertyIsEqualTo>
-                    <ogc:Literal>RL_FILTER_APPLIED</ogc:Literal>
-                    <ogc:Literal>RL_FILTER_APPLIED</ogc:Literal>
-                  </ogc:PropertyIsEqualTo>
-                  <ogc:PropertyIsGreaterThan>
-                    <ogc:PropertyName>tag</ogc:PropertyName>
-                    <ogc:Literal>8</ogc:Literal>
-                  </ogc:PropertyIsGreaterThan>
-                </ogc:And>
-                <ogc:And>
-                  <ogc:PropertyIsEqualTo>
-                    <ogc:Literal>LABEL_CLASS_ENABLED</ogc:Literal>
-                    <ogc:Literal>LABEL_CLASS_ENABLED</ogc:Literal>
-                  </ogc:PropertyIsEqualTo>
-                  <ogc:PropertyIsEqualTo>
-                    <ogc:Literal>1</ogc:Literal>
-                    <ogc:Literal>1</ogc:Literal>
-                  </ogc:PropertyIsEqualTo>
-                </ogc:And>
-              </ogc:And>
-            </ogc:And>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>feat_type</ogc:PropertyName>
+              <ogc:Literal>STATE FOREST</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <sld:MinScaleDenominator>1000</sld:MinScaleDenominator>
-          <sld:MaxScaleDenominator>80000</sld:MaxScaleDenominator>
-          <sld:TextSymbolizer>
-            <sld:Label>
-              <ogc:PropertyName>tag</ogc:PropertyName>
-            </sld:Label>
-            <sld:Font>
-              <sld:CssParameter name="font-family">Times New Roman</sld:CssParameter>
-              <sld:CssParameter name="font-size">11.0</sld:CssParameter>
-              <sld:CssParameter name="font-style">normal</sld:CssParameter>
-              <sld:CssParameter name="font-weight">normal</sld:CssParameter>
-            </sld:Font>
-            <sld:LabelPlacement>
-              <sld:PointPlacement>
-                <sld:AnchorPoint>
-                  <sld:AnchorPointX>
-                    <ogc:Literal>0.5</ogc:Literal>
-                  </sld:AnchorPointX>
-                  <sld:AnchorPointY>
-                    <ogc:Literal>0.5</ogc:Literal>
-                  </sld:AnchorPointY>
-                </sld:AnchorPoint>
-                <sld:Displacement>
-                  <sld:DisplacementX>
-                    <ogc:Literal>0.0</ogc:Literal>
-                  </sld:DisplacementX>
-                  <sld:DisplacementY>
-                    <ogc:Literal>0.0</ogc:Literal>
-                  </sld:DisplacementY>
-                </sld:Displacement>
-                <sld:Rotation>
-                  <ogc:Literal>0</ogc:Literal>
-                </sld:Rotation>
-              </sld:PointPlacement>
-            </sld:LabelPlacement>
-            <sld:Halo>
-              <sld:Radius>
-                <ogc:Literal>1.0</ogc:Literal>
-              </sld:Radius>
-              <sld:Fill>
-                <sld:CssParameter name="fill">#FFFFFF</sld:CssParameter>
-                <sld:CssParameter name="fill-opacity">0.5</sld:CssParameter>
-              </sld:Fill>
-            </sld:Halo>
-            <sld:Fill>
-              <sld:CssParameter name="fill">#000000</sld:CssParameter>
-            </sld:Fill>
-          </sld:TextSymbolizer>
-        </sld:Rule>
-      </sld:FeatureTypeStyle>
-    </sld:UserStyle>
-  </sld:NamedLayer>
-</sld:StyledLayerDescriptor>
+          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
+          <se:PolygonSymbolizer>
+            <se:Fill>
+              <se:SvgParameter name="fill">#76a675</se:SvgParameter>
+            </se:Fill>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.1</se:SvgParameter>
+            </se:Stroke>
+          </se:PolygonSymbolizer>
+        </se:Rule>
+      </se:FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>
