@@ -33,7 +33,7 @@
                             <ogc:PropertyName>feat_type</ogc:PropertyName>
                         </sld:Label>
                         <sld:Font>
-                            <sld:CssParameter name="font-family">Arial</sld:CssParameter>
+                            <sld:CssParameter name="font-family">Times New Roman</sld:CssParameter>
                             <sld:CssParameter name="font-size">6.0</sld:CssParameter>
                             <sld:CssParameter name="font-style">normal</sld:CssParameter>
                             <sld:CssParameter name="font-weight">bold</sld:CssParameter>
@@ -72,7 +72,7 @@
                             <ogc:PropertyName>feat_type</ogc:PropertyName>
                         </sld:Label>
                         <sld:Font>
-                            <sld:CssParameter name="font-family">Arial</sld:CssParameter>
+                            <sld:CssParameter name="font-family">Times New Roman</sld:CssParameter>
                             <sld:CssParameter name="font-size">6.0</sld:CssParameter>
                             <sld:CssParameter name="font-style">normal</sld:CssParameter>
                             <sld:CssParameter name="font-weight">bold</sld:CssParameter>
@@ -116,7 +116,7 @@
                             <ogc:PropertyName>feat_type</ogc:PropertyName>
                         </sld:Label>
                         <sld:Font>
-                            <sld:CssParameter name="font-family">Arial</sld:CssParameter>
+                            <sld:CssParameter name="font-family">Times New Roman</sld:CssParameter>
                             <sld:CssParameter name="font-size">6.0</sld:CssParameter>
                             <sld:CssParameter name="font-style">normal</sld:CssParameter>
                             <sld:CssParameter name="font-weight">bold</sld:CssParameter>
@@ -158,7 +158,7 @@
                             <ogc:PropertyName>feat_type</ogc:PropertyName>
                         </sld:Label>
                         <sld:Font>
-                            <sld:CssParameter name="font-family">Arial</sld:CssParameter>
+                            <sld:CssParameter name="font-family">Times New Roman</sld:CssParameter>
                             <sld:CssParameter name="font-size">6.0</sld:CssParameter>
                             <sld:CssParameter name="font-style">normal</sld:CssParameter>
                             <sld:CssParameter name="font-weight">bold</sld:CssParameter>
@@ -197,7 +197,7 @@
                             <ogc:PropertyName>feat_type</ogc:PropertyName>
                         </sld:Label>
                         <sld:Font>
-                            <sld:CssParameter name="font-family">Arial</sld:CssParameter>
+                            <sld:CssParameter name="font-family">Times New Roman</sld:CssParameter>
                             <sld:CssParameter name="font-size">6.0</sld:CssParameter>
                             <sld:CssParameter name="font-style">normal</sld:CssParameter>
                             <sld:CssParameter name="font-weight">bold</sld:CssParameter>

@@ -16,26 +16,27 @@
               <ogc:Literal>ANTI EROSION WALL</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
           <se:LineSymbolizer>
+            <VendorOption name="placement">centralPoint</VendorOption>
+            <VendorOption name="rotateMarker">0</VendorOption>
             <se:Stroke>
               <se:GraphicStroke>
                 <se:Graphic>
                   <se:Mark>
                     <se:OnlineResource xlink:type="simple" xlink:href="ttf://dingbats"/>
                     <se:Format>ttf</se:Format>
-                    <se:MarkIndex>1352</se:MarkIndex>
+                    <se:MarkIndex>5205</se:MarkIndex>
                     <se:Fill>
                       <se:SvgParameter name="fill">#000000</se:SvgParameter>
                     </se:Fill>
                   </se:Mark>
-                  <se:Size>4.23333</se:Size>
+                  <se:Size>2.83</se:Size>
+                  <se:Rotation>
+                    <ogc:Filter>
+                      <ogc:Literal>90</ogc:Literal>
+                    </ogc:Filter>
+                  </se:Rotation>
                 </se:Graphic>
-                <se:Gap>
-                  <ogc:Filter>
-                    <ogc:Literal>3</ogc:Literal>
-                  </ogc:Filter>
-                </se:Gap>
               </se:GraphicStroke>
             </se:Stroke>
           </se:LineSymbolizer>
@@ -51,7 +52,6 @@
               <ogc:Literal>DAM WALL</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -72,7 +72,6 @@
               <ogc:Literal>FENCE</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -93,7 +92,6 @@
               <ogc:Literal>TRACK FOOTPATH</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#72b2d7</se:SvgParameter>
@@ -115,7 +113,6 @@
               <ogc:Literal>WALL</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -136,7 +133,6 @@
               <ogc:Literal>WEIR</ogc:Literal>
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
-          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#00aaff</se:SvgParameter>

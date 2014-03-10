@@ -1,15 +1,15 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="2.0.1-Dufour" minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+<qgis version="2.0.1-Dufour" minimumScale="-4.65661e-10" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
   <renderer-v2 symbollevels="0" type="RuleRenderer">
     <rules>
-      <rule scalemaxdenom="80000" filter="feat_type = 'ARTERIAL ROUTE'" symbol="0" scalemindenom="1000" label="Arterial route"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'NATIONAL FREEWAY' OR feat_type = 'ON-OFF RAMP'" symbol="1" scalemindenom="1000" label="Freeway"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'NATIONAL ROUTE'" symbol="2" scalemindenom="1000" label="National Route"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'MAIN ROAD' OR feat_type = 'SECONDARY ROAD'" symbol="3" scalemindenom="1000" label="Main Road"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'STREET'" symbol="4" scalemindenom="1000" label="Street"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'OTHER ACCESS'" symbol="5" scalemindenom="1000" label="Other Acess"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'UNDER CONSTRUCTION'" symbol="6" scalemindenom="1000" label="Under construction"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'TRACK FOOTPATH' OR feat_type = 'FENCE'" symbol="7" scalemindenom="1000" label="Track footpath and fence"/>
+      <rule scalemaxdenom="80000" filter="feat_type = 'ARTERIAL ROUTE'" symbol="0" label="Arterial route"/>
+      <rule scalemaxdenom="80000" filter="feat_type = 'NATIONAL FREEWAY' OR feat_type = 'ON-OFF RAMP'" symbol="1" label="Freeway"/>
+      <rule scalemaxdenom="80000" filter="feat_type = 'NATIONAL ROUTE'" symbol="2" label="National Route"/>
+      <rule scalemaxdenom="80000" filter="feat_type = 'MAIN ROAD' OR feat_type = 'SECONDARY ROAD'" symbol="3" label="Main Road"/>
+      <rule scalemaxdenom="80000" filter="feat_type = 'STREET'" symbol="4" label="Street"/>
+      <rule scalemaxdenom="80000" filter="feat_type = 'OTHER ACCESS'" symbol="5" label="Other Acess"/>
+      <rule scalemaxdenom="80000" filter="feat_type = 'UNDER CONSTRUCTION'" symbol="6" label="Under construction"/>
+      <rule scalemaxdenom="80000" filter="feat_type = 'TRACK FOOTPATH' OR feat_type = 'FENCE'" symbol="7" label="Track footpath and fence"/>
     </rules>
     <symbols>
       <symbol alpha="1" type="line" name="0">
@@ -383,6 +383,8 @@
   </labelattributes>
   <edittypes>
     <edittype labelontop="0" editable="1" type="0" name="FEAT_TYPE"/>
+    <edittype labelontop="0" editable="1" type="0" name="PK_UID"/>
+    <edittype labelontop="0" editable="1" type="0" name="__gid"/>
     <edittype labelontop="0" editable="1" type="0" name="capture_in"/>
     <edittype labelontop="0" editable="1" type="0" name="create_dat"/>
     <edittype labelontop="0" editable="1" type="0" name="data_sourc"/>

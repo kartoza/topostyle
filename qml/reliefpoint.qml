@@ -1,15 +1,14 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="2.1.0-Master" minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+<qgis version="2.0.1-Dufour" minimumScale="-4.65661e-10" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
   <renderer-v2 symbollevels="0" type="RuleRenderer">
     <rules>
-      <rule scalemaxdenom="80000" filter=" &quot;feat_type&quot;  =  'STANDARD' " symbol="0" label="Standard"/>
-      <rule scalemaxdenom="80000" filter=" &quot;feat_type&quot;  =  'STATION' " symbol="1" label="Station"/>
+      <rule scalemaxdenom="80000" filter=" &quot;feat_type&quot;  =  'SPOT HEIGHT' " symbol="0" scalemindenom="20000" label="Spot height"/>
     </rules>
     <symbols>
       <symbol alpha="1" type="marker" name="0">
         <layer pass="0" class="SimpleMarker" locked="0">
           <prop k="angle" v="0"/>
-          <prop k="color" v="21,103,157,255"/>
+          <prop k="color" v="178,147,119,255"/>
           <prop k="color_border" v="0,0,0,255"/>
           <prop k="name" v="circle"/>
           <prop k="offset" v="0,0"/>
@@ -17,22 +16,7 @@
           <prop k="outline_width" v="0"/>
           <prop k="outline_width_unit" v="MM"/>
           <prop k="scale_method" v="area"/>
-          <prop k="size" v="2"/>
-          <prop k="size_unit" v="MM"/>
-        </layer>
-      </symbol>
-      <symbol alpha="1" type="marker" name="1">
-        <layer pass="0" class="SimpleMarker" locked="0">
-          <prop k="angle" v="0"/>
-          <prop k="color" v="0,0,0,255"/>
-          <prop k="color_border" v="0,0,0,255"/>
-          <prop k="name" v="rectangle"/>
-          <prop k="offset" v="0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="outline_width" v="0"/>
-          <prop k="outline_width_unit" v="MM"/>
-          <prop k="scale_method" v="area"/>
-          <prop k="size" v="1.5"/>
+          <prop k="size" v="0.25"/>
           <prop k="size_unit" v="MM"/>
         </layer>
       </symbol>
@@ -48,19 +32,19 @@
     <property key="labeling/bufferColorB" value="255"/>
     <property key="labeling/bufferColorG" value="255"/>
     <property key="labeling/bufferColorR" value="255"/>
-    <property key="labeling/bufferDraw" value="false"/>
+    <property key="labeling/bufferDraw" value="true"/>
     <property key="labeling/bufferJoinStyle" value="64"/>
     <property key="labeling/bufferNoFill" value="false"/>
-    <property key="labeling/bufferSize" value="1"/>
+    <property key="labeling/bufferSize" value="0.1"/>
     <property key="labeling/bufferSizeInMapUnits" value="false"/>
     <property key="labeling/bufferTransp" value="0"/>
     <property key="labeling/centroidWhole" value="false"/>
-    <property key="labeling/decimals" value="3"/>
+    <property key="labeling/decimals" value="0"/>
     <property key="labeling/displayAll" value="false"/>
-    <property key="labeling/dist" value="0"/>
+    <property key="labeling/dist" value="0.5"/>
     <property key="labeling/distInMapUnits" value="false"/>
-    <property key="labeling/enabled" value="false"/>
-    <property key="labeling/fieldName" value=""/>
+    <property key="labeling/enabled" value="true"/>
+    <property key="labeling/fieldName" value="height"/>
     <property key="labeling/fontBold" value="true"/>
     <property key="labeling/fontCapitals" value="0"/>
     <property key="labeling/fontFamily" value="Ubuntu"/>
@@ -69,7 +53,7 @@
     <property key="labeling/fontLimitPixelSize" value="false"/>
     <property key="labeling/fontMaxPixelSize" value="10000"/>
     <property key="labeling/fontMinPixelSize" value="3"/>
-    <property key="labeling/fontSize" value="11"/>
+    <property key="labeling/fontSize" value="6"/>
     <property key="labeling/fontSizeInMapUnits" value="false"/>
     <property key="labeling/fontStrikeout" value="false"/>
     <property key="labeling/fontUnderline" value="false"/>
@@ -159,7 +143,7 @@
   <blendMode>0</blendMode>
   <featureBlendMode>0</featureBlendMode>
   <layerTransparency>0</layerTransparency>
-  <displayfield>descriptio</displayfield>
+  <displayfield>gid</displayfield>
   <label>0</label>
   <labelattributes>
     <label fieldname="" text="Label"/>
@@ -182,14 +166,7 @@
     <selectedonly on=""/>
   </labelattributes>
   <edittypes>
-    <edittype labelontop="0" editable="1" type="0" name="CREATE_DAT"/>
-    <edittype labelontop="0" editable="1" type="0" name="FEAT_TYPE"/>
-    <edittype labelontop="0" editable="1" type="0" name="GEOM"/>
-    <edittype labelontop="0" editable="1" type="0" name="GEOM_TYPE"/>
-    <edittype labelontop="0" editable="1" type="0" name="GMROTATION"/>
-    <edittype labelontop="0" editable="1" type="0" name="NAME"/>
     <edittype labelontop="0" editable="1" type="0" name="PK_UID"/>
-    <edittype labelontop="0" editable="1" type="0" name="TAG"/>
     <edittype labelontop="0" editable="1" type="0" name="capture_in"/>
     <edittype labelontop="0" editable="1" type="0" name="create_dat"/>
     <edittype labelontop="0" editable="1" type="0" name="data_sourc"/>
@@ -200,23 +177,25 @@
     <edittype labelontop="0" editable="1" type="0" name="geom_type"/>
     <edittype labelontop="0" editable="1" type="0" name="gid"/>
     <edittype labelontop="0" editable="1" type="0" name="gmrotation"/>
+    <edittype labelontop="0" editable="1" type="0" name="height"/>
     <edittype labelontop="0" editable="1" type="0" name="lock_date"/>
     <edittype labelontop="0" editable="1" type="0" name="mapsheet"/>
     <edittype labelontop="0" editable="1" type="0" name="modified_b"/>
     <edittype labelontop="0" editable="1" type="0" name="original_g"/>
+    <edittype labelontop="0" editable="1" type="0" name="orthoindex"/>
     <edittype labelontop="0" editable="1" type="0" name="retired_da"/>
     <edittype labelontop="0" editable="1" type="0" name="row_status"/>
     <edittype labelontop="0" editable="1" type="0" name="selection_"/>
     <edittype labelontop="0" editable="1" type="0" name="source_con"/>
     <edittype labelontop="0" editable="1" type="0" name="source_pro"/>
-    <edittype labelontop="0" editable="1" type="0" name="source_pro__19"/>
+    <edittype labelontop="0" editable="1" type="0" name="source_pro__20"/>
     <edittype labelontop="0" editable="1" type="0" name="source_ver"/>
     <edittype labelontop="0" editable="1" type="0" name="tag"/>
     <edittype labelontop="0" editable="1" type="0" name="version_da"/>
     <edittype labelontop="0" editable="1" type="0" name="version_nu"/>
     <edittype labelontop="0" editable="1" type="0" name="version_st"/>
   </edittypes>
-  <editform>.</editform>
+  <editform></editform>
   <editforminit></editforminit>
   <annotationform>.</annotationform>
   <editorlayout>generatedlayout</editorlayout>

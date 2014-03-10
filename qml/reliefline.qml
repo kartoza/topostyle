@@ -1,12 +1,12 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis version="1.9.0-Master" minimumScale="-4.65661e-10" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+<qgis version="2.0.1-Dufour" minimumScale="0" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
   <renderer-v2 symbollevels="0" type="RuleRenderer">
     <rules>
-      <rule filter="FEAT_TYPE='CONTOUR'" symbol="0"/>
-      <rule filter="FEAT_TYPE='Index contours at 100m'" symbol="1"/>
-      <rule filter="FEAT_TYPE='Depression contour at 20m'" symbol="2"/>
-      <rule filter="FEAT_TYPE='Depression contour at 100m'" symbol="3"/>
-      <rule filter="FEAT_TYPE='Prominant rock outcrops'" symbol="4"/>
+      <rule scalemaxdenom="80000" filter="FEAT_TYPE='CONTOUR'" symbol="0" scalemindenom="20000"/>
+      <rule scalemaxdenom="80000" filter="FEAT_TYPE='Index contours at 100m'" symbol="1" scalemindenom="20000"/>
+      <rule scalemaxdenom="80000" filter="FEAT_TYPE='Depression contour at 20m'" symbol="2" scalemindenom="20000"/>
+      <rule scalemaxdenom="80000" filter="FEAT_TYPE='Depression contour at 100m'" symbol="3" scalemindenom="20000"/>
+      <rule scalemaxdenom="80000" filter="FEAT_TYPE='Prominant rock outcrops'" symbol="4" scalemindenom="20000"/>
     </rules>
     <symbols>
       <symbol alpha="1" type="line" name="0">
@@ -144,10 +144,10 @@
     <property key="labeling/distInMapUnits" value="false"/>
     <property key="labeling/enabled" value="false"/>
     <property key="labeling/fieldName" value=""/>
-    <property key="labeling/fontBold" value="false"/>
+    <property key="labeling/fontBold" value="true"/>
     <property key="labeling/fontCapitals" value="0"/>
     <property key="labeling/fontFamily" value="Ubuntu"/>
-    <property key="labeling/fontItalic" value="false"/>
+    <property key="labeling/fontItalic" value="true"/>
     <property key="labeling/fontLetterSpacing" value="0"/>
     <property key="labeling/fontLimitPixelSize" value="false"/>
     <property key="labeling/fontMaxPixelSize" value="10000"/>
@@ -156,7 +156,7 @@
     <property key="labeling/fontSizeInMapUnits" value="false"/>
     <property key="labeling/fontStrikeout" value="false"/>
     <property key="labeling/fontUnderline" value="false"/>
-    <property key="labeling/fontWeight" value="50"/>
+    <property key="labeling/fontWeight" value="75"/>
     <property key="labeling/fontWordSpacing" value="0"/>
     <property key="labeling/formatNumbers" value="false"/>
     <property key="labeling/isExpression" value="false"/>
@@ -278,6 +278,7 @@
     <edittype labelontop="0" editable="1" type="0" name="MAPSHEET"/>
     <edittype labelontop="0" editable="1" type="0" name="MODIFIED_B"/>
     <edittype labelontop="0" editable="1" type="0" name="ORIGINAL_G"/>
+    <edittype labelontop="0" editable="1" type="0" name="PK_UID"/>
     <edittype labelontop="0" editable="1" type="0" name="RETIRED_DA"/>
     <edittype labelontop="0" editable="1" type="0" name="ROW_STATUS"/>
     <edittype labelontop="0" editable="1" type="0" name="SELECTION_"/>
@@ -288,6 +289,7 @@
     <edittype labelontop="0" editable="1" type="0" name="VERSION_DA"/>
     <edittype labelontop="0" editable="1" type="0" name="VERSION_NU"/>
     <edittype labelontop="0" editable="1" type="0" name="VERSION_ST"/>
+    <edittype labelontop="0" editable="1" type="0" name="__gid"/>
     <edittype labelontop="0" editable="1" type="0" name="capture_in"/>
     <edittype labelontop="0" editable="1" type="0" name="create_dat"/>
     <edittype labelontop="0" editable="1" type="0" name="data_sourc"/>
