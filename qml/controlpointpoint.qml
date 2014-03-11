@@ -92,7 +92,7 @@
     <property key="labeling/fieldName" value="case when  &quot;feat_type&quot;  =  'BENCH MARK' then  toint(  &quot;height&quot;) &#xa;          when  &quot;feat_type&quot;  =  'TRIGONOMETRIC BEACON'  then (&quot;height&quot;) &#xa;else null&#xa;end"/>
     <property key="labeling/fontBold" value="true"/>
     <property key="labeling/fontCapitals" value="0"/>
-    <property key="labeling/fontFamily" value="Ubuntu"/>
+    <property key="labeling/fontFamily" value="Times New Roman"/>
     <property key="labeling/fontItalic" value="true"/>
     <property key="labeling/fontLetterSpacing" value="0"/>
     <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -192,7 +192,7 @@
   <label>0</label>
   <labelattributes>
     <label fieldname="" text="Label"/>
-    <family fieldname="" name="Ubuntu"/>
+    <family fieldname="" name="Times New Roman"/>
     <size fieldname="" units="pt" value="12"/>
     <bold fieldname="" on="0"/>
     <italic fieldname="" on="0"/>

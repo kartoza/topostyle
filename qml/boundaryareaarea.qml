@@ -86,7 +86,7 @@
     <property key="labeling/distInMapUnits" value="false"/>
     <property key="labeling/enabled" value="true"/>
     <property key="labeling/fieldName" value="CASE WHEN &quot;tag&quot; ~ '^[0-9]+$'  THEN NULL &#xa;ELSE &quot;tag&quot;  END"/>
-    <property key="labeling/fontFamily" value="Ubuntu"/>
+    <property key="labeling/fontFamily" value="Times New Roman"/>
     <property key="labeling/fontItalic" value="false"/>
     <property key="labeling/fontSize" value="6"/>
     <property key="labeling/fontSizeInMapUnits" value="false"/>
@@ -114,7 +114,7 @@
   <label>0</label>
   <labelattributes>
     <label fieldname="" text="Label"/>
-    <family fieldname="" name="Ubuntu"/>
+    <family fieldname="" name="Times New Roman"/>
     <size fieldname="" units="pt" value="12"/>
     <bold fieldname="" on="0"/>
     <italic fieldname="" on="0"/>

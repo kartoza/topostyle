@@ -170,7 +170,7 @@
   <label>0</label>
   <labelattributes>
     <label fieldname="" text="Label"/>
-    <family fieldname="" name="Ubuntu"/>
+    <family fieldname="" name="Times New Roman"/>
     <size fieldname="" units="pt" value="12"/>
     <bold fieldname="" on="0"/>
     <italic fieldname="" on="0"/>
