@@ -25,7 +25,7 @@
                     <sld:PointSymbolizer>
                         <sld:Graphic>
                             <sld:ExternalGraphic>
-                                <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="svg/trees.svg"/>
+                                <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="file:./svg_graphics/trees.svg"/>
                                 <sld:Format>image/svg+xml</sld:Format>
                             </sld:ExternalGraphic>
                             <sld:Size>65</sld:Size>

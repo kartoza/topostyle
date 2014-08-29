@@ -60,7 +60,7 @@
           <prop k="angle" v="0"/>
           <prop k="outline_width_unit" v="MM"/>
           <prop k="pattern_width_unit" v="MM"/>
-          <prop k="svgFile" v="file:///home/admire/Documents/workingfiles/ngi/svg/marsh.svg"/>
+          <prop k="svgFile" v="file:////home/admire/src/topostyle/svg_graphics/marsh.svg"/>
           <prop k="svgFillColor" v="#000000"/>
           <prop k="svgOutlineColor" v="#000000"/>
           <prop k="svgOutlineWidth" v="1"/>
@@ -189,7 +189,7 @@
           <prop k="angle" v="0"/>
           <prop k="outline_width_unit" v="MM"/>
           <prop k="pattern_width_unit" v="MM"/>
-          <prop k="svgFile" v="file:///home/admire/Documents/workingfiles/ngi/svg/marsh.svg"/>
+          <prop k="svgFile" v="file:////home/admire/src/topostyle/svg_graphics/marsh.svg"/>
           <prop k="svgFillColor" v="#000000"/>
           <prop k="svgOutlineColor" v="#000000"/>
           <prop k="svgOutlineWidth" v="1"/>

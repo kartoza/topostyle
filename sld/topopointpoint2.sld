@@ -49,7 +49,7 @@
                     <sld:PointSymbolizer>
                         <sld:Graphic>
                             <sld:ExternalGraphic>
-                                <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="svg/poi_cave.svg"/>
+                                <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="file:./svg_graphics/poi_cave.svg"/>
                                 <sld:Format>image/svg+xml</sld:Format>
                             </sld:ExternalGraphic>
                             <sld:Size>6</sld:Size>
@@ -95,7 +95,7 @@
                     <sld:PointSymbolizer>
                         <sld:Graphic>
                             <sld:ExternalGraphic>
-                                <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="svg/shipwreck.svg"/>
+                                <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="file:./svg_graphics/shipwreck.svg"/>
                                 <sld:Format>image/svg+xml</sld:Format>
                             </sld:ExternalGraphic>
                             <sld:Size>40</sld:Size>

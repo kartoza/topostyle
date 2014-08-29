@@ -146,7 +146,7 @@
               <se:GraphicFill>
                 <se:Graphic>
                   <se:ExternalGraphic>
-                    <se:OnlineResource xlink:type="simple" xlink:href="file:///home/admire/Documents/workingfiles/ngi/svg/marsh.svg"/>
+                    <se:OnlineResource xlink:type="simple" xlink:href="file:./svg_graphics/marsh.svg"/>
                     <se:Format>image/svg+xml</se:Format>
                   </se:ExternalGraphic>
                   <se:Size>24</se:Size>
@@ -288,7 +288,7 @@
               <se:GraphicFill>
                 <se:Graphic>
                   <se:ExternalGraphic>
-                    <se:OnlineResource xlink:type="simple" xlink:href="file:///home/admire/Documents/workingfiles/ngi/svg/marsh.svg"/>
+                    <se:OnlineResource xlink:type="simple" xlink:href="file:./svg_graphics/marsh.svg"/>
                     <se:Format>image/svg+xml</se:Format>
                   </se:ExternalGraphic>
                   <se:Size>24</se:Size>

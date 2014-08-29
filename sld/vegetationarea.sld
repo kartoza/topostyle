@@ -25,7 +25,7 @@
               <sld:GraphicFill>
                 <sld:Graphic>
                   <sld:ExternalGraphic>
-                    <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="svg/orchards.svg"/>
+                    <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="file:./svg_graphics/orchards.svg"/>
                     <sld:Format>image/svg+xml</sld:Format>
                   </sld:ExternalGraphic>
                   <sld:Size>15</sld:Size>
@@ -88,7 +88,7 @@
               <sld:GraphicFill>
                 <sld:Graphic>
                   <sld:ExternalGraphic>
-                    <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="svg/cultivatedland.svg"/>
+                    <sld:OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="file:./svg_graphics/cultivatedland.svg"/>
                     <sld:Format>image/svg+xml</sld:Format>
                   </sld:ExternalGraphic>
                   <sld:Size>15</sld:Size>

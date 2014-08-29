@@ -2,90 +2,107 @@
 <qgis version="2.0.1-Dufour" minimumScale="-4.65661e-10" maximumScale="1e+08" minLabelScale="1" maxLabelScale="1e+08" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
   <renderer-v2 symbollevels="0" type="RuleRenderer">
     <rules>
-      <rule scalemaxdenom="80000" filter="feat_type = 'CULTIVATED LAND'" symbol="0" label="Cultivated land"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'WOODLAND'" symbol="1" label="Woodland"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'PLANTATION'" symbol="2" label="Plantation"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'ORCHARD VINEYARD'" symbol="3" label="Orchard vineyard"/>
+      <rule scalemaxdenom="80000" filter="feat_type = 'CUT LINE'" symbol="0" label="Cut line"/>
+      <rule scalemaxdenom="80000" filter=" &quot;feat_type&quot;  =  'ROCKY OUTCROP' " symbol="1" label="Rocky Outcrop"/>
     </rules>
     <symbols>
-      <symbol alpha="1" type="fill" name="0">
-        <layer pass="0" class="SVGFill" locked="0">
-          <prop k="angle" v="0"/>
-          <prop k="outline_width_unit" v="MM"/>
-          <prop k="pattern_width_unit" v="MM"/>
-          <prop k="svgFile" v="../../../../../src/topostyle/svg_graphics/cultivatedland.svg"/>
-          <prop k="svgFillColor" v="#000000"/>
-          <prop k="svgOutlineColor" v="#000000"/>
-          <prop k="svgOutlineWidth" v="1"/>
-          <prop k="svgOutlineWidth_expression" v="svgOutlineWidth_expression"/>
-          <prop k="svg_outline_width_unit" v="MM"/>
-          <prop k="width" v="23"/>
-          <symbol alpha="1" type="line" name="@0@0">
-            <layer pass="0" class="SimpleLine" locked="0">
-              <prop k="capstyle" v="square"/>
-              <prop k="color" v="39,119,64,255"/>
-              <prop k="customdash" v="5;2"/>
-              <prop k="customdash_unit" v="MM"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0"/>
+      <symbol alpha="1" type="line" name="0">
+        <layer pass="0" class="MarkerLine" locked="0">
+          <prop k="interval" v="3"/>
+          <prop k="interval_unit" v="MM"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="placement" v="centralpoint"/>
+          <prop k="rotate" v="0"/>
+          <symbol alpha="1" type="marker" name="@0@0">
+            <layer pass="0" class="SimpleMarker" locked="0">
+              <prop k="angle" v="135"/>
+              <prop k="color" v="255,0,0,255"/>
+              <prop k="color_border" v="0,0,0,255"/>
+              <prop k="name" v="line"/>
+              <prop k="offset" v="0,0"/>
               <prop k="offset_unit" v="MM"/>
-              <prop k="penstyle" v="solid"/>
-              <prop k="use_custom_dash" v="0"/>
-              <prop k="width" v="0.076"/>
-              <prop k="width_unit" v="MM"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="area"/>
+              <prop k="size" v="2"/>
+              <prop k="size_unit" v="MM"/>
+            </layer>
+            <layer pass="0" class="SimpleMarker" locked="0">
+              <prop k="angle" v="135"/>
+              <prop k="color" v="255,0,0,255"/>
+              <prop k="color_border" v="0,0,0,255"/>
+              <prop k="name" v="line"/>
+              <prop k="offset" v="0,3"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="area"/>
+              <prop k="size" v="2"/>
+              <prop k="size_unit" v="MM"/>
+            </layer>
+            <layer pass="0" class="SimpleMarker" locked="0">
+              <prop k="angle" v="135"/>
+              <prop k="color" v="255,0,0,255"/>
+              <prop k="color_border" v="0,0,0,255"/>
+              <prop k="name" v="line"/>
+              <prop k="offset" v="0,6"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="area"/>
+              <prop k="size" v="2"/>
+              <prop k="size_unit" v="MM"/>
+            </layer>
+            <layer pass="0" class="SimpleMarker" locked="0">
+              <prop k="angle" v="135"/>
+              <prop k="color" v="255,0,0,255"/>
+              <prop k="color_border" v="0,0,0,255"/>
+              <prop k="name" v="line"/>
+              <prop k="offset" v="0,10"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="area"/>
+              <prop k="size" v="2"/>
+              <prop k="size_unit" v="MM"/>
+            </layer>
+            <layer pass="0" class="SimpleMarker" locked="0">
+              <prop k="angle" v="135"/>
+              <prop k="color" v="255,0,0,255"/>
+              <prop k="color_border" v="0,0,0,255"/>
+              <prop k="name" v="line"/>
+              <prop k="offset" v="0,-3"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="area"/>
+              <prop k="size" v="2"/>
+              <prop k="size_unit" v="MM"/>
             </layer>
           </symbol>
         </layer>
       </symbol>
-      <symbol alpha="1" type="fill" name="1">
-        <layer pass="0" class="SimpleFill" locked="0">
-          <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="172,204,180,255"/>
-          <prop k="color_border" v="172,204,180,255"/>
-          <prop k="offset" v="0,0"/>
+      <symbol alpha="1" type="line" name="1">
+        <layer pass="0" class="MarkerLine" locked="0">
+          <prop k="interval" v="5"/>
+          <prop k="interval_unit" v="MM"/>
+          <prop k="offset" v="0"/>
           <prop k="offset_unit" v="MM"/>
-          <prop k="style" v="dense3"/>
-          <prop k="style_border" v="solid"/>
-          <prop k="width_border" v="0.26"/>
-        </layer>
-      </symbol>
-      <symbol alpha="1" type="fill" name="2">
-        <layer pass="0" class="SimpleFill" locked="0">
-          <prop k="border_width_unit" v="MM"/>
-          <prop k="color" v="177,204,180,255"/>
-          <prop k="color_border" v="72,222,117,255"/>
-          <prop k="offset" v="0,0"/>
-          <prop k="offset_unit" v="MM"/>
-          <prop k="style" v="solid"/>
-          <prop k="style_border" v="solid"/>
-          <prop k="width_border" v="0.26"/>
-        </layer>
-      </symbol>
-      <symbol alpha="1" type="fill" name="3">
-        <layer pass="0" class="SVGFill" locked="0">
-          <prop k="angle" v="0"/>
-          <prop k="outline_width_unit" v="MM"/>
-          <prop k="pattern_width_unit" v="MM"/>
-          <prop k="svgFile" v="../../../../../src/topostyle/svg_graphics/orchards.svg"/>
-          <prop k="svgFillColor" v="#000000"/>
-          <prop k="svgOutlineColor" v="#000000"/>
-          <prop k="svgOutlineWidth" v="1"/>
-          <prop k="svgOutlineWidth_expression" v="svgOutlineWidth_expression"/>
-          <prop k="svg_outline_width_unit" v="MM"/>
-          <prop k="width" v="28"/>
-          <symbol alpha="1" type="line" name="@3@0">
-            <layer pass="0" class="SimpleLine" locked="0">
-              <prop k="capstyle" v="square"/>
-              <prop k="color" v="39,119,64,255"/>
-              <prop k="customdash" v="5;2"/>
-              <prop k="customdash_unit" v="MM"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0"/>
+          <prop k="placement" v="interval"/>
+          <prop k="rotate" v="0"/>
+          <symbol alpha="1" type="marker" name="@1@0">
+            <layer pass="0" class="SvgMarker" locked="0">
+              <prop k="angle" v="0"/>
+              <prop k="fill" v="#000000"/>
+              <prop k="name" v="../../../../../src/topostyle/svg_graphics/coastalrock.svg"/>
+              <prop k="offset" v="0,0"/>
               <prop k="offset_unit" v="MM"/>
-              <prop k="penstyle" v="solid"/>
-              <prop k="use_custom_dash" v="0"/>
-              <prop k="width" v="0.076"/>
-              <prop k="width_unit" v="MM"/>
+              <prop k="outline" v="#000000"/>
+              <prop k="outline-width" v="1"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="size" v="4"/>
+              <prop k="size_unit" v="MM"/>
             </layer>
           </symbol>
         </layer>
@@ -102,19 +119,19 @@
     <property key="labeling/bufferColorB" value="255"/>
     <property key="labeling/bufferColorG" value="255"/>
     <property key="labeling/bufferColorR" value="255"/>
-    <property key="labeling/bufferDraw" value="false"/>
+    <property key="labeling/bufferDraw" value="true"/>
     <property key="labeling/bufferJoinStyle" value="64"/>
     <property key="labeling/bufferNoFill" value="false"/>
     <property key="labeling/bufferSize" value="1"/>
     <property key="labeling/bufferSizeInMapUnits" value="false"/>
     <property key="labeling/bufferTransp" value="0"/>
     <property key="labeling/centroidWhole" value="false"/>
-    <property key="labeling/decimals" value="3"/>
+    <property key="labeling/decimals" value="0"/>
     <property key="labeling/displayAll" value="false"/>
-    <property key="labeling/dist" value="0"/>
+    <property key="labeling/dist" value="2"/>
     <property key="labeling/distInMapUnits" value="false"/>
-    <property key="labeling/enabled" value="false"/>
-    <property key="labeling/fieldName" value=""/>
+    <property key="labeling/enabled" value="true"/>
+    <property key="labeling/fieldName" value="case when &quot;feat_type&quot; =  'CUT LINE'  then  &quot;feat_type&quot; &#xa;else null&#xa;end"/>
     <property key="labeling/fontBold" value="false"/>
     <property key="labeling/fontCapitals" value="0"/>
     <property key="labeling/fontFamily" value="Times New Roman"/>
@@ -123,14 +140,14 @@
     <property key="labeling/fontLimitPixelSize" value="false"/>
     <property key="labeling/fontMaxPixelSize" value="10000"/>
     <property key="labeling/fontMinPixelSize" value="3"/>
-    <property key="labeling/fontSize" value="11"/>
+    <property key="labeling/fontSize" value="6"/>
     <property key="labeling/fontSizeInMapUnits" value="false"/>
     <property key="labeling/fontStrikeout" value="false"/>
     <property key="labeling/fontUnderline" value="false"/>
     <property key="labeling/fontWeight" value="50"/>
     <property key="labeling/fontWordSpacing" value="0"/>
     <property key="labeling/formatNumbers" value="false"/>
-    <property key="labeling/isExpression" value="false"/>
+    <property key="labeling/isExpression" value="true"/>
     <property key="labeling/labelOffsetInMapUnits" value="true"/>
     <property key="labeling/labelPerPart" value="false"/>
     <property key="labeling/leftDirectionSymbol" value="&lt;"/>
@@ -145,8 +162,8 @@
     <property key="labeling/namedStyle" value="Bold Italic"/>
     <property key="labeling/obstacle" value="true"/>
     <property key="labeling/placeDirectionSymbol" value="0"/>
-    <property key="labeling/placement" value="0"/>
-    <property key="labeling/placementFlags" value="0"/>
+    <property key="labeling/placement" value="2"/>
+    <property key="labeling/placementFlags" value="10"/>
     <property key="labeling/plussign" value="false"/>
     <property key="labeling/preserveRotation" value="true"/>
     <property key="labeling/previewBkgrdColor" value="#ffffff"/>
@@ -237,7 +254,6 @@
   </labelattributes>
   <edittypes>
     <edittype labelontop="0" editable="1" type="0" name="PK_UID"/>
-    <edittype labelontop="0" editable="1" type="0" name="__gid"/>
     <edittype labelontop="0" editable="1" type="0" name="capture_in"/>
     <edittype labelontop="0" editable="1" type="0" name="create_dat"/>
     <edittype labelontop="0" editable="1" type="0" name="data_sourc"/>

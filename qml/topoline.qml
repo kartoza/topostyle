@@ -69,7 +69,7 @@
         <layer pass="0" class="SvgMarker" locked="0">
           <prop k="angle" v="0"/>
           <prop k="fill" v="#000000"/>
-          <prop k="name" v="/home/admire/src/topostyle/sld/svg/coastalrock.svg"/>
+          <prop k="name" v="/home/admire/src/topostyle/svg_graphics/coastalrock.svg"/>
           <prop k="offset" v="0,0"/>
           <prop k="outline" v="#000000"/>
           <prop k="outline-width" v="1"/>
