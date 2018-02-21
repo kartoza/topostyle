@@ -106,6 +106,7 @@
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#f7fbff</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">0</se:SvgParameter>
             </se:Fill>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -199,6 +200,8 @@
               </ogc:PropertyIsEqualTo>
             </ogc:Or>
           </ogc:Filter>
+          <se:MinScaleDenominator>1</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>80000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
@@ -285,9 +288,28 @@
           </se:LineSymbolizer>
         </se:Rule>
         <se:Rule>
+          <ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+            <ogc:Or>
+              <ogc:PropertyIsEqualTo>
+                <ogc:PropertyName>feat_type</ogc:PropertyName>
+                <ogc:Literal>Digging</ogc:Literal>
+              </ogc:PropertyIsEqualTo>
+              <ogc:PropertyIsEqualTo>
+                <ogc:PropertyName>feat_type</ogc:PropertyName>
+                <ogc:Literal>Open Cast Mine</ogc:Literal>
+              </ogc:PropertyIsEqualTo>
+              <ogc:PropertyIsEqualTo>
+                <ogc:PropertyName>feat_type</ogc:PropertyName>
+                <ogc:Literal>Slimes Dam</ogc:Literal>
+              </ogc:PropertyIsEqualTo>
+            </ogc:Or>
+          </ogc:Filter>
+          <se:MinScaleDenominator>1</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>15000</se:MaxScaleDenominator>
           <se:TextSymbolizer>
             <se:Label>
-              <!--SE Export for CASE WHEN feat_type  IN ('DIGGING', 'OPEN CAST MINE', 'SLIMES DAM') THEN feat_type ELSE NULL END not implemented yet-->Placeholder</se:Label>
+              <ogc:PropertyName>feat_type</ogc:PropertyName>
+            </se:Label>
             <se:Font>
               <se:SvgParameter name="font-family">Ubuntu</se:SvgParameter>
               <se:SvgParameter name="font-size">6</se:SvgParameter>
