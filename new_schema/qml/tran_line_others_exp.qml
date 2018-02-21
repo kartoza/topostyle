@@ -1,403 +1,211 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis simplifyLocal="1" maxScale="0" labelsEnabled="1" readOnly="0" simplifyDrawingTol="1" minScale="1e+8" simplifyAlgorithm="0" simplifyDrawingHints="1" simplifyMaxScale="1" version="2.99.0-Master" hasScaleBasedVisibilityFlag="0">
-  <renderer-v2 symbollevels="0" forceraster="0" enableorderby="0" type="RuleRenderer">
+<qgis maxScale="0" hasScaleBasedVisibilityFlag="0" readOnly="0" simplifyDrawingHints="1" simplifyDrawingTol="1" minScale="1e+8" simplifyLocal="1" simplifyMaxScale="1" version="2.99.0-Master" simplifyAlgorithm="0" labelsEnabled="1">
+  <renderer-v2 enableorderby="0" symbollevels="0" forceraster="0" type="RuleRenderer">
     <rules key="{e17c4bd1-b6c9-446f-8b92-196eeaefef51}">
-      <rule scalemaxdenom="80000" filter="feat_type = 'Dock'" symbol="0" label="DOCK" key="{055f9fe5-2f7e-492f-8e79-4304eb144d3a}" scalemindenom="1"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'Dry Dock'" symbol="1" label="DRY DOCK" key="{204633f5-df95-4c4d-9f22-eec1b660611a}" scalemindenom="1"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'Quay'" symbol="2" label="QUAY" key="{37c37d08-8d24-4f17-9738-9ca74c5f288f}" scalemindenom="1"/>
-      <rule scalemaxdenom="80000" filter="feat_type = 'Wharf'" symbol="3" label="WHARF" key="{fb5e704f-9c22-41f3-81d9-519fbc4b1951}" scalemindenom="1"/>
-      <rule scalemaxdenom="80000" filter=" &quot;feat_type&quot;  =  'Cableway' " symbol="4" label="Cableway" key="{ea093c6d-1031-4dcf-9761-71fd0516675f}" scalemindenom="1"/>
+      <rule filter="feat_type = 'Dock'" symbol="0" key="{055f9fe5-2f7e-492f-8e79-4304eb144d3a}" label="DOCK" scalemindenom="1" scalemaxdenom="80000"/>
+      <rule filter="feat_type = 'Dry Dock'" symbol="1" key="{204633f5-df95-4c4d-9f22-eec1b660611a}" label="DRY DOCK" scalemindenom="1" scalemaxdenom="80000"/>
+      <rule filter="feat_type = 'Quay'" symbol="2" key="{37c37d08-8d24-4f17-9738-9ca74c5f288f}" label="QUAY" scalemindenom="1" scalemaxdenom="80000"/>
+      <rule filter="feat_type = 'Wharf'" symbol="3" key="{fb5e704f-9c22-41f3-81d9-519fbc4b1951}" label="WHARF" scalemindenom="1" scalemaxdenom="80000"/>
+      <rule filter=" &quot;feat_type&quot;  =  'Cableway' " symbol="4" key="{ea093c6d-1031-4dcf-9761-71fd0516675f}" label="Cableway"/>
     </rules>
     <symbols>
-      <symbol alpha="1" type="line" clip_to_extent="1" name="0">
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="0" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="0.1" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="0" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+      <symbol clip_to_extent="1" name="0" type="line" alpha="1">
+        <layer pass="0" class="SimpleLine" locked="0" enabled="1">
+          <prop k="capstyle" v="square"/>
+          <prop k="customdash" v="0"/>
+          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="draw_inside_polygon" v="0"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="line_color" v="0,0,0,255"/>
+          <prop k="line_style" v="solid"/>
+          <prop k="line_width" v="0.1"/>
+          <prop k="line_width_unit" v="MM"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="use_custom_dash" v="0"/>
+          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol alpha="1" type="line" clip_to_extent="1" name="1">
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="0" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="0.1" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="0" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+      <symbol clip_to_extent="1" name="1" type="line" alpha="1">
+        <layer pass="0" class="SimpleLine" locked="0" enabled="1">
+          <prop k="capstyle" v="square"/>
+          <prop k="customdash" v="0"/>
+          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="draw_inside_polygon" v="0"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="line_color" v="0,0,0,255"/>
+          <prop k="line_style" v="solid"/>
+          <prop k="line_width" v="0.1"/>
+          <prop k="line_width_unit" v="MM"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="use_custom_dash" v="0"/>
+          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol alpha="1" type="line" clip_to_extent="1" name="2">
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="0" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="0.1" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="0" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+      <symbol clip_to_extent="1" name="2" type="line" alpha="1">
+        <layer pass="0" class="SimpleLine" locked="0" enabled="1">
+          <prop k="capstyle" v="square"/>
+          <prop k="customdash" v="0"/>
+          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="draw_inside_polygon" v="0"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="line_color" v="0,0,0,255"/>
+          <prop k="line_style" v="solid"/>
+          <prop k="line_width" v="0.1"/>
+          <prop k="line_width_unit" v="MM"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="use_custom_dash" v="0"/>
+          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol alpha="1" type="line" clip_to_extent="1" name="3">
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="0" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="0.1" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="0" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+      <symbol clip_to_extent="1" name="3" type="line" alpha="1">
+        <layer pass="0" class="SimpleLine" locked="0" enabled="1">
+          <prop k="capstyle" v="square"/>
+          <prop k="customdash" v="0"/>
+          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="draw_inside_polygon" v="0"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="line_color" v="0,0,0,255"/>
+          <prop k="line_style" v="solid"/>
+          <prop k="line_width" v="0.1"/>
+          <prop k="line_width_unit" v="MM"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="use_custom_dash" v="0"/>
+          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
       </symbol>
-      <symbol alpha="1" type="line" clip_to_extent="1" name="4">
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="5;2" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="0.26" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="1" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="1" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+      <symbol clip_to_extent="1" name="4" type="line" alpha="1">
+        <layer pass="0" class="SimpleLine" locked="0" enabled="1">
+          <prop k="capstyle" v="square"/>
+          <prop k="customdash" v="5;2"/>
+          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="draw_inside_polygon" v="0"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="line_color" v="0,0,0,255"/>
+          <prop k="line_style" v="solid"/>
+          <prop k="line_width" v="0.26"/>
+          <prop k="line_width_unit" v="MM"/>
+          <prop k="offset" v="1"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="use_custom_dash" v="1"/>
+          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
         </layer>
-        <layer locked="0" pass="0" class="MarkerLine" enabled="1">
-          <prop v="3" k="interval"/>
-          <prop v="3x:0,0,0,0,0,0" k="interval_map_unit_scale"/>
-          <prop v="MM" k="interval_unit"/>
-          <prop v="1" k="offset"/>
-          <prop v="0" k="offset_along_line"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_along_line_map_unit_scale"/>
-          <prop v="MM" k="offset_along_line_unit"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="interval" k="placement"/>
-          <prop v="1" k="rotate"/>
+        <layer pass="0" class="MarkerLine" locked="0" enabled="1">
+          <prop k="interval" v="3"/>
+          <prop k="interval_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="interval_unit" v="MM"/>
+          <prop k="offset" v="1"/>
+          <prop k="offset_along_line" v="0"/>
+          <prop k="offset_along_line_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_along_line_unit" v="MM"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="placement" v="interval"/>
+          <prop k="rotate" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option name="name" value="" type="QString"/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option name="type" value="collection" type="QString"/>
             </Option>
           </data_defined_properties>
-          <symbol alpha="1" type="marker" clip_to_extent="1" name="@4@1">
-            <layer locked="0" pass="0" class="SimpleMarker" enabled="1">
-              <prop v="0" k="angle"/>
-              <prop v="0,0,0,255" k="color"/>
-              <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="circle" k="name"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="0,0,0,255" k="outline_color"/>
-              <prop v="solid" k="outline_style"/>
-              <prop v="0" k="outline_width"/>
-              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="area" k="scale_method"/>
-              <prop v="1.2" k="size"/>
-              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-              <prop v="MM" k="size_unit"/>
-              <prop v="1" k="vertical_anchor_point"/>
+          <symbol clip_to_extent="1" name="@4@1" type="marker" alpha="1">
+            <layer pass="0" class="SimpleMarker" locked="0" enabled="1">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="0,0,0,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="area"/>
+              <prop k="size" v="1.2"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option name="name" value="" type="QString"/>
                   <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option name="type" value="collection" type="QString"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
-        </layer>
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="0" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="1" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="-1" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="1" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-          <data_defined_properties>
-            <Option type="Map">
-              <Option type="QString" value="" name="name"/>
-              <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
-            </Option>
-          </data_defined_properties>
-        </layer>
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="0" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="1" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="-1" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="1" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-          <data_defined_properties>
-            <Option type="Map">
-              <Option type="QString" value="" name="name"/>
-              <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
-            </Option>
-          </data_defined_properties>
-        </layer>
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="0" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="1" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="-1" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="1" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-          <data_defined_properties>
-            <Option type="Map">
-              <Option type="QString" value="" name="name"/>
-              <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
-            </Option>
-          </data_defined_properties>
-        </layer>
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="0" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="1" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="-1" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="1" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-          <data_defined_properties>
-            <Option type="Map">
-              <Option type="QString" value="" name="name"/>
-              <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
-            </Option>
-          </data_defined_properties>
-        </layer>
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="0" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="1" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="-1" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="1" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-          <data_defined_properties>
-            <Option type="Map">
-              <Option type="QString" value="" name="name"/>
-              <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
-            </Option>
-          </data_defined_properties>
-        </layer>
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="0" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="1" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="-1" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="1" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-          <data_defined_properties>
-            <Option type="Map">
-              <Option type="QString" value="" name="name"/>
-              <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
-            </Option>
-          </data_defined_properties>
-        </layer>
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="0" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="1" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="-1" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="1" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-          <data_defined_properties>
-            <Option type="Map">
-              <Option type="QString" value="" name="name"/>
-              <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
-            </Option>
-          </data_defined_properties>
-        </layer>
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="0" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="solid" k="line_style"/>
-          <prop v="1" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="-1" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="1" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
-          <data_defined_properties>
-            <Option type="Map">
-              <Option type="QString" value="" name="name"/>
-              <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
-            </Option>
-          </data_defined_properties>
         </layer>
       </symbol>
     </symbols>
   </renderer-v2>
   <labeling type="simple">
     <settings>
-      <text-style fontWeight="57" previewBkgrdColor="#ffffff" multilineHeight="1" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontUnderline="0" textColor="0,0,0,255" fontSize="8" useSubstitutions="0" fontStrikeout="0" fontSizeUnit="Point" fieldName="feat_type" fontItalic="0" fontCapitals="0" isExpression="0" blendMode="0" namedStyle="Medium" fontFamily="Ubuntu" textOpacity="1" fontLetterSpacing="0" fontWordSpacing="0">
-        <text-buffer bufferOpacity="1" bufferDraw="0" bufferNoFill="0" bufferColor="255,255,255,255" bufferBlendMode="0" bufferSize="1" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferSizeUnits="MM" bufferJoinStyle="64"/>
-        <background shapeRotationType="0" shapeSizeType="0" shapeBlendMode="0" shapeJoinStyle="64" shapeOffsetY="0" shapeSizeY="0" shapeRadiiY="0" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeRotation="0" shapeFillColor="255,255,255,255" shapeSVGFile="" shapeSizeX="0" shapeOpacity="1" shapeOffsetUnit="MM" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeBorderWidthUnit="MM" shapeType="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeSizeUnit="MM" shapeRadiiUnit="MM" shapeBorderColor="128,128,128,255" shapeOffsetX="0" shapeBorderWidth="0" shapeRadiiX="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeDraw="0"/>
-        <shadow shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowUnder="0" shadowOffsetDist="1" shadowOpacity="0.7" shadowColor="0,0,0,255" shadowOffsetGlobal="1" shadowBlendMode="6" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowRadius="1.5" shadowOffsetUnit="MM" shadowRadiusAlphaOnly="0" shadowRadiusUnit="MM" shadowOffsetAngle="135" shadowDraw="0" shadowScale="100"/>
+      <text-style fontSize="8" isExpression="0" fontItalic="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontWordSpacing="0" fontWeight="57" blendMode="0" fieldName="feat_type" previewBkgrdColor="#ffffff" fontUnderline="0" textColor="0,0,0,255" fontFamily="Ubuntu" multilineHeight="1" useSubstitutions="0" textOpacity="1" fontStrikeout="0" fontLetterSpacing="0" namedStyle="Medium" fontCapitals="0" fontSizeUnit="Point">
+        <text-buffer bufferJoinStyle="64" bufferSize="1" bufferDraw="0" bufferBlendMode="0" bufferOpacity="1" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferColor="255,255,255,255" bufferSizeUnits="MM" bufferNoFill="0"/>
+        <background shapeSizeX="0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeOpacity="1" shapeFillColor="255,255,255,255" shapeSizeUnit="MM" shapeSizeY="0" shapeBorderWidth="0" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeDraw="0" shapeRotation="0" shapeOffsetY="0" shapeBorderWidthUnit="MM" shapeRadiiUnit="MM" shapeRadiiY="0" shapeType="0" shapeOffsetUnit="MM" shapeBorderColor="128,128,128,255" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeJoinStyle="64" shapeSizeType="0" shapeRadiiX="0" shapeOffsetX="0" shapeBlendMode="0" shapeSVGFile="" shapeRotationType="0"/>
+        <shadow shadowOffsetAngle="135" shadowOffsetGlobal="1" shadowDraw="0" shadowOffsetUnit="MM" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowUnder="0" shadowOffsetDist="1" shadowRadiusAlphaOnly="0" shadowRadius="1.5" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowRadiusUnit="MM" shadowColor="0,0,0,255" shadowOpacity="0.7" shadowScale="100" shadowBlendMode="6"/>
         <substitutions/>
       </text-style>
-      <text-format plussign="0" wrapChar="" addDirectionSymbol="0" formatNumbers="0" decimals="3" placeDirectionSymbol="0" leftDirectionSymbol="&lt;" multilineAlign="0" rightDirectionSymbol=">" reverseDirectionSymbol="0"/>
-      <placement placement="3" xOffset="0" priority="5" centroidWhole="0" offsetType="0" rotationAngle="0" repeatDistance="0" repeatDistanceUnits="MM" distMapUnitScale="3x:0,0,0,0,0,0" distUnits="MM" yOffset="0" preserveRotation="1" maxCurvedCharAngleOut="-20" placementFlags="10" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" centroidInside="0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" offsetUnits="MapUnit" dist="0" quadOffset="4" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" fitInPolygonOnly="0" maxCurvedCharAngleIn="20"/>
-      <rendering maxNumLabels="2000" scaleVisibility="1" scaleMin="1" mergeLines="0" upsidedownLabels="0" fontMaxPixelSize="10000" scaleMax="20000" obstacle="1" fontMinPixelSize="3" fontLimitPixelSize="0" drawLabels="1" labelPerPart="0" minFeatureSize="0" zIndex="0" obstacleFactor="1" obstacleType="0" limitNumLabels="0" displayAll="0"/>
+      <text-format multilineAlign="0" wrapChar="" formatNumbers="0" addDirectionSymbol="0" reverseDirectionSymbol="0" decimals="3" placeDirectionSymbol="0" plussign="0" leftDirectionSymbol="&lt;" rightDirectionSymbol=">"/>
+      <placement fitInPolygonOnly="0" offsetUnits="MapUnit" quadOffset="4" rotationAngle="0" preserveRotation="1" repeatDistance="0" maxCurvedCharAngleIn="20" priority="5" distMapUnitScale="3x:0,0,0,0,0,0" maxCurvedCharAngleOut="-20" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" placement="3" xOffset="0" yOffset="0" placementFlags="10" centroidWhole="0" distUnits="MM" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" offsetType="0" repeatDistanceUnits="MM" centroidInside="0" dist="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR"/>
+      <rendering scaleMin="1" obstacleFactor="1" limitNumLabels="0" maxNumLabels="2000" fontMinPixelSize="3" drawLabels="1" fontMaxPixelSize="10000" displayAll="0" obstacle="1" labelPerPart="0" minFeatureSize="0" scaleMax="20000" fontLimitPixelSize="0" scaleVisibility="1" mergeLines="0" zIndex="0" obstacleType="0" upsidedownLabels="0"/>
       <dd_properties>
         <Option type="Map">
-          <Option type="QString" value="" name="name"/>
+          <Option name="name" value="" type="QString"/>
           <Option name="properties"/>
-          <Option type="QString" value="collection" name="type"/>
+          <Option name="type" value="collection" type="QString"/>
         </Option>
       </dd_properties>
     </settings>
@@ -411,17 +219,17 @@
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
   <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
-    <DiagramCategory maxScaleDenominator="1e+8" minScaleDenominator="0" barWidth="5" labelPlacementMethod="XHeight" backgroundAlpha="255" enabled="0" scaleBasedVisibility="0" lineSizeScale="3x:0,0,0,0,0,0" height="15" penWidth="0" rotationOffset="270" sizeType="MM" width="15" penAlpha="255" minimumSize="0" lineSizeType="MM" sizeScale="3x:0,0,0,0,0,0" penColor="#000000" opacity="1" diagramOrientation="Up" scaleDependency="Area" backgroundColor="#ffffff">
-      <fontProperties style="" description="Ubuntu,11,-1,5,50,0,0,0,0,0"/>
-      <attribute label="" color="#000000" field=""/>
+    <DiagramCategory minScaleDenominator="0" lineSizeType="MM" sizeScale="3x:0,0,0,0,0,0" maxScaleDenominator="1e+8" rotationOffset="270" lineSizeScale="3x:0,0,0,0,0,0" enabled="0" opacity="1" backgroundColor="#ffffff" backgroundAlpha="255" minimumSize="0" width="15" penAlpha="255" scaleDependency="Area" diagramOrientation="Up" sizeType="MM" barWidth="5" height="15" penWidth="0" scaleBasedVisibility="0" penColor="#000000" labelPlacementMethod="XHeight">
+      <fontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
+      <attribute color="#000000" label="" field=""/>
     </DiagramCategory>
   </SingleCategoryDiagramRenderer>
-  <DiagramLayerSettings priority="0" obstacle="0" dist="0" showAll="1" linePlacementFlags="18" zIndex="0" placement="2">
+  <DiagramLayerSettings obstacle="0" dist="0" placement="2" priority="0" zIndex="0" linePlacementFlags="18" showAll="1">
     <properties>
       <Option type="Map">
-        <Option type="QString" value="" name="name"/>
+        <Option name="name" value="" type="QString"/>
         <Option name="properties"/>
-        <Option type="QString" value="collection" name="type"/>
+        <Option name="type" value="collection" type="QString"/>
       </Option>
     </properties>
   </DiagramLayerSettings>
@@ -430,8 +238,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -440,8 +248,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -450,8 +258,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -460,8 +268,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -470,8 +278,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -480,8 +288,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -490,8 +298,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -500,8 +308,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -510,8 +318,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -520,8 +328,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -530,8 +338,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -540,8 +348,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -550,8 +358,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -560,8 +368,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -570,8 +378,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -580,8 +388,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -590,8 +398,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -600,8 +408,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -610,8 +418,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -620,8 +428,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -630,8 +438,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
@@ -640,139 +448,139 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" value="0" type="QString"/>
+            <Option name="UseHtml" value="0" type="QString"/>
           </Option>
         </config>
       </editWidget>
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias field="ogc_fid" index="0" name=""/>
-    <alias field="gid" index="1" name=""/>
-    <alias field="cuid" index="2" name=""/>
-    <alias field="feat_t_id" index="3" name=""/>
-    <alias field="feat_type" index="4" name=""/>
-    <alias field="sub_type" index="5" name=""/>
-    <alias field="op_status" index="6" name=""/>
-    <alias field="job_nr" index="7" name=""/>
-    <alias field="est_rv_date" index="8" name=""/>
-    <alias field="fea_r_date" index="9" name=""/>
-    <alias field="att_r_date" index="10" name=""/>
-    <alias field="cap_source" index="11" name=""/>
-    <alias field="cap_method" index="12" name=""/>
-    <alias field="source_desc" index="13" name=""/>
-    <alias field="source_curr" index="14" name=""/>
-    <alias field="source_accu" index="15" name=""/>
-    <alias field="entity_name" index="16" name=""/>
-    <alias field="geom_type" index="17" name=""/>
-    <alias field="sagd_f_typ" index="18" name=""/>
-    <alias field="sagd_s_typ" index="19" name=""/>
-    <alias field="sagd_f_des" index="20" name=""/>
-    <alias field="sagd_s_des" index="21" name=""/>
+    <alias name="" index="0" field="ogc_fid"/>
+    <alias name="" index="1" field="gid"/>
+    <alias name="" index="2" field="cuid"/>
+    <alias name="" index="3" field="feat_t_id"/>
+    <alias name="" index="4" field="feat_type"/>
+    <alias name="" index="5" field="sub_type"/>
+    <alias name="" index="6" field="op_status"/>
+    <alias name="" index="7" field="job_nr"/>
+    <alias name="" index="8" field="est_rv_date"/>
+    <alias name="" index="9" field="fea_r_date"/>
+    <alias name="" index="10" field="att_r_date"/>
+    <alias name="" index="11" field="cap_source"/>
+    <alias name="" index="12" field="cap_method"/>
+    <alias name="" index="13" field="source_desc"/>
+    <alias name="" index="14" field="source_curr"/>
+    <alias name="" index="15" field="source_accu"/>
+    <alias name="" index="16" field="entity_name"/>
+    <alias name="" index="17" field="geom_type"/>
+    <alias name="" index="18" field="sagd_f_typ"/>
+    <alias name="" index="19" field="sagd_s_typ"/>
+    <alias name="" index="20" field="sagd_f_des"/>
+    <alias name="" index="21" field="sagd_s_des"/>
   </aliases>
   <excludeAttributesWMS/>
   <excludeAttributesWFS/>
   <defaults>
-    <default expression="" applyOnUpdate="0" field="ogc_fid"/>
-    <default expression="" applyOnUpdate="0" field="gid"/>
-    <default expression="" applyOnUpdate="0" field="cuid"/>
-    <default expression="" applyOnUpdate="0" field="feat_t_id"/>
-    <default expression="" applyOnUpdate="0" field="feat_type"/>
-    <default expression="" applyOnUpdate="0" field="sub_type"/>
-    <default expression="" applyOnUpdate="0" field="op_status"/>
-    <default expression="" applyOnUpdate="0" field="job_nr"/>
-    <default expression="" applyOnUpdate="0" field="est_rv_date"/>
-    <default expression="" applyOnUpdate="0" field="fea_r_date"/>
-    <default expression="" applyOnUpdate="0" field="att_r_date"/>
-    <default expression="" applyOnUpdate="0" field="cap_source"/>
-    <default expression="" applyOnUpdate="0" field="cap_method"/>
-    <default expression="" applyOnUpdate="0" field="source_desc"/>
-    <default expression="" applyOnUpdate="0" field="source_curr"/>
-    <default expression="" applyOnUpdate="0" field="source_accu"/>
-    <default expression="" applyOnUpdate="0" field="entity_name"/>
-    <default expression="" applyOnUpdate="0" field="geom_type"/>
-    <default expression="" applyOnUpdate="0" field="sagd_f_typ"/>
-    <default expression="" applyOnUpdate="0" field="sagd_s_typ"/>
-    <default expression="" applyOnUpdate="0" field="sagd_f_des"/>
-    <default expression="" applyOnUpdate="0" field="sagd_s_des"/>
+    <default applyOnUpdate="0" field="ogc_fid" expression=""/>
+    <default applyOnUpdate="0" field="gid" expression=""/>
+    <default applyOnUpdate="0" field="cuid" expression=""/>
+    <default applyOnUpdate="0" field="feat_t_id" expression=""/>
+    <default applyOnUpdate="0" field="feat_type" expression=""/>
+    <default applyOnUpdate="0" field="sub_type" expression=""/>
+    <default applyOnUpdate="0" field="op_status" expression=""/>
+    <default applyOnUpdate="0" field="job_nr" expression=""/>
+    <default applyOnUpdate="0" field="est_rv_date" expression=""/>
+    <default applyOnUpdate="0" field="fea_r_date" expression=""/>
+    <default applyOnUpdate="0" field="att_r_date" expression=""/>
+    <default applyOnUpdate="0" field="cap_source" expression=""/>
+    <default applyOnUpdate="0" field="cap_method" expression=""/>
+    <default applyOnUpdate="0" field="source_desc" expression=""/>
+    <default applyOnUpdate="0" field="source_curr" expression=""/>
+    <default applyOnUpdate="0" field="source_accu" expression=""/>
+    <default applyOnUpdate="0" field="entity_name" expression=""/>
+    <default applyOnUpdate="0" field="geom_type" expression=""/>
+    <default applyOnUpdate="0" field="sagd_f_typ" expression=""/>
+    <default applyOnUpdate="0" field="sagd_s_typ" expression=""/>
+    <default applyOnUpdate="0" field="sagd_f_des" expression=""/>
+    <default applyOnUpdate="0" field="sagd_s_des" expression=""/>
   </defaults>
   <constraints>
-    <constraint notnull_strength="1" constraints="3" unique_strength="1" exp_strength="0" field="ogc_fid"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="gid"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="cuid"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="feat_t_id"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="feat_type"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="sub_type"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="op_status"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="job_nr"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="est_rv_date"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="fea_r_date"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="att_r_date"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="cap_source"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="cap_method"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="source_desc"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="source_curr"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="source_accu"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="entity_name"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="geom_type"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="sagd_f_typ"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="sagd_s_typ"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="sagd_f_des"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="sagd_s_des"/>
+    <constraint exp_strength="0" unique_strength="1" notnull_strength="1" field="ogc_fid" constraints="3"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="gid" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="cuid" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="feat_t_id" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="feat_type" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="sub_type" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="op_status" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="job_nr" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="est_rv_date" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="fea_r_date" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="att_r_date" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="cap_source" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="cap_method" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="source_desc" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="source_curr" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="source_accu" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="entity_name" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="geom_type" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="sagd_f_typ" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="sagd_s_typ" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="sagd_f_des" constraints="0"/>
+    <constraint exp_strength="0" unique_strength="0" notnull_strength="0" field="sagd_s_des" constraints="0"/>
   </constraints>
   <constraintExpressions>
-    <constraint desc="" exp="" field="ogc_fid"/>
-    <constraint desc="" exp="" field="gid"/>
-    <constraint desc="" exp="" field="cuid"/>
-    <constraint desc="" exp="" field="feat_t_id"/>
-    <constraint desc="" exp="" field="feat_type"/>
-    <constraint desc="" exp="" field="sub_type"/>
-    <constraint desc="" exp="" field="op_status"/>
-    <constraint desc="" exp="" field="job_nr"/>
-    <constraint desc="" exp="" field="est_rv_date"/>
-    <constraint desc="" exp="" field="fea_r_date"/>
-    <constraint desc="" exp="" field="att_r_date"/>
-    <constraint desc="" exp="" field="cap_source"/>
-    <constraint desc="" exp="" field="cap_method"/>
-    <constraint desc="" exp="" field="source_desc"/>
-    <constraint desc="" exp="" field="source_curr"/>
-    <constraint desc="" exp="" field="source_accu"/>
-    <constraint desc="" exp="" field="entity_name"/>
-    <constraint desc="" exp="" field="geom_type"/>
-    <constraint desc="" exp="" field="sagd_f_typ"/>
-    <constraint desc="" exp="" field="sagd_s_typ"/>
-    <constraint desc="" exp="" field="sagd_f_des"/>
-    <constraint desc="" exp="" field="sagd_s_des"/>
+    <constraint exp="" desc="" field="ogc_fid"/>
+    <constraint exp="" desc="" field="gid"/>
+    <constraint exp="" desc="" field="cuid"/>
+    <constraint exp="" desc="" field="feat_t_id"/>
+    <constraint exp="" desc="" field="feat_type"/>
+    <constraint exp="" desc="" field="sub_type"/>
+    <constraint exp="" desc="" field="op_status"/>
+    <constraint exp="" desc="" field="job_nr"/>
+    <constraint exp="" desc="" field="est_rv_date"/>
+    <constraint exp="" desc="" field="fea_r_date"/>
+    <constraint exp="" desc="" field="att_r_date"/>
+    <constraint exp="" desc="" field="cap_source"/>
+    <constraint exp="" desc="" field="cap_method"/>
+    <constraint exp="" desc="" field="source_desc"/>
+    <constraint exp="" desc="" field="source_curr"/>
+    <constraint exp="" desc="" field="source_accu"/>
+    <constraint exp="" desc="" field="entity_name"/>
+    <constraint exp="" desc="" field="geom_type"/>
+    <constraint exp="" desc="" field="sagd_f_typ"/>
+    <constraint exp="" desc="" field="sagd_s_typ"/>
+    <constraint exp="" desc="" field="sagd_f_des"/>
+    <constraint exp="" desc="" field="sagd_s_des"/>
   </constraintExpressions>
   <attributeactions>
     <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
   </attributeactions>
-  <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
+  <attributetableconfig sortOrder="0" actionWidgetStyle="dropDown" sortExpression="">
     <columns>
-      <column hidden="0" type="field" width="-1" name="ogc_fid"/>
-      <column hidden="0" type="field" width="-1" name="gid"/>
-      <column hidden="0" type="field" width="-1" name="cuid"/>
-      <column hidden="0" type="field" width="-1" name="feat_t_id"/>
-      <column hidden="0" type="field" width="-1" name="feat_type"/>
-      <column hidden="0" type="field" width="-1" name="sub_type"/>
-      <column hidden="0" type="field" width="-1" name="op_status"/>
-      <column hidden="0" type="field" width="-1" name="job_nr"/>
-      <column hidden="0" type="field" width="-1" name="est_rv_date"/>
-      <column hidden="0" type="field" width="-1" name="fea_r_date"/>
-      <column hidden="0" type="field" width="-1" name="att_r_date"/>
-      <column hidden="0" type="field" width="-1" name="cap_source"/>
-      <column hidden="0" type="field" width="-1" name="cap_method"/>
-      <column hidden="0" type="field" width="-1" name="source_desc"/>
-      <column hidden="0" type="field" width="-1" name="source_curr"/>
-      <column hidden="0" type="field" width="-1" name="source_accu"/>
-      <column hidden="0" type="field" width="-1" name="entity_name"/>
-      <column hidden="0" type="field" width="-1" name="geom_type"/>
-      <column hidden="0" type="field" width="-1" name="sagd_f_typ"/>
-      <column hidden="0" type="field" width="-1" name="sagd_s_typ"/>
-      <column hidden="0" type="field" width="-1" name="sagd_f_des"/>
-      <column hidden="0" type="field" width="-1" name="sagd_s_des"/>
-      <column hidden="1" type="actions" width="-1"/>
+      <column name="ogc_fid" hidden="0" width="-1" type="field"/>
+      <column name="gid" hidden="0" width="-1" type="field"/>
+      <column name="cuid" hidden="0" width="-1" type="field"/>
+      <column name="feat_t_id" hidden="0" width="-1" type="field"/>
+      <column name="feat_type" hidden="0" width="-1" type="field"/>
+      <column name="sub_type" hidden="0" width="-1" type="field"/>
+      <column name="op_status" hidden="0" width="-1" type="field"/>
+      <column name="job_nr" hidden="0" width="-1" type="field"/>
+      <column name="est_rv_date" hidden="0" width="-1" type="field"/>
+      <column name="fea_r_date" hidden="0" width="-1" type="field"/>
+      <column name="att_r_date" hidden="0" width="-1" type="field"/>
+      <column name="cap_source" hidden="0" width="-1" type="field"/>
+      <column name="cap_method" hidden="0" width="-1" type="field"/>
+      <column name="source_desc" hidden="0" width="-1" type="field"/>
+      <column name="source_curr" hidden="0" width="-1" type="field"/>
+      <column name="source_accu" hidden="0" width="-1" type="field"/>
+      <column name="entity_name" hidden="0" width="-1" type="field"/>
+      <column name="geom_type" hidden="0" width="-1" type="field"/>
+      <column name="sagd_f_typ" hidden="0" width="-1" type="field"/>
+      <column name="sagd_s_typ" hidden="0" width="-1" type="field"/>
+      <column name="sagd_f_des" hidden="0" width="-1" type="field"/>
+      <column name="sagd_s_des" hidden="0" width="-1" type="field"/>
+      <column hidden="1" width="-1" type="actions"/>
     </columns>
   </attributetableconfig>
   <editform>/data/maps.kartoza.com/ngi</editform>
@@ -799,52 +607,52 @@ def my_form_open(dialog, layer, feature):
   <featformsuppress>0</featformsuppress>
   <editorlayout>generatedlayout</editorlayout>
   <editable>
-    <field editable="1" name="att_r_date"/>
-    <field editable="1" name="cap_method"/>
-    <field editable="1" name="cap_source"/>
-    <field editable="1" name="cuid"/>
-    <field editable="1" name="entity_name"/>
-    <field editable="1" name="est_rv_date"/>
-    <field editable="1" name="fea_r_date"/>
-    <field editable="1" name="feat_t_id"/>
-    <field editable="1" name="feat_type"/>
-    <field editable="1" name="geom_type"/>
-    <field editable="1" name="gid"/>
-    <field editable="1" name="job_nr"/>
-    <field editable="1" name="ogc_fid"/>
-    <field editable="1" name="op_status"/>
-    <field editable="1" name="sagd_f_des"/>
-    <field editable="1" name="sagd_f_typ"/>
-    <field editable="1" name="sagd_s_des"/>
-    <field editable="1" name="sagd_s_typ"/>
-    <field editable="1" name="source_accu"/>
-    <field editable="1" name="source_curr"/>
-    <field editable="1" name="source_desc"/>
-    <field editable="1" name="sub_type"/>
+    <field name="att_r_date" editable="1"/>
+    <field name="cap_method" editable="1"/>
+    <field name="cap_source" editable="1"/>
+    <field name="cuid" editable="1"/>
+    <field name="entity_name" editable="1"/>
+    <field name="est_rv_date" editable="1"/>
+    <field name="fea_r_date" editable="1"/>
+    <field name="feat_t_id" editable="1"/>
+    <field name="feat_type" editable="1"/>
+    <field name="geom_type" editable="1"/>
+    <field name="gid" editable="1"/>
+    <field name="job_nr" editable="1"/>
+    <field name="ogc_fid" editable="1"/>
+    <field name="op_status" editable="1"/>
+    <field name="sagd_f_des" editable="1"/>
+    <field name="sagd_f_typ" editable="1"/>
+    <field name="sagd_s_des" editable="1"/>
+    <field name="sagd_s_typ" editable="1"/>
+    <field name="source_accu" editable="1"/>
+    <field name="source_curr" editable="1"/>
+    <field name="source_desc" editable="1"/>
+    <field name="sub_type" editable="1"/>
   </editable>
   <labelOnTop>
-    <field labelOnTop="0" name="att_r_date"/>
-    <field labelOnTop="0" name="cap_method"/>
-    <field labelOnTop="0" name="cap_source"/>
-    <field labelOnTop="0" name="cuid"/>
-    <field labelOnTop="0" name="entity_name"/>
-    <field labelOnTop="0" name="est_rv_date"/>
-    <field labelOnTop="0" name="fea_r_date"/>
-    <field labelOnTop="0" name="feat_t_id"/>
-    <field labelOnTop="0" name="feat_type"/>
-    <field labelOnTop="0" name="geom_type"/>
-    <field labelOnTop="0" name="gid"/>
-    <field labelOnTop="0" name="job_nr"/>
-    <field labelOnTop="0" name="ogc_fid"/>
-    <field labelOnTop="0" name="op_status"/>
-    <field labelOnTop="0" name="sagd_f_des"/>
-    <field labelOnTop="0" name="sagd_f_typ"/>
-    <field labelOnTop="0" name="sagd_s_des"/>
-    <field labelOnTop="0" name="sagd_s_typ"/>
-    <field labelOnTop="0" name="source_accu"/>
-    <field labelOnTop="0" name="source_curr"/>
-    <field labelOnTop="0" name="source_desc"/>
-    <field labelOnTop="0" name="sub_type"/>
+    <field name="att_r_date" labelOnTop="0"/>
+    <field name="cap_method" labelOnTop="0"/>
+    <field name="cap_source" labelOnTop="0"/>
+    <field name="cuid" labelOnTop="0"/>
+    <field name="entity_name" labelOnTop="0"/>
+    <field name="est_rv_date" labelOnTop="0"/>
+    <field name="fea_r_date" labelOnTop="0"/>
+    <field name="feat_t_id" labelOnTop="0"/>
+    <field name="feat_type" labelOnTop="0"/>
+    <field name="geom_type" labelOnTop="0"/>
+    <field name="gid" labelOnTop="0"/>
+    <field name="job_nr" labelOnTop="0"/>
+    <field name="ogc_fid" labelOnTop="0"/>
+    <field name="op_status" labelOnTop="0"/>
+    <field name="sagd_f_des" labelOnTop="0"/>
+    <field name="sagd_f_typ" labelOnTop="0"/>
+    <field name="sagd_s_des" labelOnTop="0"/>
+    <field name="sagd_s_typ" labelOnTop="0"/>
+    <field name="source_accu" labelOnTop="0"/>
+    <field name="source_curr" labelOnTop="0"/>
+    <field name="source_desc" labelOnTop="0"/>
+    <field name="sub_type" labelOnTop="0"/>
   </labelOnTop>
   <widgets/>
   <conditionalstyles>
