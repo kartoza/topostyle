@@ -1,134 +1,134 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis simplifyLocal="1" maxScale="0" labelsEnabled="0" readOnly="0" simplifyDrawingTol="1" minScale="0" simplifyAlgorithm="0" simplifyDrawingHints="1" simplifyMaxScale="1" version="2.99.0-Master" hasScaleBasedVisibilityFlag="0">
-  <renderer-v2 symbollevels="0" forceraster="0" enableorderby="0" type="RuleRenderer">
+<qgis readOnly="0" version="3.0.0-Girona" simplifyMaxScale="1" labelsEnabled="0" simplifyDrawingHints="1" simplifyDrawingTol="1" minScale="0" hasScaleBasedVisibilityFlag="0" simplifyAlgorithm="0" maxScale="0" simplifyLocal="1">
+  <renderer-v2 symbollevels="0" type="RuleRenderer" enableorderby="0" forceraster="0">
     <rules key="{bccad0d3-8201-4a31-935d-c2c6946cef18}">
-      <rule filter="&quot;feat_type&quot; = 'Boulder' or &quot;feat_type&quot; = 'Rock'" checkstate="0" symbol="0" label="Boulder / Rock" key="{70a82645-b8dc-487f-bb4e-e400253c4fe9}"/>
-      <rule filter="&quot;feat_type&quot; = 'Rocky Outcrop'" checkstate="0" symbol="1" label="Rocky Outcrop" key="{a339c47d-cf5c-4675-9cbd-292bb2ddfa3f}"/>
-      <rule filter=" &quot;feat_type&quot; in (  'Donga' , 'Dune' , 'Eroded Area'   )" symbol="2" label="Other" key="{409b6e42-2091-4055-97fe-28eaf35b40c3}"/>
+      <rule key="{70a82645-b8dc-487f-bb4e-e400253c4fe9}" label="Boulder / Rock" symbol="0" filter="&quot;feat_type&quot; = 'Boulder' or &quot;feat_type&quot; = 'Rock'"/>
+      <rule key="{a339c47d-cf5c-4675-9cbd-292bb2ddfa3f}" label="Rocky Outcrop" symbol="1" filter="&quot;feat_type&quot; = 'Rocky Outcrop'"/>
+      <rule key="{409b6e42-2091-4055-97fe-28eaf35b40c3}" label="Other" symbol="2" filter=" &quot;feat_type&quot; in (  'Donga' , 'Dune' , 'Eroded Area'   )"/>
     </rules>
     <symbols>
-      <symbol alpha="1" type="line" clip_to_extent="1" name="0">
-        <layer locked="0" pass="0" class="MarkerLine" enabled="1">
-          <prop v="3" k="interval"/>
-          <prop v="3x:0,0,0,0,0,0" k="interval_map_unit_scale"/>
-          <prop v="MM" k="interval_unit"/>
-          <prop v="0" k="offset"/>
-          <prop v="0" k="offset_along_line"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_along_line_map_unit_scale"/>
-          <prop v="MM" k="offset_along_line_unit"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="interval" k="placement"/>
-          <prop v="1" k="rotate"/>
+      <symbol name="0" alpha="1" type="line" clip_to_extent="1">
+        <layer locked="0" class="MarkerLine" enabled="1" pass="0">
+          <prop k="interval" v="3"/>
+          <prop k="interval_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="interval_unit" v="MM"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_along_line" v="0"/>
+          <prop k="offset_along_line_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_along_line_unit" v="MM"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="placement" v="interval"/>
+          <prop k="rotate" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option name="name" type="QString" value=""/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option name="type" type="QString" value="collection"/>
             </Option>
           </data_defined_properties>
-          <symbol alpha="1" type="marker" clip_to_extent="1" name="@0@0">
-            <layer locked="0" pass="0" class="FontMarker" enabled="1">
-              <prop v="270" k="angle"/>
-              <prop v="ƺ" k="chr"/>
-              <prop v="0,0,0,255" k="color"/>
-              <prop v="Dingbats" k="font"/>
-              <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="bevel" k="joinstyle"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="70,70,70,255" k="outline_color"/>
-              <prop v="0" k="outline_width"/>
-              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="3" k="size"/>
-              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-              <prop v="MM" k="size_unit"/>
-              <prop v="1" k="vertical_anchor_point"/>
+          <symbol name="@0@0" alpha="1" type="marker" clip_to_extent="1">
+            <layer locked="0" class="FontMarker" enabled="1" pass="0">
+              <prop k="angle" v="270"/>
+              <prop k="chr" v="ƺ"/>
+              <prop k="color" v="0,0,0,255"/>
+              <prop k="font" v="Dingbats"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="70,70,70,255"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="size" v="3"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option name="name" type="QString" value=""/>
                   <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option name="type" type="QString" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </layer>
       </symbol>
-      <symbol alpha="1" type="line" clip_to_extent="1" name="1">
-        <layer locked="0" pass="0" class="MarkerLine" enabled="1">
-          <prop v="3" k="interval"/>
-          <prop v="3x:0,0,0,0,0,0" k="interval_map_unit_scale"/>
-          <prop v="MM" k="interval_unit"/>
-          <prop v="0" k="offset"/>
-          <prop v="0" k="offset_along_line"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_along_line_map_unit_scale"/>
-          <prop v="MM" k="offset_along_line_unit"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="interval" k="placement"/>
-          <prop v="1" k="rotate"/>
+      <symbol name="1" alpha="1" type="line" clip_to_extent="1">
+        <layer locked="0" class="MarkerLine" enabled="1" pass="0">
+          <prop k="interval" v="3"/>
+          <prop k="interval_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="interval_unit" v="MM"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_along_line" v="0"/>
+          <prop k="offset_along_line_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_along_line_unit" v="MM"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="placement" v="interval"/>
+          <prop k="rotate" v="1"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option name="name" type="QString" value=""/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option name="type" type="QString" value="collection"/>
             </Option>
           </data_defined_properties>
-          <symbol alpha="1" type="marker" clip_to_extent="1" name="@1@0">
-            <layer locked="0" pass="0" class="SvgMarker" enabled="1">
-              <prop v="0" k="angle"/>
-              <prop v="255,0,0,255" k="color"/>
-              <prop v="0" k="fixedAspectRatio"/>
-              <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="/gis/src/kartoza_work/topostyle/svg_graphics/prominentrockoutcrops3.svg" k="name"/>
-              <prop v="0,0" k="offset"/>
-              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-              <prop v="MM" k="offset_unit"/>
-              <prop v="70,70,70,255" k="outline_color"/>
-              <prop v="0" k="outline_width"/>
-              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
-              <prop v="MM" k="outline_width_unit"/>
-              <prop v="diameter" k="scale_method"/>
-              <prop v="2" k="size"/>
-              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
-              <prop v="MM" k="size_unit"/>
-              <prop v="1" k="vertical_anchor_point"/>
+          <symbol name="@1@0" alpha="1" type="marker" clip_to_extent="1">
+            <layer locked="0" class="SvgMarker" enabled="1" pass="0">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="255,0,0,255"/>
+              <prop k="fixedAspectRatio" v="0"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="name" v="/gis/src/kartoza_work/topostyle/svg_graphics/prominentrockoutcrops3.svg"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="70,70,70,255"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="2"/>
+              <prop k="size_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
               <data_defined_properties>
                 <Option type="Map">
-                  <Option type="QString" value="" name="name"/>
+                  <Option name="name" type="QString" value=""/>
                   <Option name="properties"/>
-                  <Option type="QString" value="collection" name="type"/>
+                  <Option name="type" type="QString" value="collection"/>
                 </Option>
               </data_defined_properties>
             </layer>
           </symbol>
         </layer>
       </symbol>
-      <symbol alpha="1" type="line" clip_to_extent="1" name="2">
-        <layer locked="0" pass="0" class="SimpleLine" enabled="1">
-          <prop v="square" k="capstyle"/>
-          <prop v="5;2" k="customdash"/>
-          <prop v="3x:0,0,0,0,0,0" k="customdash_map_unit_scale"/>
-          <prop v="MM" k="customdash_unit"/>
-          <prop v="0" k="draw_inside_polygon"/>
-          <prop v="bevel" k="joinstyle"/>
-          <prop v="0,0,0,255" k="line_color"/>
-          <prop v="dash" k="line_style"/>
-          <prop v="0.2" k="line_width"/>
-          <prop v="MM" k="line_width_unit"/>
-          <prop v="0" k="offset"/>
-          <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
-          <prop v="MM" k="offset_unit"/>
-          <prop v="0" k="use_custom_dash"/>
-          <prop v="3x:0,0,0,0,0,0" k="width_map_unit_scale"/>
+      <symbol name="2" alpha="1" type="line" clip_to_extent="1">
+        <layer locked="0" class="SimpleLine" enabled="1" pass="0">
+          <prop k="capstyle" v="square"/>
+          <prop k="customdash" v="5;2"/>
+          <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="customdash_unit" v="MM"/>
+          <prop k="draw_inside_polygon" v="0"/>
+          <prop k="joinstyle" v="bevel"/>
+          <prop k="line_color" v="0,0,0,255"/>
+          <prop k="line_style" v="dash"/>
+          <prop k="line_width" v="0.2"/>
+          <prop k="line_width_unit" v="MM"/>
+          <prop k="offset" v="0"/>
+          <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+          <prop k="offset_unit" v="MM"/>
+          <prop k="use_custom_dash" v="0"/>
+          <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
           <data_defined_properties>
             <Option type="Map">
-              <Option type="QString" value="" name="name"/>
+              <Option name="name" type="QString" value=""/>
               <Option name="properties"/>
-              <Option type="QString" value="collection" name="type"/>
+              <Option name="type" type="QString" value="collection"/>
             </Option>
           </data_defined_properties>
         </layer>
@@ -143,18 +143,18 @@
   <blendMode>0</blendMode>
   <featureBlendMode>0</featureBlendMode>
   <layerOpacity>1</layerOpacity>
-  <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
-    <DiagramCategory maxScaleDenominator="0" minScaleDenominator="0" barWidth="5" labelPlacementMethod="XHeight" backgroundAlpha="255" enabled="0" scaleBasedVisibility="0" lineSizeScale="3x:0,0,0,0,0,0" height="15" penWidth="0" rotationOffset="270" sizeType="MM" width="15" penAlpha="255" minimumSize="0" lineSizeType="MM" sizeScale="3x:0,0,0,0,0,0" penColor="#000000" opacity="1" diagramOrientation="Up" scaleDependency="Area" backgroundColor="#ffffff">
-      <fontProperties style="" description="Ubuntu,11,-1,5,50,0,0,0,0,0"/>
-      <attribute label="" color="#000000" field=""/>
+  <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+    <DiagramCategory maxScaleDenominator="0" height="15" scaleBasedVisibility="0" penWidth="0" minimumSize="0" sizeType="MM" backgroundAlpha="255" lineSizeType="MM" penColor="#000000" backgroundColor="#ffffff" width="15" labelPlacementMethod="XHeight" opacity="1" lineSizeScale="3x:0,0,0,0,0,0" rotationOffset="270" diagramOrientation="Up" barWidth="5" minScaleDenominator="0" scaleDependency="Area" penAlpha="255" enabled="0" sizeScale="3x:0,0,0,0,0,0">
+      <fontProperties description="Ubuntu,11,-1,5,50,0,0,0,0,0" style=""/>
+      <attribute color="#000000" label="" field=""/>
     </DiagramCategory>
   </SingleCategoryDiagramRenderer>
-  <DiagramLayerSettings priority="0" obstacle="0" dist="0" showAll="1" linePlacementFlags="18" zIndex="0" placement="2">
+  <DiagramLayerSettings obstacle="0" placement="2" linePlacementFlags="18" priority="0" zIndex="0" dist="0" showAll="1">
     <properties>
       <Option type="Map">
-        <Option type="QString" value="" name="name"/>
+        <Option name="name" type="QString" value=""/>
         <Option name="properties"/>
-        <Option type="QString" value="collection" name="type"/>
+        <Option name="type" type="QString" value="collection"/>
       </Option>
     </properties>
   </DiagramLayerSettings>
@@ -163,8 +163,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -173,8 +173,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -183,8 +183,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -193,8 +193,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -203,8 +203,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -213,8 +213,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -223,8 +223,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -233,8 +233,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -243,8 +243,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -253,8 +253,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -263,8 +263,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -273,8 +273,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -283,8 +283,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -293,8 +293,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -303,8 +303,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -313,8 +313,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -323,8 +323,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -333,8 +333,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -343,8 +343,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -353,8 +353,8 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
@@ -363,133 +363,133 @@
       <editWidget type="TextEdit">
         <config>
           <Option type="Map">
-            <Option type="QString" value="0" name="IsMultiline"/>
-            <Option type="QString" value="0" name="UseHtml"/>
+            <Option name="IsMultiline" type="QString" value="0"/>
+            <Option name="UseHtml" type="QString" value="0"/>
           </Option>
         </config>
       </editWidget>
     </field>
   </fieldConfiguration>
   <aliases>
-    <alias field="ogc_fid" index="0" name=""/>
-    <alias field="gid" index="1" name=""/>
-    <alias field="cuid" index="2" name=""/>
-    <alias field="feat_t_id" index="3" name=""/>
-    <alias field="feat_type" index="4" name=""/>
-    <alias field="sub_type" index="5" name=""/>
-    <alias field="job_nr" index="6" name=""/>
-    <alias field="est_rv_date" index="7" name=""/>
-    <alias field="fea_r_date" index="8" name=""/>
-    <alias field="att_r_date" index="9" name=""/>
-    <alias field="cap_source" index="10" name=""/>
-    <alias field="cap_method" index="11" name=""/>
-    <alias field="source_desc" index="12" name=""/>
-    <alias field="source_curr" index="13" name=""/>
-    <alias field="source_accu" index="14" name=""/>
-    <alias field="entity_name" index="15" name=""/>
-    <alias field="geom_type" index="16" name=""/>
-    <alias field="sagd_f_typ" index="17" name=""/>
-    <alias field="sagd_s_typ" index="18" name=""/>
-    <alias field="sagd_f_des" index="19" name=""/>
-    <alias field="sagd_s_des" index="20" name=""/>
+    <alias name="" field="ogc_fid" index="0"/>
+    <alias name="" field="gid" index="1"/>
+    <alias name="" field="cuid" index="2"/>
+    <alias name="" field="feat_t_id" index="3"/>
+    <alias name="" field="feat_type" index="4"/>
+    <alias name="" field="sub_type" index="5"/>
+    <alias name="" field="job_nr" index="6"/>
+    <alias name="" field="est_rv_date" index="7"/>
+    <alias name="" field="fea_r_date" index="8"/>
+    <alias name="" field="att_r_date" index="9"/>
+    <alias name="" field="cap_source" index="10"/>
+    <alias name="" field="cap_method" index="11"/>
+    <alias name="" field="source_desc" index="12"/>
+    <alias name="" field="source_curr" index="13"/>
+    <alias name="" field="source_accu" index="14"/>
+    <alias name="" field="entity_name" index="15"/>
+    <alias name="" field="geom_type" index="16"/>
+    <alias name="" field="sagd_f_typ" index="17"/>
+    <alias name="" field="sagd_s_typ" index="18"/>
+    <alias name="" field="sagd_f_des" index="19"/>
+    <alias name="" field="sagd_s_des" index="20"/>
   </aliases>
   <excludeAttributesWMS/>
   <excludeAttributesWFS/>
   <defaults>
-    <default expression="" applyOnUpdate="0" field="ogc_fid"/>
-    <default expression="" applyOnUpdate="0" field="gid"/>
-    <default expression="" applyOnUpdate="0" field="cuid"/>
-    <default expression="" applyOnUpdate="0" field="feat_t_id"/>
-    <default expression="" applyOnUpdate="0" field="feat_type"/>
-    <default expression="" applyOnUpdate="0" field="sub_type"/>
-    <default expression="" applyOnUpdate="0" field="job_nr"/>
-    <default expression="" applyOnUpdate="0" field="est_rv_date"/>
-    <default expression="" applyOnUpdate="0" field="fea_r_date"/>
-    <default expression="" applyOnUpdate="0" field="att_r_date"/>
-    <default expression="" applyOnUpdate="0" field="cap_source"/>
-    <default expression="" applyOnUpdate="0" field="cap_method"/>
-    <default expression="" applyOnUpdate="0" field="source_desc"/>
-    <default expression="" applyOnUpdate="0" field="source_curr"/>
-    <default expression="" applyOnUpdate="0" field="source_accu"/>
-    <default expression="" applyOnUpdate="0" field="entity_name"/>
-    <default expression="" applyOnUpdate="0" field="geom_type"/>
-    <default expression="" applyOnUpdate="0" field="sagd_f_typ"/>
-    <default expression="" applyOnUpdate="0" field="sagd_s_typ"/>
-    <default expression="" applyOnUpdate="0" field="sagd_f_des"/>
-    <default expression="" applyOnUpdate="0" field="sagd_s_des"/>
+    <default applyOnUpdate="0" field="ogc_fid" expression=""/>
+    <default applyOnUpdate="0" field="gid" expression=""/>
+    <default applyOnUpdate="0" field="cuid" expression=""/>
+    <default applyOnUpdate="0" field="feat_t_id" expression=""/>
+    <default applyOnUpdate="0" field="feat_type" expression=""/>
+    <default applyOnUpdate="0" field="sub_type" expression=""/>
+    <default applyOnUpdate="0" field="job_nr" expression=""/>
+    <default applyOnUpdate="0" field="est_rv_date" expression=""/>
+    <default applyOnUpdate="0" field="fea_r_date" expression=""/>
+    <default applyOnUpdate="0" field="att_r_date" expression=""/>
+    <default applyOnUpdate="0" field="cap_source" expression=""/>
+    <default applyOnUpdate="0" field="cap_method" expression=""/>
+    <default applyOnUpdate="0" field="source_desc" expression=""/>
+    <default applyOnUpdate="0" field="source_curr" expression=""/>
+    <default applyOnUpdate="0" field="source_accu" expression=""/>
+    <default applyOnUpdate="0" field="entity_name" expression=""/>
+    <default applyOnUpdate="0" field="geom_type" expression=""/>
+    <default applyOnUpdate="0" field="sagd_f_typ" expression=""/>
+    <default applyOnUpdate="0" field="sagd_s_typ" expression=""/>
+    <default applyOnUpdate="0" field="sagd_f_des" expression=""/>
+    <default applyOnUpdate="0" field="sagd_s_des" expression=""/>
   </defaults>
   <constraints>
-    <constraint notnull_strength="1" constraints="3" unique_strength="1" exp_strength="0" field="ogc_fid"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="gid"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="cuid"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="feat_t_id"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="feat_type"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="sub_type"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="job_nr"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="est_rv_date"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="fea_r_date"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="att_r_date"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="cap_source"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="cap_method"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="source_desc"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="source_curr"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="source_accu"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="entity_name"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="geom_type"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="sagd_f_typ"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="sagd_s_typ"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="sagd_f_des"/>
-    <constraint notnull_strength="0" constraints="0" unique_strength="0" exp_strength="0" field="sagd_s_des"/>
+    <constraint constraints="3" unique_strength="1" notnull_strength="1" field="ogc_fid" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="gid" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="cuid" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="feat_t_id" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="feat_type" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="sub_type" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="job_nr" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="est_rv_date" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="fea_r_date" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="att_r_date" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="cap_source" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="cap_method" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="source_desc" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="source_curr" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="source_accu" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="entity_name" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="geom_type" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="sagd_f_typ" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="sagd_s_typ" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="sagd_f_des" exp_strength="0"/>
+    <constraint constraints="0" unique_strength="0" notnull_strength="0" field="sagd_s_des" exp_strength="0"/>
   </constraints>
   <constraintExpressions>
-    <constraint desc="" exp="" field="ogc_fid"/>
-    <constraint desc="" exp="" field="gid"/>
-    <constraint desc="" exp="" field="cuid"/>
-    <constraint desc="" exp="" field="feat_t_id"/>
-    <constraint desc="" exp="" field="feat_type"/>
-    <constraint desc="" exp="" field="sub_type"/>
-    <constraint desc="" exp="" field="job_nr"/>
-    <constraint desc="" exp="" field="est_rv_date"/>
-    <constraint desc="" exp="" field="fea_r_date"/>
-    <constraint desc="" exp="" field="att_r_date"/>
-    <constraint desc="" exp="" field="cap_source"/>
-    <constraint desc="" exp="" field="cap_method"/>
-    <constraint desc="" exp="" field="source_desc"/>
-    <constraint desc="" exp="" field="source_curr"/>
-    <constraint desc="" exp="" field="source_accu"/>
-    <constraint desc="" exp="" field="entity_name"/>
-    <constraint desc="" exp="" field="geom_type"/>
-    <constraint desc="" exp="" field="sagd_f_typ"/>
-    <constraint desc="" exp="" field="sagd_s_typ"/>
-    <constraint desc="" exp="" field="sagd_f_des"/>
-    <constraint desc="" exp="" field="sagd_s_des"/>
+    <constraint exp="" field="ogc_fid" desc=""/>
+    <constraint exp="" field="gid" desc=""/>
+    <constraint exp="" field="cuid" desc=""/>
+    <constraint exp="" field="feat_t_id" desc=""/>
+    <constraint exp="" field="feat_type" desc=""/>
+    <constraint exp="" field="sub_type" desc=""/>
+    <constraint exp="" field="job_nr" desc=""/>
+    <constraint exp="" field="est_rv_date" desc=""/>
+    <constraint exp="" field="fea_r_date" desc=""/>
+    <constraint exp="" field="att_r_date" desc=""/>
+    <constraint exp="" field="cap_source" desc=""/>
+    <constraint exp="" field="cap_method" desc=""/>
+    <constraint exp="" field="source_desc" desc=""/>
+    <constraint exp="" field="source_curr" desc=""/>
+    <constraint exp="" field="source_accu" desc=""/>
+    <constraint exp="" field="entity_name" desc=""/>
+    <constraint exp="" field="geom_type" desc=""/>
+    <constraint exp="" field="sagd_f_typ" desc=""/>
+    <constraint exp="" field="sagd_s_typ" desc=""/>
+    <constraint exp="" field="sagd_f_des" desc=""/>
+    <constraint exp="" field="sagd_s_des" desc=""/>
   </constraintExpressions>
   <attributeactions>
     <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
   </attributeactions>
-  <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
+  <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
     <columns>
-      <column hidden="0" type="field" width="-1" name="ogc_fid"/>
-      <column hidden="0" type="field" width="-1" name="gid"/>
-      <column hidden="0" type="field" width="-1" name="cuid"/>
-      <column hidden="0" type="field" width="-1" name="feat_t_id"/>
-      <column hidden="0" type="field" width="-1" name="feat_type"/>
-      <column hidden="0" type="field" width="-1" name="sub_type"/>
-      <column hidden="0" type="field" width="-1" name="job_nr"/>
-      <column hidden="0" type="field" width="-1" name="est_rv_date"/>
-      <column hidden="0" type="field" width="-1" name="fea_r_date"/>
-      <column hidden="0" type="field" width="-1" name="att_r_date"/>
-      <column hidden="0" type="field" width="-1" name="cap_source"/>
-      <column hidden="0" type="field" width="-1" name="cap_method"/>
-      <column hidden="0" type="field" width="-1" name="source_desc"/>
-      <column hidden="0" type="field" width="-1" name="source_curr"/>
-      <column hidden="0" type="field" width="-1" name="source_accu"/>
-      <column hidden="0" type="field" width="-1" name="entity_name"/>
-      <column hidden="0" type="field" width="-1" name="geom_type"/>
-      <column hidden="0" type="field" width="-1" name="sagd_f_typ"/>
-      <column hidden="0" type="field" width="-1" name="sagd_s_typ"/>
-      <column hidden="0" type="field" width="-1" name="sagd_f_des"/>
-      <column hidden="0" type="field" width="-1" name="sagd_s_des"/>
+      <column name="ogc_fid" hidden="0" type="field" width="-1"/>
+      <column name="gid" hidden="0" type="field" width="-1"/>
+      <column name="cuid" hidden="0" type="field" width="-1"/>
+      <column name="feat_t_id" hidden="0" type="field" width="-1"/>
+      <column name="feat_type" hidden="0" type="field" width="-1"/>
+      <column name="sub_type" hidden="0" type="field" width="-1"/>
+      <column name="job_nr" hidden="0" type="field" width="-1"/>
+      <column name="est_rv_date" hidden="0" type="field" width="-1"/>
+      <column name="fea_r_date" hidden="0" type="field" width="-1"/>
+      <column name="att_r_date" hidden="0" type="field" width="-1"/>
+      <column name="cap_source" hidden="0" type="field" width="-1"/>
+      <column name="cap_method" hidden="0" type="field" width="-1"/>
+      <column name="source_desc" hidden="0" type="field" width="-1"/>
+      <column name="source_curr" hidden="0" type="field" width="-1"/>
+      <column name="source_accu" hidden="0" type="field" width="-1"/>
+      <column name="entity_name" hidden="0" type="field" width="-1"/>
+      <column name="geom_type" hidden="0" type="field" width="-1"/>
+      <column name="sagd_f_typ" hidden="0" type="field" width="-1"/>
+      <column name="sagd_s_typ" hidden="0" type="field" width="-1"/>
+      <column name="sagd_f_des" hidden="0" type="field" width="-1"/>
+      <column name="sagd_s_des" hidden="0" type="field" width="-1"/>
       <column hidden="1" type="actions" width="-1"/>
     </columns>
   </attributetableconfig>
@@ -517,50 +517,50 @@ def my_form_open(dialog, layer, feature):
   <featformsuppress>0</featformsuppress>
   <editorlayout>generatedlayout</editorlayout>
   <editable>
-    <field editable="1" name="att_r_date"/>
-    <field editable="1" name="cap_method"/>
-    <field editable="1" name="cap_source"/>
-    <field editable="1" name="cuid"/>
-    <field editable="1" name="entity_name"/>
-    <field editable="1" name="est_rv_date"/>
-    <field editable="1" name="fea_r_date"/>
-    <field editable="1" name="feat_t_id"/>
-    <field editable="1" name="feat_type"/>
-    <field editable="1" name="geom_type"/>
-    <field editable="1" name="gid"/>
-    <field editable="1" name="job_nr"/>
-    <field editable="1" name="ogc_fid"/>
-    <field editable="1" name="sagd_f_des"/>
-    <field editable="1" name="sagd_f_typ"/>
-    <field editable="1" name="sagd_s_des"/>
-    <field editable="1" name="sagd_s_typ"/>
-    <field editable="1" name="source_accu"/>
-    <field editable="1" name="source_curr"/>
-    <field editable="1" name="source_desc"/>
-    <field editable="1" name="sub_type"/>
+    <field name="att_r_date" editable="1"/>
+    <field name="cap_method" editable="1"/>
+    <field name="cap_source" editable="1"/>
+    <field name="cuid" editable="1"/>
+    <field name="entity_name" editable="1"/>
+    <field name="est_rv_date" editable="1"/>
+    <field name="fea_r_date" editable="1"/>
+    <field name="feat_t_id" editable="1"/>
+    <field name="feat_type" editable="1"/>
+    <field name="geom_type" editable="1"/>
+    <field name="gid" editable="1"/>
+    <field name="job_nr" editable="1"/>
+    <field name="ogc_fid" editable="1"/>
+    <field name="sagd_f_des" editable="1"/>
+    <field name="sagd_f_typ" editable="1"/>
+    <field name="sagd_s_des" editable="1"/>
+    <field name="sagd_s_typ" editable="1"/>
+    <field name="source_accu" editable="1"/>
+    <field name="source_curr" editable="1"/>
+    <field name="source_desc" editable="1"/>
+    <field name="sub_type" editable="1"/>
   </editable>
   <labelOnTop>
-    <field labelOnTop="0" name="att_r_date"/>
-    <field labelOnTop="0" name="cap_method"/>
-    <field labelOnTop="0" name="cap_source"/>
-    <field labelOnTop="0" name="cuid"/>
-    <field labelOnTop="0" name="entity_name"/>
-    <field labelOnTop="0" name="est_rv_date"/>
-    <field labelOnTop="0" name="fea_r_date"/>
-    <field labelOnTop="0" name="feat_t_id"/>
-    <field labelOnTop="0" name="feat_type"/>
-    <field labelOnTop="0" name="geom_type"/>
-    <field labelOnTop="0" name="gid"/>
-    <field labelOnTop="0" name="job_nr"/>
-    <field labelOnTop="0" name="ogc_fid"/>
-    <field labelOnTop="0" name="sagd_f_des"/>
-    <field labelOnTop="0" name="sagd_f_typ"/>
-    <field labelOnTop="0" name="sagd_s_des"/>
-    <field labelOnTop="0" name="sagd_s_typ"/>
-    <field labelOnTop="0" name="source_accu"/>
-    <field labelOnTop="0" name="source_curr"/>
-    <field labelOnTop="0" name="source_desc"/>
-    <field labelOnTop="0" name="sub_type"/>
+    <field name="att_r_date" labelOnTop="0"/>
+    <field name="cap_method" labelOnTop="0"/>
+    <field name="cap_source" labelOnTop="0"/>
+    <field name="cuid" labelOnTop="0"/>
+    <field name="entity_name" labelOnTop="0"/>
+    <field name="est_rv_date" labelOnTop="0"/>
+    <field name="fea_r_date" labelOnTop="0"/>
+    <field name="feat_t_id" labelOnTop="0"/>
+    <field name="feat_type" labelOnTop="0"/>
+    <field name="geom_type" labelOnTop="0"/>
+    <field name="gid" labelOnTop="0"/>
+    <field name="job_nr" labelOnTop="0"/>
+    <field name="ogc_fid" labelOnTop="0"/>
+    <field name="sagd_f_des" labelOnTop="0"/>
+    <field name="sagd_f_typ" labelOnTop="0"/>
+    <field name="sagd_s_des" labelOnTop="0"/>
+    <field name="sagd_s_typ" labelOnTop="0"/>
+    <field name="source_accu" labelOnTop="0"/>
+    <field name="source_curr" labelOnTop="0"/>
+    <field name="source_desc" labelOnTop="0"/>
+    <field name="sub_type" labelOnTop="0"/>
   </labelOnTop>
   <widgets/>
   <conditionalstyles>
