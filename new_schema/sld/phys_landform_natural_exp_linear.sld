@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogc="http://www.opengis.net/ogc" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" version="1.1.0">
+<StyledLayerDescriptor xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <NamedLayer>
     <se:Name>phys_landform_natural_exp_linear</se:Name>
     <UserStyle>
@@ -61,28 +61,13 @@
             <se:Stroke>
               <se:GraphicStroke>
                 <se:Graphic>
-                  <!--Parametric SVG-->
+                  
                   <se:ExternalGraphic>
-                    <se:OnlineResource xlink:href="/gis/src/kartoza_work/topostyle/svg_graphics/prominentrockoutcrops3.svg?fill=%23ff0000&amp;fill-opacity=1&amp;outline=%23464646&amp;outline-opacity=1&amp;outline-width=0" xlink:type="simple"/>
+                    <se:OnlineResource xlink:href="file:/web/topostyle/svg_graphics/prominentrockoutcrops3.svg" xlink:type="simple"/>
                     <se:Format>image/svg+xml</se:Format>
                   </se:ExternalGraphic>
-                  <!--Plain SVG fallback, no parameters-->
-                  <se:ExternalGraphic>
-                    <se:OnlineResource xlink:href="/gis/src/kartoza_work/topostyle/svg_graphics/prominentrockoutcrops3.svg" xlink:type="simple"/>
-                    <se:Format>image/svg+xml</se:Format>
-                  </se:ExternalGraphic>
-                  <!--Well known marker fallback-->
-                  <se:Mark>
-                    <se:WellKnownName>square</se:WellKnownName>
-                    <se:Fill>
-                      <se:SvgParameter name="fill">#ff0000</se:SvgParameter>
-                    </se:Fill>
-                    <se:Stroke>
-                      <se:SvgParameter name="stroke">#464646</se:SvgParameter>
-                      <se:SvgParameter name="stroke-width">0.5</se:SvgParameter>
-                    </se:Stroke>
-                  </se:Mark>
-                  <se:Size>7</se:Size>
+                  
+                  <se:Size>5</se:Size>
                 </se:Graphic>
                 <se:Gap>
                   <ogc:Literal>11</ogc:Literal>
@@ -115,7 +100,7 @@
           <se:LineSymbolizer>
             <se:Stroke>
               <se:SvgParameter name="stroke">#000000</se:SvgParameter>
-              <se:SvgParameter name="stroke-width">1</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">0.26</se:SvgParameter>
               <se:SvgParameter name="stroke-linejoin">bevel</se:SvgParameter>
               <se:SvgParameter name="stroke-linecap">square</se:SvgParameter>
               <se:SvgParameter name="stroke-dasharray">4 2</se:SvgParameter>
