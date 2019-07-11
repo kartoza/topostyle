@@ -4017,7 +4017,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="1" k="alpha"/>
               <prop v="0" k="angle"/>
               <prop v="0" k="coordinate_mode"/>
-              <prop v="/web/Topostyle/svg_graphics/grave.png" k="imageFile"/>
+              <prop v="../svg_graphics/grave.png" k="imageFile"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -4390,7 +4390,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="1" k="alpha"/>
               <prop v="0" k="angle"/>
               <prop v="0" k="coordinate_mode"/>
-              <prop v="/web/Topostyle/svg_graphics/shipwreck.svg" k="imageFile"/>
+              <prop v="../svg_graphics/shipwreck.svg" k="imageFile"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -4475,7 +4475,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="1" k="alpha"/>
               <prop v="0" k="angle"/>
               <prop v="0" k="coordinate_mode"/>
-              <prop v="/web/Topostyle/svg_graphics/Trees.png" k="imageFile"/>
+              <prop v="../svg_graphics/Trees.png" k="imageFile"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -4602,7 +4602,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="1" k="alpha"/>
               <prop v="0" k="angle"/>
               <prop v="0" k="coordinate_mode"/>
-              <prop v="/web/Topostyle/svg_graphics/grave.png" k="imageFile"/>
+              <prop v="../svg_graphics/grave.png" k="imageFile"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -5808,7 +5808,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="0,0,0,255" k="color"/>
               <prop v="0" k="fixedAspectRatio"/>
               <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="/web/Topostyle/svg_graphics/shipwreck.svg" k="name"/>
+              <prop v="../svg_graphics/shipwreck.svg" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -5836,7 +5836,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="71,224,99,255" k="color"/>
               <prop v="0" k="fixedAspectRatio"/>
               <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="/web/Topostyle/svg_graphics/trees.svg" k="name"/>
+              <prop v="../svg_graphics/trees.svg" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -5893,7 +5893,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="14,91,224,255" k="color"/>
               <prop v="0" k="fixedAspectRatio"/>
               <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="/web/Topostyle/svg_graphics/grave.svg" k="name"/>
+              <prop v="../svg_graphics/grave.svg" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -5921,7 +5921,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="223,199,39,255" k="color"/>
               <prop v="0" k="fixedAspectRatio"/>
               <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="/web/Topostyle/svg_graphics/grave.svg" k="name"/>
+              <prop v="../svg_graphics/grave.svg" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -9497,7 +9497,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="1" k="alpha"/>
               <prop v="0" k="angle"/>
               <prop v="1" k="coordinate_mode"/>
-              <prop v="/web/Topostyle/svg_graphics/marsh.svg" k="imageFile"/>
+              <prop v="../svg_graphics/marsh.svg" k="imageFile"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -9676,7 +9676,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="1" k="alpha"/>
               <prop v="0" k="angle"/>
               <prop v="0" k="coordinate_mode"/>
-              <prop v="/web/Topostyle/svg_graphics/marsh.svg" k="imageFile"/>
+              <prop v="../svg_graphics/marsh.svg" k="imageFile"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -10141,7 +10141,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="1" k="alpha"/>
               <prop v="0" k="angle"/>
               <prop v="0" k="coordinate_mode"/>
-              <prop v="/web/Topostyle/svg_graphics/estuary.png" k="imageFile"/>
+              <prop v="../svg_graphics/estuary.png" k="imageFile"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -11237,7 +11237,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="0,0,0,255" k="color"/>
               <prop v="0" k="fixedAspectRatio"/>
               <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="tourist/tourist_windmill.svg" k="name"/>
+              <prop v="../svg_graphics/tourist_windmill.svg" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -12823,7 +12823,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="1" k="alpha"/>
               <prop v="0" k="angle"/>
               <prop v="0" k="coordinate_mode"/>
-              <prop v="/web/Topostyle/svg_graphics/orchards.svg" k="imageFile"/>
+              <prop v="../svg_graphics/orchards.svg" k="imageFile"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -15678,7 +15678,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="1" k="alpha"/>
               <prop v="0" k="angle"/>
               <prop v="0" k="coordinate_mode"/>
-              <prop v="/web/Topostyle/svg_graphics/prominentrockoutcrops3.svg" k="imageFile"/>
+              <prop v="../svg_graphics/prominentrockoutcrops3.svg" k="imageFile"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -16104,7 +16104,7 @@ def my_form_open(dialog, layer, feature):
                   <prop v="255,0,0,255" k="color"/>
                   <prop v="0" k="fixedAspectRatio"/>
                   <prop v="1" k="horizontal_anchor_point"/>
-                  <prop v="/web/Topostyle/svg_graphics/prominentrockoutcrops3.svg" k="name"/>
+                  <prop v="../svg_graphics/prominentrockoutcrops3.svg" k="name"/>
                   <prop v="0,0" k="offset"/>
                   <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
                   <prop v="MM" k="offset_unit"/>
@@ -16424,7 +16424,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="0,0,0,255" k="color"/>
               <prop v="0" k="fixedAspectRatio"/>
               <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="/web/Topostyle/svg_graphics/poi_cave.svg" k="name"/>
+              <prop v="../svg_graphics/poi_cave.svg" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -18637,7 +18637,7 @@ def my_form_open(dialog, layer, feature):
               <prop v="198,111,217,255" k="color"/>
               <prop v="0" k="fixedAspectRatio"/>
               <prop v="1" k="horizontal_anchor_point"/>
-              <prop v="/web/Topostyle/svg_graphics/helipad.svg" k="name"/>
+              <prop v="../svg_graphics/helipad.svg" k="name"/>
               <prop v="0,0" k="offset"/>
               <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
               <prop v="MM" k="offset_unit"/>
@@ -20376,7 +20376,7 @@ def my_form_open(dialog, layer, feature):
             <settings>
               <text-style namedStyle="Regular" fieldName="'N'  || '\n'   || '2'" fontSizeUnit="Point" fontWordSpacing="0" previewBkgrdColor="#ffffff" fontItalic="0" isExpression="1" fontCapitals="0" useSubstitutions="0" fontStrikeout="0" fontUnderline="0" fontFamily="Ubuntu" fontSizeMapUnitScale="3x:0,0,0,0,0,0" fontWeight="50" fontLetterSpacing="0" textColor="0,0,0,255" fontSize="5" multilineHeight="1" textOpacity="1" blendMode="0">
                 <text-buffer bufferJoinStyle="128" bufferSizeMapUnitScale="3x:0,0,0,0,0,0" bufferSize="1" bufferBlendMode="0" bufferDraw="0" bufferColor="255,255,255,255" bufferNoFill="1" bufferOpacity="1" bufferSizeUnits="MM"/>
-                <background shapeSizeType="0" shapeOpacity="1" shapeRadiiY="0" shapeRotationType="2" shapeSizeY="0" shapeOffsetUnit="MM" shapeRadiiX="0" shapeJoinStyle="64" shapeSizeUnit="MM" shapeRotation="0" shapeBorderWidthUnit="MM" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeFillColor="255,255,255,255" shapeDraw="1" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeBlendMode="0" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetX="0" shapeType="4" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeBorderColor="128,128,128,255" shapeOffsetY="0" shapeRadiiUnit="MM" shapeBorderWidth="0" shapeSizeX="0" shapeSVGFile="/web/Topostyle/svg_graphics/route_markers/N.svg"/>
+                <background shapeSizeType="0" shapeOpacity="1" shapeRadiiY="0" shapeRotationType="2" shapeSizeY="0" shapeOffsetUnit="MM" shapeRadiiX="0" shapeJoinStyle="64" shapeSizeUnit="MM" shapeRotation="0" shapeBorderWidthUnit="MM" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeFillColor="255,255,255,255" shapeDraw="1" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeBlendMode="0" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeOffsetX="0" shapeType="4" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeBorderColor="128,128,128,255" shapeOffsetY="0" shapeRadiiUnit="MM" shapeBorderWidth="0" shapeSizeX="0" shapeSVGFile="../svg_graphics/route_markers/N.svg"/>
                 <shadow shadowRadiusUnit="MM" shadowRadiusAlphaOnly="0" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowOffsetGlobal="1" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowColor="0,0,0,255" shadowUnder="0" shadowDraw="0" shadowOffsetUnit="MM" shadowRadius="1.5" shadowBlendMode="6" shadowOffsetDist="1" shadowOpacity="0.7" shadowOffsetAngle="135" shadowScale="100"/>
                 <substitutions/>
               </text-style>
