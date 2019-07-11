@@ -3,7 +3,7 @@ topostyle
 
 Open publication and styling of South African 1:50000 topographical map vector data from NGI
 
-Copyright (C) 2013 AfriSpatial
+Copyright (C) 2013 - present AfriSpatial, Kartoza
 
 Authors:
 * Admire Nyakudya
@@ -35,7 +35,9 @@ Style the maps to look as close as possible to the familiar topo map sheets in t
 See the styles in action
 ========================
 
-1Map is kindly hosting an instance of the NGI data, managed by AfriSpatial.
+See it being served by QGIS server at http://maps.kartoza.com/Topostyle/
+
+Alternatively, 1Map is kindly hosting an instance of the NGI data, managed by Kartoza and served by GeoServer.
 
 1. Register with http://1map.co.za
 2. Find or browse to somewhere in South Africa
