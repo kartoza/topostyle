@@ -9,7 +9,7 @@ Authors:
 * Admire Nyakudya
 * Gavin Fleming
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/za/deed.en"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/2.5/za/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">topostyle</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://afrispatial.co.za" property="cc:attributionName" rel="cc:attributionURL">AfriSpatial</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/za/deed.en">Creative Commons Attribution-ShareAlike 2.5 South Africa License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/za/deed.en"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/2.5/za/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">topostyle</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://kartoza.com" property="cc:attributionName" rel="cc:attributionURL">Kartoza</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/za/deed.en">Creative Commons Attribution-ShareAlike 2.5 South Africa License</a>.
 
 All files in this repository fall under this CC BY-SA 2.5 ZA licence EXCEPT the files in the scripts directory, which are GPL licenced. This licence also covers all cartographic products produced using these styles, including web map image tiles. 
 
