@@ -3,7 +3,7 @@ topostyle
 
 Open publication and styling of South African 1:50000 topographical map vector data from NGI
 
-Copyright (C) 2013 - present AfriSpatial, Kartoza
+Copyright (C) 2013 - present: AfriSpatial, Kartoza
 
 Authors:
 * Admire Nyakudya
@@ -17,7 +17,9 @@ Aim
 ===
 A free, public set of styles and scripts that will enable anyone to publish the free data available from NGI (http://www.ngi.gov.za) as web or desktop maps that look exactly like the published map sheets, starting with 1:50000 topographical maps. Hopefully this will also be endorsed, used and contributed to by NGI. 
 
-We at AfriSpatial have invested in getting the map and styles to the point where we feel confident to share them. We hope you find these useful. This is a work in progress. We know there is lots of space for improvement so if you see something that could be styled better, please do it!
+We at Kartoza have invested in getting the map and styles to the point where we feel confident to share them and have continued improving them over the years. We hope you find these useful. This is a work in progress. We know there is lots of space for improvement so if you see something that could be styled better, please do it!
+
+Besides style improvements, we've managed changes in SLD and GeoServer versions, QML and QGIS versions and a major change in the NGI data schema. 
 
 Objective
 =========
