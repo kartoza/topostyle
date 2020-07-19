@@ -1,0 +1,62 @@
+LAYER
+  NAME "hydr_coastal_areas_exp_areal"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POLYGON
+  CONNECTIONTYPE postgis
+  CONNECTION "host=localhost port=5432 dbname=database_name user=qgis password='password'"
+  DATA "wkb_geometry from ngi.hydr_coastal_areas_exp_areal using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Estuary"
+    EXPRESSION ("[feat_type]" = "Estuary")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Lagoon"
+    EXPRESSION ("[feat_type]" = "Lagoon")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Tidal Pool"
+    EXPRESSION (("[feat_type]" = "Tidal Pool") OR ("[feat_type]" = "Tidal River"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+      OUTLINECOLOR "#232323"
+      OUTLINEWIDTH 2.2857142857142856
+    END
+  END
+  CLASS
+    NAME "labeling - Pool"
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 8.824999999999998
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#d3e5f3"
+      END
+    END
+  END
+END

@@ -1,0 +1,87 @@
+LAYER
+  NAME "lclu_landuse_exp"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POLYGON
+  CONNECTIONTYPE postgis
+  CONNECTION "host=localhost port=5432 dbname=database_name user=qgis password='password'"
+  DATA "wkb_geometry from ngi.lclu_landuse_exp using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Residential Landuse"
+    EXPRESSION ("[feat_type]" = "Residential Landuse")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#a5a5a5"
+      OUTLINECOLOR "#a5a5a5"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Plantation"
+    EXPRESSION ("[feat_type]" = "Plantation")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#b1ccb4"
+      OUTLINECOLOR "#48de75"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Orchard vineyard"
+    EXPRESSION ("[feat_type]" = "Orchard / Vineyard")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+  END
+  CLASS
+    NAME "RECREATION AREA"
+    EXPRESSION ("[feat_type]" = "Recreational Landuse")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#b1ccb4"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.2714285714285714
+    END
+  END
+  CLASS
+    NAME "labeling - Plantation"
+    EXPRESSION ("[feat_type]" = "Plantation")
+    MAXSCALEDENOM 50000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 10.085714285714284
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Residential"
+    EXPRESSION ("[feat_type]" = "Residential Landuse")
+    MAXSCALEDENOM 50000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 10.085714285714284
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+END

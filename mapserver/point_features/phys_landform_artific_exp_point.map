@@ -1,0 +1,55 @@
+LAYER
+  NAME "phys_landform_artific_exp_point"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POINT
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.phys_landform_artific_exp_point using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Artificial terrain crest"
+    EXPRESSION ("[feat_type]" = "Artificial terrain crest")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "circle"
+      COLOR "#000000"
+      SIZE 7.142857142857142
+      ANGLE 0
+      OUTLINECOLOR "#232323"
+      OUTLINEWIDTH 1
+    END
+  END
+  CLASS
+    NAME "Excavation"
+    EXPRESSION ("[feat_type]" = "Excavation")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "circle"
+      COLOR "#000000"
+      SIZE 7.142857142857142
+      ANGLE 0
+      OUTLINECOLOR "#232323"
+      OUTLINEWIDTH 1
+    END
+  END
+  CLASS
+    NAME "Mine Head Gear"
+    EXPRESSION ("[feat_type]" = "Mine Head Gear")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "square"
+      COLOR "#000000"
+      SIZE 3.571428571428571
+      ANGLE 0
+      OUTLINECOLOR "#232323"
+      OUTLINEWIDTH 1
+    END
+  END
+END

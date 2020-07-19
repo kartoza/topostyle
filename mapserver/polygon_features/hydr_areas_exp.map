@@ -1,0 +1,235 @@
+LAYER
+  NAME "hydr_areas_exp"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POLYGON
+  CONNECTIONTYPE postgis
+  CONNECTION "host=localhost port=5432 dbname=database_name user=qgis password='password'"
+  DATA "wkb_geometry from ngi.hydr_areas_exp using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Closed Reservoir"
+    EXPRESSION ("[feat_type]" = "Closed Reservoir")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+  END
+  CLASS
+    NAME "Dam"
+    EXPRESSION ("[feat_type]" = "Dam")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Lake"
+    EXPRESSION ("[feat_type]" = "Lake")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Dry Pan"
+    EXPRESSION ("[feat_type]" = "Dry Pan")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#e0ccc0"
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Dry Water Course"
+    EXPRESSION ("[feat_type]" = "Dry Water Course")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#e0ccc0"
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Flood Bank Area"
+    EXPRESSION ("[feat_type]" = "Flood Bank Area")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+    END
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 100.0
+      COLOR "#6998c9"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Marsh"
+    EXPRESSION ("[feat_type]" = "Marsh")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+  END
+  CLASS
+    NAME "Mudflat"
+    EXPRESSION ("[feat_type]" = "Mudflat")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "b_diagonal"
+      OPACITY 70.89999999999999
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+    STYLE
+      SYMBOL "f_diagonal"
+      OPACITY 70.89999999999999
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Non-perennial pan"
+    EXPRESSION ("[feat_type]" = "Non-perennial pan")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "dense4"
+      OPACITY 100.0
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 100.0
+      COLOR "#6998c9"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Non-Perennial River"
+    EXPRESSION ("[feat_type]" = "Non-Perennial River")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "dense6"
+      OPACITY 100.0
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+    STYLE
+      WIDTH 0.7142857142857143
+      OPACITY 100.0
+      COLOR "#6998c9"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Open Reservoir"
+    EXPRESSION ("[feat_type]" = "Open Reservoir")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Perennial Pan"
+    EXPRESSION ("[feat_type]" = "Perennial Pan")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Perennial River"
+    EXPRESSION ("[feat_type]" = "Perennial River")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Salt Pan"
+    EXPRESSION ("[feat_type]" = "Salt Pan")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#e6e6e6"
+      OUTLINECOLOR "#e6e6e6"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Vlei"
+    EXPRESSION ("[feat_type]" = "Vlei")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.35714285714285715
+      OPACITY 100.0
+      COLOR "#6997c8"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Water Tank"
+    EXPRESSION ("[feat_type]" = "Water Tank")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#f2a2ae"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "labeling - All Features"
+    EXPRESSION ((((((((("[feat_type]" = "Closed Reservoir") OR ("[feat_type]" = "Salt Pan")) OR ("[feat_type]" = "Perennial River")) OR ("[feat_type]" = "Perennial Pan")) OR ("[feat_type]" = "Open Reservoir")) OR ("[feat_type]" = "Non-Perennial River")) OR ("[feat_type]" = "Non-perennial pan")) OR ("[feat_type]" = "Dry Pan")) OR ("[feat_type]" = "Dam"))
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 7.564285714285713
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#6997c8"
+      END
+    END
+  END
+END

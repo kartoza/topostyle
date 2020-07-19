@@ -1,0 +1,40 @@
+MAP
+    CONFIG "MS_ERRORFILE" "/tmp/generic_map_error.txt"
+    DEBUG 5
+    NAME "NGI Topostyle"
+    SIZE 800 800
+    UNITS meters
+    SHAPEPATH  "/map/"
+
+    SYMBOLSET symbolset.txt
+
+    EXTENT 16.3449 -34.81 32.830 -22.09131
+    PROJECTION
+        'init=epsg:4326'
+    END #PROJECTION
+
+    IMAGECOLOR -1 -1 -1
+    IMAGEQUALITY 80
+    IMAGETYPE PNG
+
+    WEB
+        IMAGEPATH '/tmp/'
+        IMAGEURL '/tmp/'
+
+        METADATA
+          'ows_title'           '1in50k topostyle'
+          'ows_srs'             'EPSG:3857 EPSG:4326 EPSG:900913'      
+          'wms_feature_info_mime_type' "text/html" 
+          'ows_enable_request'   '*'
+        END 
+    END
+    # Include all mapping files here for the render
+    INCLUDE 'polygon_features/cult_educational_exp_areal.map'
+
+    
+
+    
+
+END 
+
+

@@ -1,0 +1,81 @@
+LAYER
+  NAME "cult_recreational_exp_linear"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE LINE
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.cult_recreational_exp_linear using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Hiking Trail"
+    EXPRESSION ("[feat_type]" = "Hiking Trail")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.5357142857142857
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+      PATTERN "5 2"
+    END
+  END
+  CLASS
+    NAME "Horse-race course"
+    EXPRESSION ((("[feat_type]" = "Horse-race course") OR ("[feat_type]" = "Race Route")) OR ("[feat_type]" = "Scale Model Facility"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.35714285714285715
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Motor sport track"
+    EXPRESSION ("[feat_type]" = "Motor sport track")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.35714285714285715
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Shooting Range"
+    EXPRESSION ("[feat_type]" = "Shooting Range")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.5714285714285714
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "labeling - Horse-race Course"
+    EXPRESSION (("[feat_type]" = "Horse-race course") OR ("[feat_type]" = "Motor sport track"))
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        TEXT "[entity_name]"
+        SIZE 7.564285714285713
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+END

@@ -1,0 +1,40 @@
+LAYER
+  NAME "tran_crossings_exp_linear"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE LINE
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.tran_crossings_exp_linear using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Any Other Bridge"
+    EXPRESSION ("[feat_type]" = "Any Other Bridge")
+    MAXSCALEDENOM 15000.0
+    MINSCALEDENOM 1000.0
+    STYLE
+      SYMBOL "shape://oarrow"
+    END
+    STYLE
+      SYMBOL "shape://oarrow"
+    END
+    STYLE
+      SYMBOL "halfsquare"
+    END
+  END
+  CLASS
+    NAME "Any Other Tunnel"
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 1.2857142857142856
+      OPACITY 100.0
+      COLOR "#969696"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+END

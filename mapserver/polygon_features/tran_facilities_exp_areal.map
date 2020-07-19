@@ -1,0 +1,229 @@
+LAYER
+  NAME "tran_facilities_exp_areal"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POLYGON
+  CONNECTIONTYPE postgis
+  CONNECTION "host=localhost port=5432 dbname=database_name user=qgis password='password'"
+  DATA "wkb_geometry from ngi.tran_facilities_exp_areal using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "AIRFIELD"
+    EXPRESSION ("[feat_type]" = "Airfield")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "HELIPAD"
+    EXPRESSION ("[feat_type]" = "Helipad")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "LANDING STRIP"
+    EXPRESSION ("[feat_type]" = "Landing Strip")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "RUNWAY"
+    EXPRESSION ("[feat_type]" = "Runway")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Aerodrome"
+    EXPRESSION ("[feat_type]" = "Aerodrome")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Airport"
+    EXPRESSION ("[feat_type]" = "Airport")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Depot"
+    EXPRESSION ("[feat_type]" = "Depot")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#ffffff"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Runway"
+    EXPRESSION ("[feat_type]" = "Runway")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#ffffff"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Taxi Rank"
+    EXPRESSION ("[feat_type]" = "Taxi Rank")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#ffffff"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Railway Station"
+    EXPRESSION ("[feat_type]" = "Railway Station")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#ffffff"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Toll Gate"
+    EXPRESSION ("[feat_type]" = "Toll Gate")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Any Other Transport Node"
+    EXPRESSION ("[feat_type]" = "Any Other Transport Node")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 80.0
+      COLOR "#ffffff"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "labeling - Airfield"
+    EXPRESSION ("[feat_type]" = "Airfield")
+    STYLE
+      LABEL
+        OFFSET -2.0 0.0
+        TEXT "[entity_name]"
+        SIZE 12.607142857142854
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Airport"
+    EXPRESSION ("[feat_type]" = "Airport")
+    STYLE
+      LABEL
+        OFFSET -2.0 0.0
+        TEXT "[entity_name]"
+        SIZE 12.607142857142854
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Aerodrome"
+    EXPRESSION ("[feat_type]" = "Aerodrome")
+    STYLE
+      LABEL
+        OFFSET -2.0 0.0
+        TEXT "[entity_name]"
+        SIZE 12.607142857142854
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Landing Strip"
+    EXPRESSION ("[feat_type]" = "Landing Strip")
+    STYLE
+      LABEL
+        OFFSET -2.0 0.0
+        TEXT ""
+        SIZE 10.085714285714284
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Depot"
+    EXPRESSION ("[feat_type]" = "Depot")
+    STYLE
+      LABEL
+        OFFSET -2.0 0.0
+        TEXT ""
+        SIZE 12.607142857142854
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+END

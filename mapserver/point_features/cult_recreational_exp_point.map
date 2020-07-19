@@ -1,0 +1,69 @@
+LAYER
+  NAME "cult_recreational_exp_point"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POINT
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.cult_recreational_exp_point using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Any Other Recreational Facility"
+    EXPRESSION ("[feat_type]" = "Any Other Recreational Facility")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "circle"
+      COLOR "#000000"
+      SIZE 7.142857142857142
+      ANGLE 0
+      OUTLINECOLOR "#ffffff"
+      OUTLINEWIDTH 1.4285714285714286
+    END
+  END
+  CLASS
+    NAME "Clubhouse"
+    EXPRESSION ("[feat_type]" = "Clubhouse")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "circle"
+      COLOR "#000000"
+      SIZE 7.142857142857142
+      ANGLE 0
+      OUTLINECOLOR "#ffffff"
+      OUTLINEWIDTH 1.4285714285714286
+    END
+  END
+  CLASS
+    NAME "Stadium"
+    EXPRESSION ("[feat_type]" = "Stadium")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "circle"
+      COLOR "#000000"
+      SIZE 7.142857142857142
+      ANGLE 0
+      OUTLINECOLOR "#ffffff"
+      OUTLINEWIDTH 1.4285714285714286
+    END
+  END
+  CLASS
+    NAME "Tennis Court"
+    EXPRESSION ("[feat_type]" = "Tennis Court")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "circle"
+      COLOR "#000000"
+      SIZE 7.142857142857142
+      ANGLE 0
+      OUTLINECOLOR "#ffffff"
+      OUTLINEWIDTH 1.4285714285714286
+    END
+  END
+END

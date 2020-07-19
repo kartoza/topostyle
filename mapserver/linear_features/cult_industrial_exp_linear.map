@@ -1,0 +1,93 @@
+LAYER
+  NAME "cult_industrial_exp_linear"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE LINE
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.cult_industrial_exp_linear using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Any Other Pipe"
+    EXPRESSION ("[feat_type]" = "Any Other Pipe")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 100.0
+      COLOR "#6998c9"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Any Other Reservoir"
+    EXPRESSION ("[feat_type]" = "Any Other Reservoir")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 100.0
+      COLOR "#3311de"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Conveyor Belt"
+    EXPRESSION ("[feat_type]" = "Conveyor Belt")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.8214285714285714
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Saltworks"
+    EXPRESSION ("[feat_type]" = "Saltworks")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.35714285714285715
+      OPACITY 100.0
+      COLOR "#6998c9"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Silo"
+    EXPRESSION ("[feat_type]" = "Silo")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 100.0
+      COLOR "#464646"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "labeling - Conveyor-belt"
+    EXPRESSION ("[feat_type]" = "Conveyor Belt")
+    MAXSCALEDENOM 50000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        TEXT ""
+        SIZE 7.564285714285713
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+END
