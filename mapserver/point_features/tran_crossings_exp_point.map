@@ -1,0 +1,27 @@
+LAYER
+  NAME "tran_crossings_exp_point"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POINT
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.tran_crossings_exp_point using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Tunnel Entrance"
+    EXPRESSION ("[feat_type]" = "Tunnel Entrance")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "halfsquare"
+      COLOR "#000000"
+      SIZE 6.428571428571428
+      ANGLE 0
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 1
+    END
+  END
+END

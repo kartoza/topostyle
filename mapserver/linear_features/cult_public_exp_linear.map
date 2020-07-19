@@ -1,0 +1,25 @@
+LAYER
+  NAME "cult_public_exp_linear"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE LINE
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.cult_public_exp_linear using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "All"
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.5714285714285714
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+END

@@ -1,0 +1,173 @@
+LAYER
+  NAME "roads"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE LINE
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.tran_roads_exp using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Arterial Road"
+    EXPRESSION ("[feat_type]" = "Arterial Road")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 2.1785714285714284
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+    STYLE
+      WIDTH 1.6428571428571428
+      OPACITY 100.0
+      COLOR "#bd204a"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Main Road"
+    EXPRESSION (("[feat_type]" = "Main Road") OR ("[feat_type]" = "Secondary Road"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 1.8214285714285714
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+    STYLE
+      WIDTH 1.4642857142857142
+      OPACITY 100.0
+      COLOR "#cd6a5a"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "National Freeway"
+    EXPRESSION (("[feat_type]" = "National Freeway") OR ("[feat_type]" = "On/OffRamp"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1000.0
+    STYLE
+      WIDTH 2.714285714285714
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+    STYLE
+      WIDTH 2.0
+      OPACITY 100.0
+      COLOR "#6a9cd5"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "National Road"
+    EXPRESSION ("[feat_type]" = "National Road")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 2.714285714285714
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+    STYLE
+      WIDTH 2.0
+      OPACITY 100.0
+      COLOR "#bd204a"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Other Road"
+    EXPRESSION ("[feat_type]" = "Other Road")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 1.4285714285714286
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+    STYLE
+      WIDTH 1.0714285714285714
+      OPACITY 100.0
+      COLOR "#ffffff"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Under Construction"
+    EXPRESSION (("[feat_type]" = "Slipway") OR ("[feat_type]" = "Interchange"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 2.714285714285714
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+    STYLE
+      WIDTH 2.0
+      OPACITY 100.0
+      COLOR "#6a9cd5"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+    STYLE
+      WIDTH 2.714285714285714
+      OPACITY 100.0
+      COLOR "#ffffff"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Street"
+    EXPRESSION ("[feat_type]" = "Street")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 1.8214285714285714
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+    STYLE
+      WIDTH 1.4642857142857142
+      OPACITY 100.0
+      COLOR "#ffffff"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Track Footpath and Fence"
+    EXPRESSION (("[feat_type]" = "Track") OR ("[feat_type]" = "Footpath"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.5357142857142857
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+END

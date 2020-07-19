@@ -1,0 +1,161 @@
+LAYER
+  NAME "hydr_points_exp"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POINT
+  CONNECTIONTYPE postgis
+  CONNECTION "host=localhost port=5432 dbname=database_name user=qgis password='password'"
+  DATA "wkb_geometry from ngi.hydr_points_exp using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Hot Spring"
+    EXPRESSION ("[feat_type]" = "Hot Spring")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "circle"
+      COLOR "#6998c9"
+      SIZE 2.2857142857142856
+      ANGLE 0
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 1
+    END
+  END
+  CLASS
+    NAME "Spring"
+    EXPRESSION (("[feat_type]" = "Spring") OR ("[feat_type]" = "Any Other Spring"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "circle"
+      COLOR "#6998c9"
+      SIZE 2.2857142857142856
+      ANGLE 0
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 1
+    END
+  END
+  CLASS
+    NAME "Other"
+    EXPRESSION (("[feat_type]" = "Water Pump") OR ("[feat_type]" = "Well"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "circle"
+      COLOR "#6998c9"
+      SIZE 2.2857142857142856
+      ANGLE 0
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 1
+    END
+  END
+  CLASS
+    NAME "Water Reservoir"
+    EXPRESSION ("[feat_type]" = "Water Reservoir")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "circle"
+      COLOR "#6998c9"
+      SIZE 2.2857142857142856
+      ANGLE 0
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 1
+    END
+  END
+  CLASS
+    NAME "Water Tower"
+    EXPRESSION ("[feat_type]" = "Water Tower")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "circle"
+      COLOR "#59a0dd"
+      SIZE 2.2857142857142856
+      ANGLE 0
+      OUTLINECOLOR "#6998c9"
+      OUTLINEWIDTH 1
+    END
+  END
+  CLASS
+    NAME "Wind Pump"
+    EXPRESSION ("[feat_type]" = "Wind Pump")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "svgicon_base64:PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1ODAgNTgwIiBoZWlnaHQ9IjU4MCIgdmlld0JveD0iMCAwIDU4MCA1ODAiIHdpZHRoPSI1ODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Im0xODQuNzgyIDU0Mi4wMTZsNTUuNTUtMzI2LjcyMyA1Mi4zMDUtMzEuMzE4IDUxLjE2NSAzMi4xNTRjMCAwIDQ2Ljg0NCAzMzEuMjAxIDQxLjM5NyAzMjguNTQ1LTUuNDQ1LTIuNjU4LTE5OS4zMjggMS4zMjctMjAwLjQxNy0yLjY1OHoiIGZpbGw9InBhcmFtKGZpbGwpIiBvcGFjaXR5PSIuNSIgc3Ryb2tlPSJwYXJhbShvdXRsaW5lKSIgc3Ryb2tlLXdpZHRoPSJwYXJhbShvdXRsaW5lLXdpZHRoKSIvPgo8cGF0aCBkPSJtNTE0LjE5NSA0MTIuNTc1bC0xNzguOTMxLTE1My4yMDIgMTc4LjkzMi0xNTMuMjAyYzIuNjU3LTIuMjc1IDQuMjItNS41NzQgNC4yOTctOS4wNzJzLTEuMzM4LTYuODYyLTMuODkzLTkuMjUybC02MC43MTMtNTYuODE1Yy0yLjU2OS0yLjQwNC02LjA0OC0zLjU4Ny05LjU0NS0zLjI2Ni0zLjUwMi4zMjYtNi42OTcgMi4xMzYtOC43NzcgNC45NzNsLTE0My4yODggMTk1LjM1Ny0xNDMuMjg4LTE5NS4zNTdjLTIuMDgtMi44MzYtNS4yNzUtNC42NDYtOC43NzctNC45NzMtMy41MDMtLjMzLTYuOTc3Ljg2Mi05LjU0NSAzLjI2NmwtNjAuNzEzIDU2LjgxNWMtMi41NTQgMi4zOS0zLjk3IDUuNzU1LTMuODkzIDkuMjUyczEuNjQgNi43OTYgNC4yOTcgOS4wNzJsMTc4LjkzIDE1My4yMDItMTc4LjkyOSAxNTMuMjAyYy0yLjY1OCAyLjI3NC00LjIyIDUuNTc0LTQuMjk3IDkuMDcxczEuMzM4IDYuODYyIDMuODkzIDkuMjUzbDYwLjcxMyA1Ni44MTRjMi4yODkgMi4xNDIgNS4yOTcgMy4zMTggOC40MDQgMy4zMTguMzc5IDAgLjc2LS4wMTggMS4xNDEtLjA1MyAzLjUwMi0uMzI2IDYuNjk3LTIuMTM2IDguNzc3LTQuOTczbDE0My4yODgtMTk1LjM1NyAxNDMuMjg3IDE5NS4zNTdjMi4wOCAyLjgzNyA1LjI3NSA0LjY0NiA4Ljc3NyA0Ljk3My4zODEuMDM1Ljc2Mi4wNTMgMS4xNDIuMDUzIDMuMTA2IDAgNi4xMTQtMS4xNzcgOC40MDMtMy4zMThsNjAuNzEzLTU2LjgxNGMyLjU1NS0yLjM5MSAzLjk3LTUuNzU2IDMuODkzLTkuMjUzcy0xLjY0LTYuNzk2LTQuMjk4LTkuMDcxem0tMjI5LjcxNC0xNTMuMjAybDcuNzk1LTcuNTQyIDcuNzk1IDcuNTQyLTcuNzk1IDcuNTQyeiIgZmlsbD0icGFyYW0oZmlsbCkiIGZpbGwtb3BhY2l0eT0icGFyYW0oZmlsbC1vcGFjaXR5KSIgc3Ryb2tlPSJwYXJhbShvdXRsaW5lKSIgc3Ryb2tlLW9wYWNpdHk9InBhcmFtKG91dGxpbmUtb3BhY2l0eSkiIHN0cm9rZS13aWR0aD0icGFyYW0ob3V0bGluZS13aWR0aCkiLz4KPC9zdmc+Cg=="
+      COLOR "#000000"
+      SIZE 7.142857142857142
+      ANGLE 0
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 1
+    END
+  END
+  CLASS
+    NAME "labeling - Hot Springs"
+    EXPRESSION ("[feat_type]" = "Hot Spring")
+    MAXSCALEDENOM 50000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 1.0 0.0
+        TEXT ""
+        SIZE 7.564285714285713
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#6998c9"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Spring"
+    EXPRESSION (("[feat_type]" = "Spring") OR ("[feat_type]" = "Any Other Spring"))
+    MAXSCALEDENOM 50000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 1.0 0.0
+        TEXT ""
+        SIZE 7.564285714285713
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#6998c9"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Reservior"
+    EXPRESSION ("[feat_type]" = "Water Reservoir")
+    MAXSCALEDENOM 50000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 1.0 0.0
+        TEXT ""
+        SIZE 7.564285714285713
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#6998c9"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Water Tower"
+    EXPRESSION ("[feat_type]" = "Water Tower")
+    MAXSCALEDENOM 50000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 1.0 0.0
+        TEXT ""
+        SIZE 7.564285714285713
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#6998c9"
+      END
+    END
+  END
+END

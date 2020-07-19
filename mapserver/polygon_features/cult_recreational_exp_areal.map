@@ -1,0 +1,274 @@
+LAYER
+  NAME "cult_recreational_exp_areal"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POLYGON
+  CONNECTIONTYPE postgis
+  CONNECTION "host=localhost port=5432 dbname=database_name user=qgis password='password'"
+  DATA "wkb_geometry from ngi.cult_public_exp_areal using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Recreational Facility and Urban"
+    EXPRESSION ((("[feat_type]" = "Any Other Recreational Facility") OR ("[feat_type]" = "Urban park")) OR ("[feat_type]" = "Gambling Facility"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#b1ccb4"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Caravan Park"
+    EXPRESSION ("[feat_type]" = "Caravan Park")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#b1ccb4"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Garden"
+    EXPRESSION ("[feat_type]" = "Garden")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#b1ccb4"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Golf Course"
+    EXPRESSION (("[feat_type]" = "Golf Course") OR ("[feat_type]" = "Golf driving range"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#b1ccb4"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Holiday Resort"
+    EXPRESSION ("[feat_type]" = "Holiday Resort")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#69d47c"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Horse-race course"
+    EXPRESSION (("[feat_type]" = "Horse-race course") OR ("[feat_type]" = "Race Route"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#65d0b5"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Motor sport track"
+    EXPRESSION (("[feat_type]" = "Motor sport track") OR ("[feat_type]" = "Indoor Sport Centre"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#0000ff"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+    STYLE
+      OPACITY 100.0
+      COLOR "#3db9ee"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Shooting Range"
+    EXPRESSION ("[feat_type]" = "Shooting Range")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#81ed46"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Sports Field"
+    EXPRESSION ("[feat_type]" = "Sports Field")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#b1ccb4"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Stadium"
+    EXPRESSION ("[feat_type]" = "Stadium")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#b1ccb4"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Swimming Pool"
+    EXPRESSION ("[feat_type]" = "Swimming Pool")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Other"
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 50.4
+      COLOR "#99a0a2"
+      OUTLINECOLOR "#99a0a2"
+      OUTLINEWIDTH 0.5714285714285714
+    END
+  END
+  CLASS
+    NAME "labeling - Caravan"
+    EXPRESSION ("[feat_type]" = "Caravan Park")
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1000.0
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 10.085714285714284
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Golf Course"
+    EXPRESSION ("[feat_type]" = "Golf Course")
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1000.0
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 10.085714285714284
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Holiday Resort"
+    EXPRESSION ("[feat_type]" = "Holiday Resort")
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1000.0
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 10.085714285714284
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Stadium"
+    EXPRESSION ("[feat_type]" = "Stadium")
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1000.0
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 10.085714285714284
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Recreational Area"
+    EXPRESSION ("[feat_type]" = "Any Other Recreational Facility")
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1000.0
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 10.085714285714284
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Swimming Pool"
+    EXPRESSION ("[feat_type]" = "Swimming Pool")
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1000.0
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 10.085714285714284
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Horse Race"
+    EXPRESSION ("[feat_type]" = "Horse-race course")
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1000.0
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 10.085714285714284
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+END

@@ -1,0 +1,103 @@
+LAYER
+  NAME "phys_landform_natural_exp_areal"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POLYGON
+  CONNECTIONTYPE postgis
+  CONNECTION "host=localhost port=5432 dbname=database_name user=qgis password='password'"
+  DATA "wkb_geometry from ngi.phys_landform_natural_exp_areal using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Sinkhole"
+    EXPRESSION ("[feat_type]" = "Sinkhole")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "dense5"
+      OPACITY 100.0
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "sandy area"
+    EXPRESSION (("[feat_type]" = "Sandbank") OR ("[feat_type]" = "Beach"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "dense1"
+      OPACITY 100.0
+      OUTLINECOLOR "#e0ccc0"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Sand dune"
+    EXPRESSION ("[feat_type]" = "Dune")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "dense6"
+      OPACITY 100.0
+      OUTLINECOLOR "#c79b89"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Island"
+    EXPRESSION ("[feat_type]" = "Island in Inland Water")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 0.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+      OUTLINECOLOR "#0eb0ea"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Other island"
+    EXPRESSION ("[feat_type]" = "Any Other Island")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#d3e5f3"
+      OUTLINECOLOR "#d3e5f3"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Rocky Outcrop"
+    EXPRESSION ("[feat_type]" = "Rocky Outcrop")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+  END
+  CLASS
+    NAME "Eroded area"
+    EXPRESSION ("[feat_type]" = "Eroded Area")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "dense7"
+      OPACITY 100.0
+      OUTLINECOLOR "#c79b89"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Boulder and Rock"
+    EXPRESSION (("[feat_type]" = "Boulder") OR ("[feat_type]" = "Rock"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#ee47ec"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.5714285714285714
+    END
+  END
+END

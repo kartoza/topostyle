@@ -1,0 +1,80 @@
+LAYER
+  NAME "lclu_landcover_exp"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POLYGON
+  CONNECTIONTYPE postgis
+  CONNECTION "host=localhost port=5432 dbname=database_name user=qgis password='password'"
+  DATA "wkb_geometry from ngi.lclu_landcover_exp using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Barren Lands"
+    EXPRESSION ("[feat_type]" = "Barren Lands")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#e0ccc0"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Built-up Land"
+    EXPRESSION ("[feat_type]" = "Built-up Land")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#969696"
+      OUTLINECOLOR "#f7f7f7"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Cultivated Land"
+    EXPRESSION ("[feat_type]" = "Cultivated Land")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "diagonal_x"
+      OPACITY 75.9
+      OUTLINECOLOR "#b1ccb4"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 75.9
+      COLOR "#277740"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Forest and Woodlands"
+    EXPRESSION ("[feat_type]" = "Forest and Woodlands")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#b1ccb4"
+      OUTLINECOLOR "#b1ccb4"
+      OUTLINEWIDTH 2.0
+    END
+  END
+  CLASS
+    NAME "Forest Plantations"
+    EXPRESSION ("[feat_type]" = "Forest Plantations")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#b1ccb4"
+      OUTLINECOLOR "#b1ccb4"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+END

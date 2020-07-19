@@ -1,0 +1,70 @@
+LAYER
+  NAME "cult_utilities_exp_linear"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE LINE
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.cult_utilities_exp_linear using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Powerline"
+    EXPRESSION ("[feat_type]" = "Powerline")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+    STYLE
+      SYMBOL "circle"
+    END
+  END
+  CLASS
+    NAME "Sewerage Pipe"
+    EXPRESSION ((("[feat_type]" = "Sewerage Pipe") OR ("[feat_type]" = "Sewage Bridge")) OR ("[feat_type]" = "Any Other Utility Pipe"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 100.0
+      COLOR "#6998c9"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Substation"
+    EXPRESSION (("[feat_type]" = "Substation") OR ("[feat_type]" = "Any Other Power Station"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.5714285714285714
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "labeling - Sewerage Pipe"
+    EXPRESSION ("[feat_type]" = "Sewerage Pipe")
+    MAXSCALEDENOM 50000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        TEXT "P"
+        SIZE 8.824999999999998
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#6998c9"
+      END
+    END
+  END
+END

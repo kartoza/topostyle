@@ -1,0 +1,151 @@
+LAYER
+  NAME "cult_educational_exp_point"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POINT
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.cult_educational_exp_point using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "College"
+    EXPRESSION ("[feat_type]" = "College")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "square"
+      COLOR "#000000"
+      SIZE 7.142857142857142
+      ANGLE 0
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 1
+    END
+    STYLE
+      SYMBOL "halfsquare"
+      COLOR "#ffffff"
+      SIZE 3.571428571428571
+      ANGLE 0
+      OUTLINECOLOR "#ffffff"
+      OUTLINEWIDTH 1
+    END
+    STYLE
+      SYMBOL "quartersquare"
+      COLOR "#000000"
+      SIZE 5.357142857142857
+      ANGLE 0
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 1
+    END
+  END
+  CLASS
+    NAME "School"
+    EXPRESSION ("[feat_type]" = "School")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "square"
+      COLOR "#000000"
+      SIZE 5.357142857142857
+      ANGLE 0
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 1
+    END
+    STYLE
+      SYMBOL "txtmarker_Dingbats_Ѕ"
+      COLOR "#000000"
+      SIZE (7.857142857142858 / 2)
+      ANGLE 0
+    END
+  END
+  CLASS
+    NAME "University"
+    EXPRESSION ("[feat_type]" = "University")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "square"
+      COLOR "#000000"
+      SIZE 5.357142857142857
+      ANGLE 0
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 1
+    END
+  END
+  CLASS
+    NAME "University of Technology"
+    EXPRESSION ("[feat_type]" = "University of Technology")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "txtmarker_Dingbats_y"
+      COLOR "#000000"
+      SIZE (16.07142857142857 / 2)
+      ANGLE 0
+    END
+    STYLE
+      SYMBOL "txtmarker_Dingbats_z"
+      COLOR "#000000"
+      SIZE (14.285714285714285 / 2)
+      ANGLE 90.0
+    END
+    STYLE
+      SYMBOL "quartersquare"
+      COLOR "#000000"
+      SIZE 7.142857142857142
+      ANGLE 0
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 1
+    END
+  END
+  CLASS
+    NAME "labeling - College"
+    EXPRESSION ("[feat_type]" = "College")
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 1.5 0.0
+        TEXT ""
+        SIZE 12.607142857142854
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Technikon"
+    EXPRESSION ("[feat_type]" = "University of Technology")
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 4.5 0.0
+        TEXT ""
+        SIZE 12.607142857142854
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - University"
+    EXPRESSION ("[feat_type]" = "University")
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 3.0 0.0
+        TEXT ""
+        SIZE 12.607142857142854
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+END

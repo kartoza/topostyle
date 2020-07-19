@@ -1,0 +1,417 @@
+LAYER
+  NAME "cult_public_exp_areal"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POLYGON
+  CONNECTIONTYPE postgis
+  CONNECTION "host=localhost port=5432 dbname=database_name user=qgis password='password'"
+  DATA "wkb_geometry from ngi.cult_public_exp_areal using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Any Other Observation Structure"
+    EXPRESSION ((("[feat_type]" = "Any Other Observation Structure") OR ("[feat_type]" = "Any Other Public Structure")) OR ("[feat_type]" = "Any Other Religious Place"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.5714285714285714
+    END
+  END
+  CLASS
+    NAME "Bird sanctuary"
+    EXPRESSION ("[feat_type]" = "Bird sanctuary")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#74e5cd"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Border Post"
+    EXPRESSION ("[feat_type]" = "Border Post")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Botanical Garden"
+    EXPRESSION ("[feat_type]" = "Botanical Garden")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#46e956"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Building"
+    EXPRESSION ("[feat_type]" = "Building")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.5714285714285714
+    END
+  END
+  CLASS
+    NAME "Cemetery"
+    EXPRESSION ("[feat_type]" = "Cemetery")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#0000ff"
+      OUTLINECOLOR "#232323"
+      OUTLINEWIDTH 0.5714285714285714
+    END
+  END
+  CLASS
+    NAME "Clinic"
+    EXPRESSION ("[feat_type]" = "Clinic")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Community Hall"
+    EXPRESSION ("[feat_type]" = "Community Hall")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Correctional Facility"
+    EXPRESSION ("[feat_type]" = "Correctional Facility")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Court"
+    EXPRESSION ("[feat_type]" = "Court")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Grave"
+    EXPRESSION ("[feat_type]" = "Grave")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#0000ff"
+      OUTLINECOLOR "#232323"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Hospital"
+    EXPRESSION ((("[feat_type]" = "Hospital") OR ("[feat_type]" = "Hostel")) OR ("[feat_type]" = "Hotel"))
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "House"
+    EXPRESSION ("[feat_type]" = "House")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Legislative Building"
+    EXPRESSION ("[feat_type]" = "Legislative Building")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Library"
+    EXPRESSION ("[feat_type]" = "Library")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Market"
+    EXPRESSION ("[feat_type]" = "Market")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Military Base"
+    EXPRESSION ("[feat_type]" = "Military Base")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Mission"
+    EXPRESSION ("[feat_type]" = "Mission")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Museum"
+    EXPRESSION ("[feat_type]" = "Museum")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Place of Worship"
+    EXPRESSION ("[feat_type]" = "Place of Worship")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Planetarium"
+    EXPRESSION ("[feat_type]" = "Planetarium")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Police Station"
+    EXPRESSION ("[feat_type]" = "Police Station")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Postal Office"
+    EXPRESSION ("[feat_type]" = "Postal Office")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Refuse Dump"
+    EXPRESSION ("[feat_type]" = "Refuse Dump")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Retail Outlet"
+    EXPRESSION ("[feat_type]" = "Retail Outlet")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Ruin"
+    EXPRESSION ("[feat_type]" = "Ruin")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Shipwreck"
+    EXPRESSION ("[feat_type]" = "Shipwreck")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#0000ff"
+      OUTLINECOLOR "#232323"
+      OUTLINEWIDTH 0.35714285714285715
+    END
+  END
+  CLASS
+    NAME "Shopping Centre"
+    EXPRESSION ("[feat_type]" = "Shopping Centre")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Town Hall"
+    EXPRESSION ("[feat_type]" = "Town Hall")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Tree"
+    EXPRESSION ("[feat_type]" = "Tree")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#0000ff"
+      OUTLINECOLOR "#76a675"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "Zoological Facility"
+    EXPRESSION ("[feat_type]" = "Zoological Facility")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      OPACITY 100.0
+      COLOR "#000000"
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 0.9285714285714285
+    END
+  END
+  CLASS
+    NAME "labeling - Building"
+    EXPRESSION ("[feat_type]" = "Building")
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 7.564285714285713
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+  CLASS
+    NAME "labeling - Hospital"
+    EXPRESSION ("[feat_type]" = "Hospital")
+    MAXSCALEDENOM 25000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 0.0 0.0
+        TEXT "[entity_name]"
+        SIZE 8.824999999999998
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+END

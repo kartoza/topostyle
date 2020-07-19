@@ -1,0 +1,42 @@
+LAYER
+  NAME "hyps_elevation_points_exp"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE POINT
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.hyps_elevation_points_exp using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Spot height"
+    EXPRESSION ("[feat_type]" = "Spot Height")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 20000.0
+    STYLE
+      SYMBOL "circle"
+      COLOR "#b29377"
+      SIZE 2.142857142857143
+      ANGLE 0
+      OUTLINECOLOR "#000000"
+      OUTLINEWIDTH 1
+    END
+  END
+  CLASS
+    NAME "labeling - Height"
+    MAXSCALEDENOM 50000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        OFFSET 3.0 -1.0
+        TEXT "[height]"
+        SIZE 7.564285714285713
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+END

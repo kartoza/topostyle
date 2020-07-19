@@ -1,0 +1,169 @@
+LAYER
+  NAME "cult_barriers_exp"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE LINE
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.cult_barriers_exp using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "ANTI EROSION WALL"
+    EXPRESSION ("[feat_type]" = "Anti Erosion Wall")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      SYMBOL "txtmarker_Dingbats_ᑕ"
+    END
+  END
+  CLASS
+    NAME "Avenue"
+    EXPRESSION ("[feat_type]" = "Avenue")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 1.2857142857142856
+      OPACITY 100.0
+      COLOR "#ff7f00"
+      LINECAP "square"
+      LINEJOIN "bevel"
+      PATTERN "5 2"
+    END
+  END
+  CLASS
+    NAME "Other Barier"
+    EXPRESSION ("[feat_type]" = "Any Other Barrier")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.9285714285714285
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+      PATTERN "5 2"
+    END
+  END
+  CLASS
+    NAME "DAM WALL"
+    EXPRESSION ("[feat_type]" = "Dam Wall")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.8214285714285714
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "FENCE"
+    EXPRESSION ("[feat_type]" = "Fence")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.2714285714285714
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "TRACK FOOTPATH"
+    EXPRESSION ("[feat_type]" = "TRACK FOOTPATH")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.5357142857142857
+      OPACITY 100.0
+      COLOR "#72b2d7"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "WALL"
+    EXPRESSION ("[feat_type]" = "Wall")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.8214285714285714
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "WEIR"
+    EXPRESSION ("[feat_type]" = "Weir")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.5357142857142857
+      OPACITY 100.0
+      COLOR "#00aaff"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Firebreak"
+    EXPRESSION ("[feat_type]" = "Fire Break")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.35714285714285715
+      OPACITY 100.0
+      COLOR "#277740"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Cutline"
+    EXPRESSION ("[feat_type]" = "Cutline")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.5357142857142857
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "BREAKWATER"
+    EXPRESSION ("[feat_type]" = "Breakwater")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.35714285714285715
+      OPACITY 100.0
+      COLOR "#000000"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "labeling - Weir"
+    EXPRESSION ("[feat_type]" = "Weir")
+    MAXSCALEDENOM 50000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        TEXT "[feat_type]"
+        SIZE 7.564285714285713
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#000000"
+      END
+    END
+  END
+END

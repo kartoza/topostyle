@@ -1,0 +1,80 @@
+LAYER
+  NAME "hydr_lines_exp"
+  STATUS ON
+  SIZEUNITS pixels
+  TYPE LINE
+  CONNECTIONTYPE postgis
+  CONNECTION "dbname='database_name' host='localhost' port='5432' user='qgis'  password='password' sslmode='disable'"
+  DATA "wkb_geometry from ngi.hydr_lines_exp using unique ogc_fid"
+  PROJECTION
+      "init=epsg:3857"
+  END
+  EXTENT 1834573.0505023100413382 -4134098.6661502798087895 3657634.1671849298290908 -2534980.7939636199735105
+  CLASS
+    NAME "Perennial River Centre line"
+    EXPRESSION ("[feat_type]" = "Perennial River Centre line")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.35714285714285715
+      OPACITY 100.0
+      COLOR "#6998c9"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Non-Perennial River Centre line"
+    EXPRESSION ("[feat_type]" = "Non-Perennial River Centre line")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.35714285714285715
+      OPACITY 100.0
+      COLOR "#6998c9"
+      LINECAP "square"
+      LINEJOIN "bevel"
+      PATTERN "5 2"
+    END
+  END
+  CLASS
+    NAME "Rapid"
+    EXPRESSION ("[feat_type]" = "Rapid")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.35714285714285715
+      OPACITY 100.0
+      COLOR "#6998c9"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "Waterfall"
+    EXPRESSION ("[feat_type]" = "Waterfall")
+    MAXSCALEDENOM 80000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      WIDTH 0.35714285714285715
+      OPACITY 100.0
+      COLOR "#6998c9"
+      LINECAP "square"
+      LINEJOIN "bevel"
+    END
+  END
+  CLASS
+    NAME "labeling - Labels"
+    MAXSCALEDENOM 50000.0
+    MINSCALEDENOM 1.0
+    STYLE
+      LABEL
+        TEXT "[entity_name]"
+        SIZE 7.564285714285713
+        FONT "Ubuntu"
+        TYPE truetype
+        COLOR "#3885d2"
+      END
+    END
+  END
+END
